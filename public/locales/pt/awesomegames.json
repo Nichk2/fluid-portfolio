@@ -1,0 +1,126 @@
+{
+  "common": {
+    "backToPortfolio": "Voltar para o portfólio",
+    "nextProject": "Próximo Projeto",
+    "viewCaseStudy": "Ver estudo de caso",
+    "thankYou": "Muito obrigado por ler! 😊",
+    "emailText": "Para mais informações sobre trabalho, ou para tomar um café, envie um e-mail para"
+  },
+  "awesomeGames": {
+    "meta": {
+      "category": "Aplicativo Mobile",
+      "title": "AwesomeGames",
+      "subtitle": "Um aplicativo de comunidade e descoberta de jogos que conecta jogadores e os ajuda a encontrar seu próximo jogo favorito",
+      "client": "Projeto de Curso",
+      "year": "2022",
+      "duration": "1 mês",
+      "role": "Designer UX/UI"
+    },
+    "titles": {
+      "client": "Cliente",
+      "year": "Ano",
+      "duration": "Duração",
+      "role": "Função",
+      "userPersona": "Persona",
+      "siteMap": "Mapa do Site",
+      "informationArchitecture": "Arquitetura da Informação",
+      "wireframes": "Wireframes",
+      "usabilityTesting": "Teste de Usabilidade",
+      "empathyMap": "Mapa de Empatia Agregado",
+      "styleGuide": "Guia de Estilo",
+      "highFidelity": "Designs de Alta Fidelidade",
+      "keyTakeaways": "Principais Conclusões"
+    },
+    "introduction": [
+      "AwesomeGames é um aplicativo de biblioteca de jogos onde todos os usuários podem interagir entre si através de uma comunidade de jogos. No aplicativo, os usuários podem navegar por várias categorias de jogos, salvar jogos em suas bibliotecas para ler mais sobre o jogo e jogá-lo depois (em outra plataforma). Eles também podem interagir com outros jogadores em comunidades por chat e lives que o aplicativo oferece.",
+      "Este é um projeto parte de um curso de design UX promovido pelo Google. Neste projeto pude aplicar todo o conhecimento absorvido no curso, como: Realizar pesquisas, construir wireframes, protótipos Lofi e Hifi e iterar no design."
+    ],
+    "keySections": {
+      "product": {
+        "title": "Produto",
+        "content": "AwesomeGames é um aplicativo de prévia de jogos, criado para a comunidade de jogadores interagir e saber mais sobre o mundo dos jogos."
+      },
+      "responsibilities": {
+        "title": "Responsabilidades",
+        "content": [
+          "Realização de entrevistas",
+          "Criação de wireframes em papel e digitais",
+          "Testes de usabilidade",
+          "Protótipos de baixa e alta fidelidade"
+        ]
+      },
+      "problem": {
+        "title": "Problema",
+        "content": "Os jogadores precisam de uma plataforma onde possam ter uma biblioteca grande e diversificada de jogos com suas prévias e uma comunidade onde possam interagir entre si para saber mais sobre novos jogos, dicas e fazer novos amigos."
+      },
+      "goal": {
+        "title": "Objetivo",
+        "content": "Projetar um aplicativo que possa fornecer prévias de jogos (através de uma grande biblioteca) para jogadores e fazê-los interagir entre si. O design deve ser simples e intuitivo para o usuário."
+      },
+      "role": {
+        "title": "Meu papel",
+        "content": "Designer UX/UI"
+      },
+      "duration": {
+        "title": "Duração do projeto",
+        "content": "Setembro - Dezembro 2022 (Este projeto foi criado para completar o curso de design UX do Google)"
+      }
+    },
+    "process": {
+      "description": "Para alcançar os objetivos desta pesquisa, conduzi entrevistas com usuários dessas plataformas e também criei mapas de empatia, vitais para entender as reais necessidades dos usuários e seus pensamentos sobre o processo de interação no aplicativo.",
+      "steps": [
+        {
+          "title": "1. Entrevistas com Usuários",
+          "description": "Realizei entrevistas detalhadas com pessoas interessadas nessas plataformas para entender seus pontos problemáticos durante a experiência.",
+          "items": [
+            "Navegação complexa",
+            "Falta de interação direta entre pessoas",
+            "Prévias de jogos fracas"
+          ]
+        },
+        {
+          "title": "2. Análise Competitiva",
+          "description": "Estudei aplicativos de jogos para identificar melhores práticas e áreas de melhoria."
+        },
+        {
+          "title": "😡 Pontos problemáticos",
+          "items": [
+            "Navegação difícil: Os usuários reclamam muito da má navegação que aplicativos desse tipo fornecem.",
+            "Falta de prévias de jogos: Os usuários demonstraram frustração com a falta de opções de jogos nos aplicativos.",
+            "Sem interação com outros jogadores: A ausência de uma comunidade para interagir com outros jogadores também cria um nível de insatisfação entre os usuários"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "studyType": "Tipo de Estudo",
+      "moderated": "Moderado",
+      "participants": "Participantes",
+      "ageRange": "Faixa Etária",
+      "length": "Duração",
+      "keyFindings": "Principais Descobertas",
+      "findings": [
+        "Os usuários adoraram a navegação simples",
+        "Adicionar jogos à biblioteca foi intuitivo",
+        "Alguns queriam transições de cores mais suaves",
+        "Os recursos da comunidade foram muito elogiados"
+      ],
+      "userQuote": "Citação do Usuário",
+      "quote": "\"Esta é uma ideia muito boa, eu amo jogar e adorei como o design foi feito para tornar a navegação simples e divertida! A forma como podemos adicionar prévias de jogos às nossas bibliotecas também é muito fácil. Ótimo aplicativo\""
+    },
+    "styleGuide": {
+      "colors": "Cores",
+      "typography": "Tipografia"
+    },
+    "keyTakeaways": [
+      "O AwesomeGames tentou atender à necessidade dos usuários de receber simplicidade em um aplicativo de prévia de jogos. A ideia é criar um espaço simples onde os jogadores possam interagir entre si, armazenar suas prévias de jogos para compartilhar com outros jogadores através da comunidade disponível, assistir lives e também compartilhar suas sessões ao vivo uns com os outros. Um dos participantes disse: \"Esta é uma ideia muito boa, eu amo jogar e adorei como o design foi feito para tornar a navegação simples e divertida! A forma como podemos adicionar prévias de jogos às nossas bibliotecas também é muito fácil. Ótimo aplicativo\"",
+      "Alguns participantes não expressaram entusiasmo com a ideia da existência da prévia de jogos, no entanto, eles pensaram que com o surgimento da nova geração de jogadores e sua grande comunidade, isso poderia funcionar com algumas atualizações, como melhorias na navegação e mudança no design para algo com cores mais suaves. Mais mudanças e testes são necessários.",
+      "Este projeto que comecei desde o início do curso de design UX do Google foi vital para que eu entendesse os processos de pesquisa UX e seus métodos e também me ajudou a otimizar minhas habilidades de design. Foi uma ótima experiência praticar empatia e entender o que os usuários realmente precisam."
+    ],
+    "nextProject": {
+      "title": "VisaBuddy",
+      "description": "Plataforma de Taxa de Carbono e NFT",
+      "cta": "Ver estudo de caso"
+    }
+  }
+}

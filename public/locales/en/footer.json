@@ -1,0 +1,23 @@
+{
+  "copyright": {
+    "base": "© 2025",
+    "name": "Nicholas Andrade",
+    "rights": "All rights reserved.",
+    "phone": "+55 12 98119-8452"
+  },
+  "social": {
+    "github": {
+      "ariaLabel": "GitHub"
+    },
+    "linkedin": {
+      "ariaLabel": "LinkedIn"
+    }
+  },
+  "branding": {
+    "text": "Weaving",
+    "efficiency": "efficiency",
+    "and": "and",
+    "purpose": "purpose",
+    "suffix": "into every digital experience."
+  }
+}

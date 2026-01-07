@@ -1,0 +1,23 @@
+{
+  "copyright": {
+    "base": "© 2025",
+    "name": "Nicholas Andrade",
+    "rights": "Todos os direitos reservados.",
+    "phone": "+55 12 98119-8452"
+  },
+  "social": {
+    "github": {
+      "ariaLabel": "GitHub"
+    },
+    "linkedin": {
+      "ariaLabel": "LinkedIn"
+    }
+  },
+  "branding": {
+    "text": "Tecendo",
+    "efficiency": "eficiência",
+    "and": "e",
+    "purpose": "propósito",
+    "suffix": "em cada experiência digital."
+  }
+}

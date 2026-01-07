@@ -1,0 +1,84 @@
+{
+  "myholybooks": {
+    "backToPortfolio": "Back to portfolio",
+    "category": "WEB and MOBILE",
+    "title": "MyHolyBooks",
+    "subtitle": "A Christian social network fostering faith-based connections and community",
+    "client": "Independent investor",
+    "year": "2024",
+    "yearTitle":"Year",
+    "clientTitle":"Client",
+    "durationTitle":"Duration",
+    "roleTitle":"Role",
+    "duration": "5 months",
+    "role": "UX/UI Designer (Research, Prototyping, Testing)",
+    "overview": "MyHolyBooks is a Christian social network designed to strengthen bonds and foster authentic connections within the faith community. The platform allows users to share insights, create customized books with Bible verses, add notes, and support one another in a purpose-driven digital environment.",
+    "challenge": {
+      "title": "The Challenge",
+      "content": "The Brazilian market lacked a dedicated Christian social media platform. Existing spaces like blogs felt impersonal, and users needed a safe, respectful environment to connect around shared beliefs while leveraging familiar social media engagement strategies.",
+      "userInsight": "User Insight:",
+      "userInsightText": " As a former student and after a chat with other students, I understand the need for a centralized, accessible platform for academic research. Together with the client (also a scholar) we could build a good idea of product.",
+      "howMightWe": "How Might We:",
+      "howMightWeText": " Create a community-centric platform that simplifies research sharing and enhances collaboration among scholars?"
+    },
+    "solution": "We came up with a 'simple' solution for this... MyHolyBooks!!",
+    "designProcess": {
+      "title": "Design Process",
+      "empathize": {
+        "title": "Empathize",
+        "content": "I conducted a meeting with the developers and with stakeholder in order to better understand the idea of the project (that was previously created), real necessities, motivations, interviews with christians and other variables so I can provide best solutions."
+      },
+      "define": {
+        "title": "Define",
+        "content": "After the meeting, we identified a key issue: the Brazilian market—where the stakeholder plans to launch first—lacks a digital environment that supports the kind of user interaction commonly found on social platforms like Facebook, X (formerly Twitter), and LinkedIn.",
+        "personaText": "To align the design process effectively, I began the persona analysis. Based on our research, we developed detailed personas to accurately represent our target users and inform our design decisions."
+      },
+      "ideate": {
+        "title": "Ideate",
+        "content": "The process of ideation consisted on the creation of many sketches of future vision of how the platform would look like. I conducted a benchmarking and analyzed Facebook and LinkedIn social networks seeking inspiration.",
+        "designExploration": "Design Exploration",
+        "designExplorationSub": "Sketches, style exploration, and color palette development",
+        "featureExploration": "Feature Exploration",
+        "featureTitle 1": "1 - Create Your Own Group", 
+        "featureTitle 2": "2 - Multi-Language Support",
+        "featureTitleBox 1": "1 - Create Your Own Group",
+        "featureTitleBox 2": "2 - Multi-Language Support",
+        "featureContainer 1": "Implemented group creation feature to allow users to connect around specific interests or Bible study topics.", 
+        "featureContainerText 1": "Group creation interface showing how users can form communities around shared interests", 
+        "featureContainer 2": "Added language selection to enable users to explore faith across different cultures and Bible translations.", 
+        "featureContainerText 2": "Language selection interface supporting multiple translations and cultural contexts"
+      },
+      "prototype": {
+        "title": "Prototype",
+        "content": "For this phase of the process, I thought that it would be interesting to give two deliverables, a medium fidelity and a high fidelity prototypes based on the ideas I could gather during the ideation process. The reason I chose this approach is to give more freedom and security to the stakeholder on how the platform will look like."
+      },
+      "test": {
+        "title": "Test",
+        "content": "I used Maze tool to help me on this extremely important part of the project. The tests (created for both versions web and mobile) had the same tasks followed of open questions related with the experience of the user."
+      }
+    },
+    "finalProduct": {
+      "title": "Final Product",
+      "content": "In our final round of usability testing, feedback from users confirmed the platform's success in delivering an intuitive and engaging experience aligned with its purpose of fostering a faith-centered community.",
+      "webVersion": "Web Version",
+      "mobileVersion": "Mobile Version"
+    },
+    "results": {
+      "title": "Results & Impact",
+      "items": [
+        "A deep study had to be done in order to better understand variants of Christianity in Brazil. Since the main goal is to welcome all Christians, the team had to make sure to be careful with symbols, words, other elements",
+        "Positive usability test feedback on intuitive navigation",
+        "Currently in development with planned 2025 launch",
+        "Users reported feeling 'safe and respected' in prototype testing"
+      ],
+      "fallback": "Results will be displayed here when translation is available."
+    },
+    "nextProject": {
+      "title": "Next Project",
+      "p3mPlatform": "P3M Platform Redesign",
+      "description": "Natural Resources Map Platform",
+      "viewCaseStudy": "View case study",
+      "cta": "View case study"
+    }
+  }
+}

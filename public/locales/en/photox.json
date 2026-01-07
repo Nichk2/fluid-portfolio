@@ -1,0 +1,65 @@
+{
+   
+  "photox": {
+    "back": "Back to portfolio", 
+    "title": "PHOTOX",
+    "category": "Web App",
+    "duration": "3 months",
+    "duration2": "Duration",
+    "role": "Role",
+    "year": "Year",
+    "client": "Client",
+    "title1": "Overview",
+    "title2": "Problem",
+    "title3": "Solution",
+    "before": "Before",
+    "after": "After",
+    "nextProject": "Next Project",
+    "projectLabel": "HYBRAS COLLAB",
+    "viewProject":"View case study",
+    "descriptionLabel":"Hydrology research repository for scholars",
+    "overview": "Photox is a platform that facilitates carbon offsetting by combining nature and technology to drive environmental preservation.",
+    "challenge": "The main challenge was to improve the usability of the Photox platform, ensuring that users could easily understand its products (governance tokens, carbon tokens, and guardian NFTs). The redesign aimed to enhance information clarity and optimize the buying/investing experience. The images below is before our design application.",
+    "solution": "We implemented a clean, modern design, intuitive navigation, enhanced content discovery features, and a map that could show information about NFTs, tokens and avaliable areas to explore",
+    "goals": {
+      "title": "Goals",
+      "items": [
+        "Educating users and clarifying their journey",
+        "Streamlining the buying and investment process",
+        "Building trust and ensuring transparency"
+      ]
+    },
+    "process": {
+      "title": "Design Process",
+      "empathize": {
+        "title": "1 → Empathize",
+        "description": "I held meetings with developers and the stakeholder to gain a deeper understanding of the existing project, its needs, motivations, and other key factors, allowing me to propose the best solutions for the redesign."
+      },
+      "define": {
+        "title": "2 → Define",
+        "description": "After the meeting, we identified that the sustainability market in Brazil, where Photox plans to operate initially, still lacks a platform that enables easy and transparent user interaction. I also started analyzing personas to better understand the target audience's needs and expectations, helping to define the best design approach.",
+        "goal": "The goal is: Let's create an intuitive and engaging experience by rebuilding the platform, making it easier for everyone to connect and invest in environmental preservation in a simple and accessible way!"
+      },
+      "ideate": {
+        "title": "3 → Ideate",
+        "description": "The ideation process involved creating multiple sketches to visualize how the Photox platform could evolve. To support this, I analyzed platforms like Ecologi, GoldStandard and kikin (the last one does not belong to the niche but has a good structure and style) which also works with carbon credits, drawing inspiration to enhance user experience and navigation."
+      },
+      "prototype": {
+        "title": "4 → Prototype",
+        "description": "At this stage, I delivered a high-fidelity prototype based on the ideas gathered during the ideation phase. Choosing a single prototype provided the stakeholder with a clearer vision of the platform's design, making adjustments easier and ensuring better alignment—especially given the short timeline."
+      },
+      "test": {
+        "title": "5 → Test",
+        "description": "I used the Maze tool to assist with this crucial part of the project. The tests were structured around open-ended questions related to the user experience and goals. I chose this method to better understand users' preferences and perceptions regarding the design and overall experience."
+      }
+    },
+    "results": {
+      "title": "Results & Impact",
+      "items": [
+        "Users said that it got much more intuitive and easy to use",
+        "The information architecture was simplified, making it easier to navigate and understand its purpose",
+        "Users can now better understand the products offered by Photox"
+      ]
+    }
+  }
+}

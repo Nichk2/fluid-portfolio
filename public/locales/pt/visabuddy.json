@@ -1,0 +1,120 @@
+{
+  "visaBuddy": {
+    "navigation": {
+      "back": "Voltar para o portfólio"
+    },
+    "hero": {
+      "category": "Projeto AI / Fullstack / UX-UI DESIGN",
+      "client": "Cliente",
+      "year": "Ano",
+      "duration": "Duração",
+      "role": "Função"
+    },
+    "sections": {
+      "overview": "Visão Geral",
+      "problem": "O Problema da Complexidade da Imigração",
+      "training": "Treinamento QLoRA na Plataforma Modal",
+      "backend": "Arquitetura do Backend",
+      "frontend": "Implementação do Frontend",
+      "design": "Processo de Design UX/UI",
+      "metrics": "Métricas do Modelo",
+      "results": "Impacto Mensurável",
+      "nextProject": "Próximo Projeto"
+    },
+    "content": {
+      "overview": "VisaBuddy é um assistente de imigração canadense sofisticado alimentado por IA que combina Geração Aumentada por Recuperação (RAG) com fine-tuning QLoRA para fornecer orientação precisa e contextualizada sobre procedimentos complexos de imigração. O sistema transforma documentação governamental não estruturada em insights acionáveis através de uma interface de chat moderna.",
+      "problem": "Navegar pela imigração canadense é notoriamente complexo, com candidatos enfrentando milhares de páginas de regulamentos frequentemente atualizados em múltiplos programas (Express Entry, permissões de estudo, permissões de trabalho, etc.). Métodos de busca tradicionais geralmente produzem informações incompletas ou desatualizadas, levando a erros de aplicação, atrasos e estresse desnecessário.",
+      "problemPoints": {
+        "pages": "Milhares de Páginas",
+        "pagesDesc": "Regulamentos governamentais espalhados por múltiplos programas",
+        "updates": "Atualizações Frequentes",
+        "updatesDesc": "Políticas mudam regularmente, exigindo monitoramento constante",
+        "decisions": "Decisões de Alto Risco",
+        "decisionsDesc": "Erros na aplicação podem levar à rejeição e atrasos"
+      },
+      "trainingDescription": "O modelo foi ajustado usando QLoRA (Quantized Low-Rank Adaptation) na plataforma GPU da Modal, permitindo treinamento eficiente do modelo Llama-3.1-8B-Instruct com sobrecarga mínima de memória. A Modal forneceu acesso contínuo a GPUs T4 e fluxos de trabalho de implantação automatizados.",
+      "jupyterTitle": "Treinamento em Jupyter Notebook",
+      "jupyterDescription": "Notebooks interativos do Jupyter foram usados para treinamento, permitindo desenvolvimento iterativo do pipeline RAG e fine-tuning QLoRA.",
+      "modalTitle": "Desenvolvido com Modal",
+      "modalDescription": "A plataforma serverless GPU da Modal permitiu fine-tuning QLoRA eficiente sem gerenciamento de infraestrutura. A plataforma forneceu:",
+      "modalPoints": [
+        "Instâncias GPU T4 para treinamento QLoRA",
+        "Empacotamento e implantação automatizados do modelo",
+        "Cobrança eficiente por segundo",
+        "Integração perfeita com modelos do Hugging Face"
+      ],
+      "backendDescription": "Construímos um backend Python otimizado para implantação no Colab, com endpoints FastAPI para interações de chat e recuperação RAG. O sistema carrega adaptadores LoRA em cima do Llama-3.1-8B-Instruct, com gerenciamento inteligente de janela de contexto. Principais recursos incluem recuperação baseada em similaridade com limites configuráveis, rastreamento de histórico de conversas e mecanismos de fallback para garantir confiabilidade quando o modelo principal está indisponível.",
+      "backendDemoTitle": "Backend em Ação",
+      "backendDemoDescription": "Backend FastAPI executando no Google Colab com inferência de modelo em tempo real e recuperação RAG.",
+      "techStack": {
+        "fastapi": "FastAPI",
+        "fastapiDesc": "Framework de API de alta performance",
+        "chromadb": "ChromaDB",
+        "chromadbDesc": "Banco de dados vetorial para embeddings",
+        "transformers": "Transformers",
+        "transformersDesc": "Llama-3.1-8B-Instruct",
+        "sentenceTransformers": "Sentence-Transformers",
+        "sentenceTransformersDesc": "Geração de embeddings"
+      },
+      "frontendDescription": "Desenvolvemos um frontend React + TypeScript com Vite para performance ótima. Implementamos hooks personalizados (useVisaBuddy) para gerenciamento de estado e comunicação API, com camadas de serviço tipadas (visaBuddyApi.ts) garantindo tratamento robusto de erros. A UI utiliza Tailwind com efeitos personalizados, Framer Motion para animações suaves e persistência localStorage para histórico de chats. A arquitetura de componentes inclui modais reutilizáveis, utilitários inteligentes de formatação de data e padrões de design responsivo.",
+      "frontendDemoTitle": "Demonstração do Frontend",
+      "frontendDemoDescription": "Interface de chat interativa com respostas em tempo real e animações suaves.",
+      "frontendTech": {
+        "react": "React",
+        "reactDesc": "Última versão do React com recursos concorrentes",
+        "typescript": "TypeScript",
+        "typescriptDesc": "Desenvolvimento com tipos seguros",
+        "tailwind": "Tailwind",
+        "tailwindDesc": "Estilização baseada em utilitários",
+        "framer": "Framer Motion",
+        "framerDesc": "Animações suaves"
+      },
+      "designDescription": "A UX seguiu um paradigma de assistente profissional em vez de uma demonstração simples. Decisões de design-chave incluíram histórico de chat múltiplo persistente com agrupamento inteligente por data (Hoje/Ontem/7 Dias/Mais Antigo), indicadores de status de conexão em tempo real e uma interface de configuração do backend baseada em modal. A interface de chat apresenta transições suaves de mensagens, indicadores de digitação com feedback \"Visa Buddy está pensando...\" e uma barra lateral responsiva que se adapta a padrões de uso mobile.",
+      "beforeAfter": {
+        "lowFi": "Design de Baixa Fidelidade",
+        "highFi": "Design de Alta Fidelidade"
+      },
+      "oldTitle": "Começando à moda antiga",
+      "designFeatures": {
+        "chatTitle": "Design da Interface de Chat",
+        "chatDescription": "Chat estilo assistente profissional com indicadores de digitação, feedback de status em tempo real e agrupamento inteligente de mensagens por data (Hoje/Ontem/7 Dias/Mais Antigo).",
+        "mobileTitle": "Responsivo para Mobile",
+        "mobileDescription": "Barra lateral adaptativa que se transforma em menu mobile, garantindo experiência ótima em todos os dispositivos de desktop a smartphone."
+      },
+      "metrics": {
+        "trainingTitle": "Performance de Treinamento",
+        "trainingSubtitle": "Fine-tuning QLoRA do Llama-3.1-8B-Instruct alcançou convergência estável",
+        "trainingDescription": "O modelo alcançou perda de treinamento de 0.056 e perplexidade de 7.3 após 500 passos, demonstrando aprendizado eficiente de padrões específicos de imigração enquanto mantinha as capacidades do modelo base.",
+        "trainingPoints": {
+          "convergence": "Convergência Estável",
+          "convergenceDesc": "Curva de aprendizado suave mostrando treinamento eficaz",
+          "loss": "Perda Final Baixa",
+          "lossDesc": "Perda de 0.056 indica reconhecimento forte de padrões",
+          "optimized": "Treinamento Otimizado",
+          "optimizedDesc": "Adaptação QLoRA eficiente para domínio de imigração"
+        },
+        "ragTitle": "Avaliação RAG",
+        "ragSubtitle": "Performance do sistema de Geração Aumentada por Recuperação em consultas de imigração",
+        "ragDescription": "O sistema alcançou taxa de sucesso de recuperação de 100% com pontuação média de relevância de 0.57, fornecendo respostas precisas e citadas de fontes oficiais de imigração.",
+        "ragPoints": {
+          "retrieval": "Recuperação Perfeita",
+          "retrievalDesc": "Taxa de sucesso de 100% em todas as consultas de teste",
+          "relevance": "Alta Relevância",
+          "relevanceDesc": "Pontuação média de 0.57 para precisão de documentos",
+          "sources": "Fontes Oficiais",
+          "sourcesDesc": "Citação consistente da documentação IRCC"
+        }
+      },
+      "results": [
+        "Alcançou 100% de taxa de sucesso de recuperação em 10 consultas de imigração de referência com pontuação média de relevância de 0.57",
+        "Reduziu o tempo de busca de informações de horas para segundos enquanto mantinha precisão de citação de fontes oficiais do IRCC",
+        "Criou dashboard abrangente de avaliação com métricas simuladas de treinamento (curvas de loss/perplexidade) e visualização de performance RAG"
+      ]
+    },
+    "nextProject": {
+      "title": "PHOTOX",
+      "description": "Plataforma de Taxa de Carbono e NFT",
+      "cta": "Explorar Projeto"
+    }
+  }
+}

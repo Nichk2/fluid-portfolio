@@ -1,0 +1,50 @@
+{
+  "p3mPlatform": {
+    "navigation": {
+      "back": "Voltar para o portfólio"
+    },
+    "hero": {
+      "category": "APLICATIVO WEB",
+      "client": "Cliente",
+      "year": "Ano",
+      "duration": "Duração",
+      "role": "Função"
+    },
+    "sections": {
+      "overview": "Visão Geral",
+      "problem": "Problema",
+      "goal": "Objetivo",
+      "layersRedesign": "Redesign da Seção de Camadas",
+      "commodityCards": "Redesign dos Cards de Commodities",
+      "menuSimplification": "Simplificação do Menu",
+      "newDashboard": "Novas Seções de Dashboard",
+      "quickSearch": "Redesign da Busca Rápida",
+      "finalHomepage": "Redesign Final da Página Inicial",
+      "results": "Resultados",
+      "nextProject": "Próximo Projeto"
+    },
+    "content": {
+      "overview": "A Plataforma P3M é uma ferramenta governamental brasileira que fornece informações e conhecimento sobre o processo de mineração para melhorar as decisões de negócios no setor e promover o desenvolvimento regional.",
+      "problem": "Nossos stakeholders queriam implementar várias mudanças no design da plataforma, especialmente a partir de ideias que conseguiram reunir de outras plataformas com o mesmo serviço. Essas plataformas fornecem os mesmos serviços de forma diferente, porém com um maior nível de usabilidade (de acordo com os stakeholders). Levando em conta esse contexto, eles decidiram mudar a plataforma adicionando alguns recursos tentando aproveitar ao máximo o que foi desenvolvido anteriormente, alterando assim o design parcialmente, não totalmente.",
+      "goal": "Decidimos implementar novos elementos e recursos na plataforma, mas tentando respeitar grande parte do design da P3M. Para isso, pesquisamos outras plataformas que têm o mesmo objetivo, como SARIG da Austrália 🇦🇺, Jazida do Brasil 🇧🇷 e SIGEOM do Canadá 🇨🇦.",
+      "originalScreensDescription": "A imagem acima mostra o design original da Plataforma P3M. A equipe responsável pela plataforma queria mudar alguns recursos e adicionar novos, mas queria manter o design original o máximo possível.",
+      "layersDescription": "A imagem acima mostra as alterações aplicadas pela nossa equipe durante o projeto. Criamos uma treeview na seção de Camadas, movemos alguns recursos para ela e construímos um fluxo de navegação melhor no topo da treeview. O menu que contém ícones de ação à direita da treeview não recebeu alterações devido à orientação do cliente.",
+      "commodityDescription": "A imagem acima mostra as alterações aplicadas nos cards de elementos. Criamos uma seção separada e dividimos em \"Principais Commodities\". Aplicamos um fundo mais claro, alterações no design dos cards com adição de mais cores para cada commodity, a fim de aumentar a energia positiva da plataforma e externalizar as diferenças entre as commodities.",
+      "menuDescription": "Outra mudança básica que é crucial mencionar é a realocação que a equipe fez com alguns ícones do menu inferior antigo e adicionou a seção \"Institucional\" para o usuário, como mostra a imagem acima. Para melhorar e facilitar o fluxo do usuário e a tomada de decisão, a ideia de tornar o menu inferior mais simples realocando elementos para a treeview chamou a atenção do cliente. MENOS, às vezes, é MAIS.",
+      "dashboardDescription": "Ambas as imagens acima mostram uma nova adição que tivemos a liberdade de mostrar ao cliente. São seções com alguns dashboards e cards. A primeira imagem é uma tela detalhada de um elemento específico (Ouro neste caso) e a outra é sobre um estudo específico de uma região do Brasil. Optamos por usar cards e brincar com alguns formatos para adicionar mais dinamismo, e usamos cores suaves para manter a limpeza.",
+      "quickSearchBefore": "Outra alteração importante foi a \"Busca Rápida\" - actions e design. Enquanto esta (a mais antiga) estava um pouco desconectada da plataforma de acordo com o cliente, trabalhamos em uma nova para promover mais conexão com a plataforma. Você pode ver na próxima imagem.",
+      "quickSearchAfter": "Adicionamos dois botões, um para busca geral - o primeiro da esquerda para a direita - e outro botão que abrirá o modal da segunda imagem.",
+      "finalDescription": "A \"Home\" da primeira versão estava limitada a mostrar apenas os cards de \"Conhecimento Geocientífico\" - este foi realocado para a pequena seção chamada \"Explorar mapa por categoria\" - a equipe achou que seria interessante fazer uma seção separada e inserir \"Principais Commodities\" no início, já que o cliente queria destacá-la para o usuário. A imagem acima é o resultado do nosso trabalho.",
+      "resultsText": "De acordo com a equipe responsável por solicitar nosso trabalho, muitos na instituição aprovaram nosso design e sentiram uma melhoria significativa na experiência do usuário. Nosso redesign também facilitou as novas implementações que estão por vir na nova plataforma.",
+      "beforeAfter": {
+        "before": "Antes",
+        "after": "Depois"
+      }
+    },
+    "nextProject": {
+      "title": "AwesomeGames",
+      "description": "Repositório de pesquisa hidrológica para acadêmicos",
+      "cta": "Ver estudo de caso"
+    }
+  }
+}

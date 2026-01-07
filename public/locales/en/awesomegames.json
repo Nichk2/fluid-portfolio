@@ -1,0 +1,126 @@
+{
+  "common": {
+    "backToPortfolio": "Back to portfolio",
+    "nextProject": "Next Project",
+    "viewCaseStudy": "View case study",
+    "thankYou": "Thank you very much for reading! 😊",
+    "emailText": "For more work inquiries, or to grab a coffee do email me at"
+  },
+  "awesomeGames": {
+    "meta": {
+      "category": "Mobile App Design",
+      "title": "AwesomeGames",
+      "subtitle": "A gaming community and discovery app that connects players and helps them find their next favorite game",
+      "client": "Course Project",
+      "year": "2022",
+      "duration": "1 month",
+      "role": "Lead UX/UI Designer"
+    },
+    "titles": {
+      "client": "Client",
+      "year": "Year",
+      "duration": "Duration",
+      "role": "Role",
+      "userPersona": "User Persona",
+      "siteMap": "Site Map",
+      "informationArchitecture": "Information Architecture",
+      "wireframes": "Wireframes",
+      "usabilityTesting": "Usability Testing",
+      "empathyMap": "Aggregated Empathy Map",
+      "styleGuide": "Style Guide",
+      "highFidelity": "High Fidelity Designs",
+      "keyTakeaways": "Key Takeaways"
+    },
+    "introduction": [
+      "AwesomeGames is a game library app where all users can interact with each other through a game community. In the app the users are able to navigate through many game categories, save games into their libraries so they can read more about the game and play it later (on another platform). They are also able to interact with other gamers in communities by chat and lives that the app opens to them.",
+      "This is a project part from a UX design course promoted by Google. In this project I was able to apply all the knowledge absorbed in the course such as: Conducting research, building wireframes, Lofi and Hifi prototypes and iterating on design."
+    ],
+    "keySections": {
+      "product": {
+        "title": "Product",
+        "content": "AwesomeGames is a game preview app, created for the gamer community to interact and know more about the game world."
+      },
+      "responsibilities": {
+        "title": "Responsibilities",
+        "content": [
+          "Conducting interviews",
+          "Creating paper and digital wireframes",
+          "Usability tests",
+          "Low-fidelity and high-fidelity prototypes"
+        ]
+      },
+      "problem": {
+        "title": "Problem",
+        "content": "Gamers need a platform where they can have a huge and diverse library of games with their previews and a community where they can interact with each other in order to know more about new games, tips and make new friends."
+      },
+      "goal": {
+        "title": "Goal",
+        "content": "Design an app that can provide game previews (through a big library) for gamers and make them interact with themselves. The design must be simple and intuitive for the user."
+      },
+      "role": {
+        "title": "My role",
+        "content": "UX/UI designer"
+      },
+      "duration": {
+        "title": "Project duration",
+        "content": "September - December 2022 (This project was created in order to complete Google UX design course)"
+      }
+    },
+    "process": {
+      "description": "In order to achieve the goals of such research, I conducted interviews with the users of such platforms and I also created empathy maps, vital to understand users real needs and their thoughts about their interacting process in the app.",
+      "steps": [
+        {
+          "title": "1. User Interviews",
+          "description": "Conducted in-depth interviews with people who are interested in those platforms to understand their pain points during their experience.",
+          "items": [
+            "Complex navigation",
+            "Lack of people directly engaging",
+            "Weak game previews"
+          ]
+        },
+        {
+          "title": "2. Competitive Analysis",
+          "description": "Studied game apps to identify best practices and areas for improvement."
+        },
+        {
+          "title": "😡 Pain points",
+          "items": [
+            "Hard Navigation: Users complain a lot about the bad navigation that apps of such nature provide.",
+            "Lack of game previews: Users demonstrated some frustration regarding the lack of game options in the apps.",
+            "No interaction with other gamers: The absence of a community to interact with other gamers also creates a level of insatisfaction among the users"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "studyType": "Study Type",
+      "moderated": "Moderated",
+      "participants": "Participants",
+      "ageRange": "Age Range",
+      "length": "Length",
+      "keyFindings": "Key Findings",
+      "findings": [
+        "Users loved the simple navigation",
+        "Adding games to library was intuitive",
+        "Some wanted smoother color transitions",
+        "Community features were highly praised"
+      ],
+      "userQuote": "User Quote",
+      "quote": "\"This is a really good idea, I love to play games, and I loved how the design was made to make navigation simple and fun! The way how we can add game previews to our libraries is also very easy. Nice app\""
+    },
+    "styleGuide": {
+      "colors": "Colors",
+      "typography": "Typography"
+    },
+    "keyTakeaways": [
+      "AwesomeGames has made an attempt to meet users' necessity to receive simplicity in a preview game app. The idea is to create a simple space where gamers could interact with each other, store their game previews so they can share with other players through the community available, watch lives and also share their live sessions with each other. one of the participants said, \"This is a really good idea, I love to play games, and I loved how the design was made to make navigation simple and fun! The way how we can add game previews to our libraries is also very easy. Nice app\"",
+      "Some of the participants did not express excitement with the idea of the game preview existence, however, they thought that with the rising of the new generation of gamers and their great community, this could work with some upgrades like improvements of navigation and changing of the design to something with smoother colors. Further changes and tests are required.",
+      "This project that I started since the beginning of the UX design google course was vital for me to understand processes of UX research and its methods and also helped me to optimize my design skills. It was a great experience to practice empathy and understanding what users really need."
+    ],
+    "nextProject": {
+      "title": "VisaBuddy",
+      "description": "AI-powered visa application assistant",
+      "cta": "View case study"
+    }
+  }
+}

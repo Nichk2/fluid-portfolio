@@ -1,0 +1,15 @@
+{
+  "links": {
+    "about": "About me",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "getInTouch": "Get in touch",
+    "language": {
+      "en": "English",
+      "pt": "Português",
+      "ariaLabel": "Change language"
+    }
+  }
+}

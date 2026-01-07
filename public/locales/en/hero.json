@@ -1,0 +1,14 @@
+{
+  "title": "Nicholas",
+  "subtitle": "LLM Engineer - UI/UX Designer - Frontend",
+  "description": {
+    "base": "Crafting digital experiences that seamlessly blend",
+    "highlight1": "innovation",
+    "highlight2": "aesthetics and",
+    "highlight3": "user-centricity"
+  },
+  "scrollIndicator": {
+    "ariaLabel": "Scroll to portfolio section"
+  }
+}
+

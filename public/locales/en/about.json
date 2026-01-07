@@ -1,0 +1,84 @@
+{
+  "title": "About me.",
+  "paragraphs": {
+    "intercultural": {
+      "base": "With a background in international studies and hands-on experience in Canada, I bring a deep understanding of",
+      "highlight": "intercultural collaboration",
+      "suffix": ". I communicate effectively with developers, stakeholders, and public sector teams, thriving in diverse, cross-functional environments."
+    },
+    "data": {
+      "base": "I work comfortably with both",
+      "highlight": "qualitative and quantitative data",
+      "suffix": ", transforming insights into intuitive and accessible user experiences. I’m used to managing multiple projects at once, which strengthens my adaptability and time management."
+    },
+    "technical": {
+      "base": "I continuously expand my technical toolkit. My current stack includes",
+      "tools": ["Figma"],
+      "coding": "and strong knowledge of",
+      "languages": "HTML5, CSS3, JavaScript (Typescript), React, Next.js and React Native, along with growing experience in Python and AI engineering (LoRA/QLoRA, Fine-Tuning, RAG, Quantization)",
+      "suffix": "."
+    },
+    "approach": {
+      "text": "I approach every project with commitment, creativity, and a results-driven mindset — aiming to deliver solutions that create meaningful value for both users and businesses."
+    },
+    "design": {
+      "base": "I believe exceptional design should feel effortless — solving complex problems while creating",
+      "highlight": "genuinely experiences",
+      "suffix": "."
+    }
+  },
+  "skills": {
+    "design": {
+      "title": "Design",
+      "items": [
+        "UI/UX Design",
+        "Visual Design",
+        "Prototyping",
+        "Design Systems"
+      ]
+    },
+    "research": {
+      "title": "Research",
+      "items": [
+        "User Research",
+        "Usability Testing",
+        "Strategy",
+        "Data Analysis"
+      ]
+    },
+    "frontend": {
+      "title": "Frontend Development",
+      "items": [
+        "React & Next.js Applications",
+        "TypeScript Development",
+        "Responsive Web Design",
+        "API Integration",
+        "Performance Optimization",
+        "Component Libraries",
+        "Progressive Web Apps"
+      ]
+    },
+    "ai": {
+      "title": "AI",
+      "items": [
+        "LoRA/QLoRA",
+        "Fine-Tuning and model adaptation",
+        "Retrieval-Augmented Generation (RAG)",
+        "Quantization",
+        "Agentic Workflows",
+        "LangChain and Python for AI development"
+      ]
+    }
+  },
+  "contact": {
+    "button": "Contact Me"
+  },
+  "footer": {
+    "copyright": {
+      "base": "© 2025",
+      "name": "Nicholas Andrade",
+      "rights": "All rights reserved."
+    },
+    "phone": "+55 12 98119-8452"
+  }
+}

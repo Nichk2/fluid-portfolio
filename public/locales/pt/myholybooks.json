@@ -1,0 +1,84 @@
+{
+  "myholybooks": {
+    "backToPortfolio": "Voltar ao portfólio",
+    "category": "WEB e MOBILE",
+    "title": "MyHolyBooks",
+    "subtitle": "Uma rede social cristã que promove conexões baseadas na fé e comunidade",
+    "client": "Investidor independente",
+    "year": "2024",
+    "yearTitle":"Ano",
+    "clientTitle":"Cliente",
+    "durationTitle":"Duração",
+    "roleTitle":"Função",
+    "duration": "5 meses",
+    "role": "Designer UX/UI (Pesquisa, Prototipagem, Testes)",
+    "overview": "MyHolyBooks é uma rede social cristã projetada para fortalecer laços e promover conexões autênticas dentro da comunidade de fé. A plataforma permite que os usuários compartilhem insights, criem livros personalizados com versículos bíblicos, adicionem notas e se apoiem mutuamente em um ambiente digital com propósito.",
+    "challenge": {
+      "title": "O Desafio",
+      "content": "O mercado brasileiro carecia de uma plataforma de mídia social cristã dedicada. Espaços existentes como blogs pareciam impessoais, e os usuários precisavam de um ambiente seguro e respeitoso para se conectar em torno de crenças compartilhadas, aproveitando estratégias familiares de engajamento em mídias sociais.",
+      "userInsight": "Insight do Usuário:",
+      "userInsightText": " Como ex-estudante e após uma conversa com outros estudantes, entendo a necessidade de uma plataforma centralizada e acessível para pesquisa acadêmica. Junto com o cliente (também um acadêmico) pudemos construir uma boa ideia de produto.",
+      "howMightWe": "Como Podemos:",
+      "howMightWeText": " Criar uma plataforma centrada na comunidade que simplifique o compartilhamento de pesquisas e melhore a colaboração entre acadêmicos?"
+    },
+    "solution": "Chegamos a uma solução 'simples' para isso... MyHolyBooks!!",
+    "designProcess": {
+      "title": "Processo de Design",
+      "empathize": {
+        "title": "Empatizar",
+        "content": "Conduzi uma reunião com os desenvolvedores e com o stakeholder para melhor compreender a ideia do projeto (que foi criada anteriormente), necessidades reais, motivações, entrevistas com cristãos e outras variáveis para que eu possa fornecer as melhores soluções."
+      },
+      "define": {
+        "title": "Definir",
+        "content": "Após a reunião, identificamos um problema-chave: o mercado brasileiro—onde o stakeholder planeja lançar primeiro—carece de um ambiente digital que suporte o tipo de interação do usuário comumente encontrado em plataformas sociais como Facebook, X (anteriormente Twitter) e LinkedIn.",
+        "personaText": "Para alinhar efetivamente o processo de design, comecei a análise de personas. Com base em nossa pesquisa, desenvolvemos personas detalhadas para representar com precisão nossos usuários-alvo e informar nossas decisões de design."
+      },
+      "ideate": {
+        "title": "Idealizar",
+        "content": "O processo de ideação consistiu na criação de muitos esboços da visão futura de como a plataforma seria. Conduzi um benchmarking e analisei as redes sociais Facebook e LinkedIn buscando inspiração.",
+        "designExploration": "Exploração de Design",
+        "designExplorationSub": "Esboços, exploração de estilo e desenvolvimento de paleta de cores",
+        "featureExploration": "Exploração de Funcionalidades",
+        "featureTitle 1": "1 - Crie seu grupo", 
+        "featureTitle 2": "2 - Suporte para idiomas",
+        "featureTitleBox 1": "1 - Crie seu grupo",
+        "featureTitleBox 2": "2 - Suporte para idiomas",
+        "featureContainer 1": "Implementamos a funcionalidade de criação de grupos para permitir que os usuários se conectem em torno de interesses específicos ou tópicos de estudo bíblico.", 
+        "featureContainerText 1": "Interface de criação de grupos mostrando como os usuários podem formar comunidades em torno de interesses em comum.", 
+        "featureContainer 2": "Adicionada seleção de idioma para permitir que os usuários explorem a fé em diferentes culturas e traduções da Bíblia.", 
+        "featureContainerText 2": "Interface de seleção de idioma que suporta múltiplas traduções e contextos culturais."
+      },
+      "prototype": {
+        "title": "Prototipar",
+        "content": "Para esta fase do processo, pensei que seria interessante fornecer dois entregáveis, protótipos de média e alta fidelidade baseados nas ideias que pude reunir durante o processo de ideação. A razão pela qual escolhi essa abordagem é dar mais liberdade e segurança ao stakeholder sobre como a plataforma será."
+      },
+      "test": {
+        "title": "Testar",
+        "content": "Usei a ferramenta Maze para me ajudar nesta parte extremamente importante do projeto. Os testes (criados para ambas as versões web e mobile) tinham as mesmas tarefas seguidas de perguntas abertas relacionadas à experiência do usuário."
+      }
+    },
+    "finalProduct": {
+      "title": "Produto Final",
+      "content": "Em nossa rodada final de testes de usabilidade, o feedback dos usuários confirmou o sucesso da plataforma em entregar uma experiência intuitiva e envolvente alinhada com seu propósito de promover uma comunidade centrada na fé.",
+      "webVersion": "Versão Web",
+      "mobileVersion": "Versão Mobile"
+    },
+    "results": {
+      "title": "Resultados e Impacto",
+      "items": [
+        "Um estudo profundo teve que ser feito para melhor compreender as variantes do cristianismo no Brasil. Como o objetivo principal é acolher todos os cristãos, a equipe teve que se certificar de ser cuidadosa com símbolos, palavras e outros elementos",
+        "Feedback positivo dos testes de usabilidade sobre navegação intuitiva",
+        "Atualmente em desenvolvimento com lançamento planejado para 2025",
+        "Usuários relataram se sentir 'seguros e respeitados' nos testes de protótipo"
+      ],
+      "fallback": "Os resultados serão exibidos aqui quando a tradução estiver disponível."
+    },
+    "nextProject": {
+      "title": "Próximo Projeto",
+      "p3mPlatform": "Redesign da Plataforma P3M",
+      "description": "Plataforma de mapa de recursos naturais",
+      "viewCaseStudy": "Ver estudo de caso",
+      "cta": "Ver estudo de caso"
+    }
+  }
+}

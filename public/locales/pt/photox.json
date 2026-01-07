@@ -1,0 +1,63 @@
+{
+  "photox": {
+    "title": "PHOTOX",
+    "category": "Aplicativo Web",
+    "duration": "3 meses",
+    "duration2": "Duração",
+    "role": "Função",
+    "year": "Ano",
+    "client": "Cliente",
+    "title1": "Visão Geral",
+    "title2": "Problema",
+    "title3": "Solução",
+    "before": "Antes",
+    "after": "Depois",
+    "nextProject": "Próximo Projeto",
+    "projectLabel": "HYBRAS COLLAB",
+    "descriptionLabel":"Repositório de pesquisa hidrológica para acadêmicos",
+    "viewProject":"Ver estudon de caso",
+    "overview": "Photox é uma plataforma que facilita a compensação de carbono combinando natureza e tecnologia para impulsionar a preservação ambiental.",
+    "challenge": "O principal desafio foi melhorar a usabilidade da plataforma Photox, garantindo que os usuários pudessem entender facilmente seus produtos (tokens de governança, tokens de carbono e NFTs guardiões). O redesign visou melhorar a clareza das informações e otimizar a experiência de compra/investimento. As imagens abaixo mostram o design antes de nossa aplicação.",
+    "solution": "Implementamos um design limpo e moderno, navegação intuitiva, recursos aprimorados de descoberta de conteúdo e um mapa que poderia mostrar informações sobre NFTs, tokens e áreas disponíveis para explorar",
+    "goals": {
+      "title": "Objetivos",
+      "items": [
+        "Educar os usuários e esclarecer sua jornada",
+        "Simplificar o processo de compra e investimento",
+        "Construir confiança e garantir transparência"
+      ]
+    },
+    "process": {
+      "title": "Processo de Design",
+      "empathize": {
+        "title": "1 → Empatizar",
+        "description": "Realizei reuniões com desenvolvedores e stakeholders para obter uma compreensão mais profunda do projeto existente, suas necessidades, motivações e outros fatores-chave, permitindo-me propor as melhores soluções para o redesign."
+      },
+      "define": {
+        "title": "2 → Definir",
+        "description": "Após a reunião, identificamos que o mercado de sustentabilidade no Brasil, onde a Photox planeja operar inicialmente, ainda carece de uma plataforma que permita interação fácil e transparente do usuário. Também comecei a analisar personas para entender melhor as necessidades e expectativas do público-alvo, ajudando a definir a melhor abordagem de design.",
+        "goal": "O objetivo é: Vamos criar uma experiência intuitiva e envolvente reconstruindo a plataforma, tornando mais fácil para todos se conectarem e investirem na preservação ambiental de forma simples e acessível!"
+      },
+      "ideate": {
+        "title": "3 → Ideação",
+        "description": "O processo de ideação envolveu a criação de vários esboços para visualizar como a plataforma Photox poderia evoluir. Para apoiar isso, analisei plataformas como Ecologi, GoldStandard e kikin (a última não pertence ao nicho, mas tem uma boa estrutura e estilo) que também trabalham com créditos de carbono, inspirando-me para melhorar a experiência do usuário e a navegação."
+      },
+      "prototype": {
+        "title": "4 → Protótipo",
+        "description": "Nesta fase, entreguei um protótipo de alta fidelidade baseado nas ideias reunidas durante a fase de ideação. Escolher um único protótipo proporcionou ao stakeholder uma visão mais clara do design da plataforma, facilitando ajustes e garantindo melhor alinhamento—especialmente considerando o curto prazo."
+      },
+      "test": {
+        "title": "5 → Testar",
+        "description": "Usei a ferramenta Maze para auxiliar nesta parte crucial do projeto. Os testes foram estruturados em torno de perguntas abertas relacionadas à experiência do usuário e objetivos. Escolhi esse método para entender melhor as preferências e percepções dos usuários em relação ao design e à experiência geral."
+      }
+    },
+    "results": {
+      "title": "Resultados & Impacto",
+      "items": [
+        "Os usuários disseram que ficou muito mais intuitivo e fácil de usar",
+        "A arquitetura de informação foi simplificada, facilitando a navegação e compreensão de seu propósito",
+        "Os usuários agora conseguem entender melhor os produtos oferecidos pela Photox"
+      ]
+    }
+  }
+}

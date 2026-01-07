@@ -1,0 +1,50 @@
+{
+  "p3mPlatform": {
+    "navigation": {
+      "back": "Back to portfolio"
+    },
+    "hero": {
+      "category": "WEB APPLICATION",
+      "client": "Client",
+      "year": "Year",
+      "duration": "Duration",
+      "role": "Role"
+    },
+    "sections": {
+      "overview": "Overview",
+      "problem": "Problem",
+      "goal": "Goal",
+      "layersRedesign": "Layers Section Redesign",
+      "commodityCards": "Commodity Cards Redesign",
+      "menuSimplification": "Menu Simplification",
+      "newDashboard": "New Dashboard Sections",
+      "quickSearch": "Quick Search Redesign",
+      "finalHomepage": "Final Homepage Redesign",
+      "results": "Results",
+      "nextProject": "Next Project"
+    },
+    "content": {
+      "overview": "The P3M Platform is a Brazilian government tool that provides information and knowledge about the mining process to improve business decisions in the sector and promote regional development.",
+      "problem": "Our stakeholders wanted to implement several changes to the platform's design, especially from ideas they gathered from other platforms with the same service. These platforms provide the same services differently, but with a higher level of usability (according to the stakeholders). Taking this context into account, they decided to change the platform by adding some features while trying to make the most of what was previously developed, thus partially changing the design, not completely.",
+      "goal": "We decided to implement new elements and features on the platform, but trying to respect much of P3M's original design. For this, we researched other platforms that have the same objective, such as SARIG from Australia 🇦🇺, Jazida from Brazil 🇧🇷, and SIGEOM from Canada 🇨🇦.",
+      "originalScreensDescription": "The image above shows the original design of the P3M Platform. The team responsible for the platform wanted to change some features and add new ones, but wanted to maintain the original design as much as possible.",
+      "layersDescription": "The image above shows the changes applied by our team during the project. We created a treeview in the Layers section, moved some features to it, and built better navigation flow at the top of the treeview. The menu containing action icons to the right of the treeview did not receive changes due to client direction.",
+      "commodityDescription": "The image above shows the changes applied to the element cards. We created a separate section and divided it into \"Main Commodities\". We applied a lighter background, design changes to the cards with the addition of more colors for each commodity, in order to increase positive energy on the platform and externalize the differences between commodities.",
+      "menuDescription": "Another basic change that is crucial to mention is the relocation that the team made with some icons from the old bottom menu and added the \"Institutional\" section for the user, as shown in the image above. To improve and facilitate user flow and decision-making, the idea of making the bottom menu simpler by relocating elements to the treeview caught the client's attention. LESS, sometimes, is MORE.",
+      "dashboardDescription": "Both images above show a new addition that we had the freedom to show the client. They are sections with some dashboards and cards. The first image is a detailed screen of a specific element (Gold in this case) and the other is about a specific study of a region in Brazil. We chose to use cards and play with some formats to add more dynamism, and used soft colors to maintain cleanliness.",
+      "quickSearchBefore": "Another important change was the \"Quick Search\" - actions and design. While this one (the older one) was somewhat disconnected from the platform according to the client, we worked on a new one to promote more connection with the platform. You can see it in the next image.",
+      "quickSearchAfter": "We added two buttons, one for general search - the first from left to right - and another button that will open the modal from the second image.",
+      "finalDescription": "The \"Home\" of the first version was limited to showing only the \"Geoscientific Knowledge\" cards - this was relocated to the small section called \"Explore map by category\" - the team thought it would be interesting to create a separate section and insert \"Main Commodities\" at the beginning, since the client wanted to highlight it for the user. The image above is the result of our work.",
+      "resultsText": "According to the team responsible for requesting our work, many in the institution approved our design and felt a significant improvement in user experience. Our redesign also facilitated the new implementations that are coming to the new platform.",
+      "beforeAfter": {
+        "before": "Before",
+        "after": "After"
+      }
+    },
+    "nextProject": {
+      "title": "AwesomeGames",
+      "description": "Hydrological research repository for academics",
+      "cta": "View case study"
+    }
+  }
+}

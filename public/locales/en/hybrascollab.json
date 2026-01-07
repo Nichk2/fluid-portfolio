@@ -1,0 +1,106 @@
+{
+  "hybras": {
+    "navigation": {
+      "back": "Back to portfolio"
+    },
+    "hero": {
+      "client": "Client",
+      "year": "Year",
+      "duration": "Duration",
+      "role": "Role",
+      "time": "4 months"
+    },
+    "sections": {
+      "overview": "Overview",
+      "challenge": "The Challenge",
+      "solution": "The Solution",
+      "research": "Research & Workshops",
+      "persona": "User Persona",
+      "empathy": "Empathy Map",
+      "testing": "Testing & Improvements",
+      "evolution": "Design Evolution",
+      "final": "HYBRAS COLLAB was born!",
+      "results": "Results & Impact",
+      "next": "Next Project"
+    },
+    "content": {
+      "userInsight": "User Insight",
+      "howMightWe": "How Might We",
+      "workshopCaption": "Workshop sessions with hydrology researchers to understand their needs.",
+      "competitiveAnalysis": "We also analyzed competitive platforms for inspiration and to tailor the solution to hydrology research. They key point was to create the same level of organization e usability so the client and users would be able to",
+      "personaDescription": "Meet Maria, our primary persona - a passionate professor with expertise in Civil Engineering and a focus on Water Resources and the Environment.",
+      "personaCaption": "Persona representing our target users - hydrology researchers and professors",
+      "empathyDescription": "Understanding what users say, think, do, and feel helped us design a platform that truly meets their needs.",
+      "empathyCaption": "Empathy map capturing user thoughts, feelings, and behaviors",
+      "testingDescription": "Three majors improvements were done in the design! We conducted 6 usability tests with stakeholders and identified three major improvements for the product.",
+      "evolutionDescription": "See how the platform evolved from initial concepts to the final polished design.",
+      "before": "Before",
+      "after": "After",
+      "finalCaption": "Final interface design of the HYBRAS COLLAB platform"
+    },
+    "solutionCarousel": [
+      {
+        "title": "Have a place to share your work!",
+        "bullets": [
+          "Upload your research",
+          "Leave comments to the evaluator"
+        ]
+      },
+      {
+        "title": "Have Accountability in the system",
+        "bullets": [
+          "History of chats and status of the process",
+          "Respect for each research and its licenses",
+          "Attention and care with the uploaded documents"
+        ]
+      },
+      {
+        "title": "Keep tracking your notifications",
+        "bullets": [
+          "Notifications screen is available and a design based on Process, so the user can be served by the product in pro active way",
+          "Keep your eyes on the bell!"
+        ]
+      },
+      {
+        "title": "Dashboard",
+        "bullets": [
+          "Manage research activities with a comprehensive dashboard"
+        ]
+      }
+    ],
+    "caseStudyData": {
+      "category": "WEB APP",
+      "overview": "This case study outlines the creation process of a platform so students and scholars can upload research related with hydrology and soil. Hybras Collab library of research already exist, however its operations occurs via email (they are sent via email) and its adminstration is difficult. So we decided, together with our client, to simplify this process and create a platform to do such service and also to promote connection between people who are interested in such subjects.",
+      "challenge": "Scholars lack an efficient platform to share and access hydrology research. How can we automate a email based system? Where we can centralize the information?",
+      "solution": "A platform so they can upload Hydrological studies and also visualize other research",
+      "process": [
+        {
+          "phase": "Research & Discovery",
+          "description": "Conducted in-depth interviews with creative professionals, analyzed existing collaboration tools, and identified key pain points in current workflows and communication methods."
+        },
+        {
+          "phase": "User Journey Mapping",
+          "description": "Created detailed user journey maps for different personas including designers, project managers, and clients to understand their specific needs and touchpoints."
+        },
+        {
+          "phase": "Wireframing & Prototyping",
+          "description": "Developed low and high-fidelity wireframes focusing on intuitive navigation and efficient task completion, followed by interactive prototypes for user testing."
+        },
+        {
+          "phase": "Visual Design & Testing",
+          "description": "Created a cohesive design system with modern aesthetics, conducted usability testing sessions, and iteratively refined the interface based on user feedback."
+        }
+      ],
+      "results": [
+        "Great impact in the new conception of the product. What once was a simple and complicated system of emails now has a robust design and purpose.",
+        "Successfully handed off finalized UX/UI designs to the development team, with positive feedback from the client.",
+        "Project is currently under development, with outcomes to be measured post-launch."
+      ]
+    },
+    "nextProject": {
+      "title": "MyHolyBooks",
+      "description": "Religious social network",
+      "cta": "View case study"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "hybras": {
+    "navigation": {
+      "back": "Voltar para o portfólio"
+    },
+    "hero": {
+      "client": "Cliente",
+      "year": "Ano",
+      "duration": "Duração",
+      "role": "Função",
+      "time": "4 meses"
+    },
+    "sections": {
+      "overview": "Visão Geral",
+      "challenge": "O Desafio",
+      "solution": "A Solução",
+      "research": "Pesquisa & Workshops",
+      "persona": "Persona do Usuário",
+      "empathy": "Mapa de Empatia",
+      "testing": "Testes & Melhorias",
+      "evolution": "Evolução do Design",
+      "final": "O HYBRAS COLLAB nasceu!",
+      "results": "Resultados e Impacto",
+      "next": "Próximo Projeto"
+    },
+    "content": {
+      "userInsight": "Insight do Usuário",
+      "howMightWe": "Como Poderíamos",
+      "workshopCaption": "Sessões de workshop com pesquisadores de hidrologia para entender suas necessidades.",
+      "competitiveAnalysis": "Também analisamos plataformas concorrentes para inspiração e para adaptar a solução à pesquisa em hidrologia. O ponto chave foi criar o mesmo nível de organização e usabilidade para que o cliente e os usuários pudessem",
+      "personaDescription": "Conheça Maria, nossa persona principal - uma professora apaixonada com expertise em Engenharia Civil e foco em Recursos Hídricos e Meio Ambiente.",
+      "personaCaption": "Persona representando nossos usuários-alvo - pesquisadores e professores de hidrologia",
+      "empathyDescription": "Entender o que os usuários dizem, pensam, fazem e sentem nos ajudou a projetar uma plataforma que realmente atenda às suas necessidades.",
+      "empathyCaption": "Mapa de empatia capturando pensamentos, sentimentos e comportamentos dos usuários",
+      "testingDescription": "Três grandes melhorias foram feitas no design! Realizamos 6 testes de usabilidade com stakeholders e identificamos três melhorias principais para o produto.",
+      "evolutionDescription": "Veja como a plataforma evoluiu dos conceitos iniciais para o design final polido.",
+      "before": "Antes",
+      "after": "Depois",
+      "finalCaption": "Design final da interface da plataforma HYBRAS COLLAB"
+    },
+    "solutionCarousel": [
+      {
+        "title": "Tenha um lugar para compartilhar seu trabalho!",
+        "bullets": [
+          "Envie sua pesquisa",
+          "Deixe comentários para o avaliador"
+        ]
+      },
+      {
+        "title": "Tenha responsabilidade no sistema",
+        "bullets": [
+          "Histórico de chats e status do processo",
+          "Respeito por cada pesquisa e suas licenças",
+          "Atenção e cuidado com os documentos enviados"
+        ]
+      },
+      {
+        "title": "Acompanhe suas notificações",
+        "bullets": [
+          "Tela de notificações disponível e um design baseado em Processo, para que o usuário possa ser atendido pelo produto de forma proativa",
+          "Fique de olho no sino!"
+        ]
+      },
+      {
+        "title": "Painel de Controle",
+        "bullets": [
+          "Gerencie atividades de pesquisa com um painel abrangente"
+        ]
+      }
+    ],
+    "caseStudyData": {
+      "category": "APLICATIVO WEB",
+      "overview": "Este estudo de caso descreve o processo de criação de uma plataforma para que estudantes e acadêmicos possam enviar pesquisas relacionadas a hidrologia e solo. A biblioteca de pesquisas do Hybras Collab já existe, porém suas operações ocorrem via e-mail (são enviadas por e-mail) e sua administração é difícil. Então decidimos, junto com nosso cliente, simplificar esse processo e criar uma plataforma para realizar esse serviço e também promover a conexão entre pessoas interessadas nesses assuntos.",
+      "challenge": "Acadêmicos carecem de uma plataforma eficiente para compartilhar e acessar pesquisas em hidrologia. Como podemos automatizar um sistema baseado em e-mail? Onde podemos centralizar as informações?",
+      "solution": "Uma plataforma para que possam enviar estudos hidrológicos e também visualizar outras pesquisas",
+      "process": [
+        {
+          "phase": "Pesquisa e Descoberta",
+          "description": "Realizamos entrevistas aprofundadas com profissionais criativos, analisamos ferramentas de colaboração existentes e identificamos pontos problemáticos nos fluxos de trabalho e métodos de comunicação atuais."
+        },
+        {
+          "phase": "Mapeamento da Jornada do Usuário",
+          "description": "Criamos mapas detalhados da jornada do usuário para diferentes personas, incluindo designers, gerentes de projeto e clientes, para entender suas necessidades específicas e pontos de contato."
+        },
+        {
+          "phase": "Wireframing e Prototipagem",
+          "description": "Desenvolvemos wireframes de baixa e alta fidelidade com foco em navegação intuitiva e conclusão eficiente de tarefas, seguidos por protótipos interativos para testes com usuários."
+        },
+        {
+          "phase": "Design Visual e Testes",
+          "description": "Criamos um sistema de design coeso com estética moderna, conduzimos sessões de teste de usabilidade e refinamos iterativamente a interface com base no feedback dos usuários."
+        }
+      ],
+      "results": [
+        "Grande impacto na nova concepção do produto. O que antes era um sistema simples e complicado de e-mails agora tem um design robusto e propósito.",
+        "Entregamos com sucesso os designs finais de UX/UI para a equipe de desenvolvimento, com feedback positivo do cliente.",
+        "O projeto está atualmente em desenvolvimento, com resultados a serem medidos após o lançamento."
+      ]
+    },
+    "nextProject": {
+      "title": "MyHolyBooks",
+      "description": "Rede social religiosa",
+      "cta": "Ver estudo de caso"
+    }
+  }
+}

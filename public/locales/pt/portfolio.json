@@ -1,0 +1,46 @@
+{
+  "header": {
+    "title": "Trabalhos Selecionados",
+    "description": {
+      "base": "Uma coleção curada de projetos que mostram minha abordagem para resolver desafios complexos de design e criar",
+      "highlight": "experiências de usuário significativas",
+      "suffix": "que geram resultados."
+    }
+  },
+  "projects": {
+    "visabuddy": {
+      "title": "VisaBuddy",
+      "subtitle": "Assistente de aplicação de visto com IA",
+      "category": "IA / FULLSTACK / UX-UI DESIGN"
+    },
+    "photox": {
+      "title": "PHOTOX",
+      "subtitle": "Plataforma de Taxa de Carbono e NFT",
+      "category": "APLICATIVO WEB"
+    },
+    "myholybooks": {
+      "title": "MyHolyBooks",
+      "subtitle": "Rede social cristã",
+      "category": "WEB E MOBILE"
+    },
+    "hybras-collab": {
+      "title": "HYBRAS COLLAB",
+      "subtitle": "Repositório de pesquisa hidrológica para acadêmicos",
+      "category": "APLICATIVO WEB"
+    },
+    "p3m-platform": {
+      "title": "Plataforma P3M",
+      "subtitle": "Plataforma de mapeamento de recursos naturais",
+      "category": "APLICATIVO WEB"
+    },
+    "awesomegames": {
+      "title": "AwesomeGames",
+      "subtitle": "Aplicativo de pré-visualização de jogos",
+      "category": "APLICATIVO MOBILE"
+    }
+  },
+  "ui": {
+    "explore": "Explorar Projeto",
+    "missingVisual": "Adicionar visual de {project} aqui"
+  }
+}

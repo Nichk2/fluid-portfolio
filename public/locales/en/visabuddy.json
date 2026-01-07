@@ -1,0 +1,120 @@
+{
+  "visaBuddy": {
+    "navigation": {
+      "back": "Back to portfolio"
+    },
+    "hero": {
+      "category": "AI / Fullstack Project / UX-UI DESIGN",
+      "client": "Client",
+      "year": "Year",
+      "duration": "Duration",
+      "role": "Role"
+    },
+    "sections": {
+      "overview": "Overview",
+      "problem": "The Immigration Complexity Problem",
+      "training": "QLoRA Training on Modal Platform",
+      "backend": "Backend Architecture",
+      "frontend": "Frontend Implementation",
+      "design": "UX/UI Design Process",
+      "metrics": "Model Metrics",
+      "results": "Measurable Impact",
+      "nextProject": "Next Project"
+    },
+    "content": {
+      "overview": "VisaBuddy is a sophisticated AI-powered Canadian immigration assistant that combines Retrieval-Augmented Generation (RAG) with QLoRA fine-tuning to provide accurate, context-aware guidance on complex immigration procedures. The system transforms unstructured government documentation into actionable insights through a modern chat interface.",
+      "problem": "Navigating Canadian immigration is notoriously complex, with applicants facing thousands of pages of frequently updated regulations across multiple programs (Express Entry, study permits, work permits, etc.). Traditional search methods often yield incomplete or outdated information, leading to application errors, delays, and unnecessary stress.",
+      "problemPoints": {
+        "pages": "Thousands of Pages",
+        "pagesDesc": "Government regulations scattered across multiple programs",
+        "updates": "Frequent Updates",
+        "updatesDesc": "Policies change regularly, requiring constant monitoring",
+        "decisions": "High-Stakes Decisions",
+        "decisionsDesc": "Application errors can lead to rejection and delays"
+      },
+      "trainingDescription": "The model was fine-tuned using QLoRA (Quantized Low-Rank Adaptation) on Modal's GPU platform, enabling efficient training of the Llama-3.1-8B-Instruct model with minimal memory overhead. Modal provided seamless access to T4 GPUs and automated deployment workflows.",
+      "jupyterTitle": "Jupyter Notebook Training",
+      "jupyterDescription": "Interactive Jupyter notebooks were used for training, allowing iterative development of the RAG pipeline and QLoRA fine-tuning.",
+      "modalTitle": "Powered by Modal",
+      "modalDescription": "Modal's serverless GPU platform enabled efficient QLoRA fine-tuning without infrastructure management. The platform provided:",
+      "modalPoints": [
+        "T4 GPU instances for QLoRA training",
+        "Automated model packaging and deployment",
+        "Cost-effective pay-per-second billing",
+        "Seamless integration with Hugging Face models"
+      ],
+      "backendDescription": "Built a Python backend optimized for Colab deployment, featuring FastAPI endpoints for chat interactions and RAG retrieval. The system loads LoRA adapters on top of Llama-3.1-8B-Instruct, with intelligent context window management. Key backend features include similarity-aware retrieval with configurable thresholds, conversation history tracking, and fallback mechanisms to ensure reliability when the primary model is unavailable.",
+      "backendDemoTitle": "Backend in Action",
+      "backendDemoDescription": "FastAPI backend running in Google Colab with real-time model inference and RAG retrieval.",
+      "techStack": {
+        "fastapi": "FastAPI",
+        "fastapiDesc": "High-performance API framework",
+        "chromadb": "ChromaDB",
+        "chromadbDesc": "Vector database for embeddings",
+        "transformers": "Transformers",
+        "transformersDesc": "Llama-3.1-8B-Instruct",
+        "sentenceTransformers": "Sentence-Transformers",
+        "sentenceTransformersDesc": "Embedding generation"
+      },
+      "frontendDescription": "Developed a React + TypeScript frontend with Vite for optimal performance. Implemented custom hooks (useVisaBuddy) for state management and API communication, with typed service layers (visaBuddyApi.ts) ensuring robust error handling. The UI leverages Tailwind with custom effects, Framer Motion for smooth animations, and localStorage persistence for chat history. The component architecture features reusable modals, intelligent date formatting utilities, and responsive design patterns.",
+      "frontendDemoTitle": "Frontend Demo",
+      "frontendDemoDescription": "Interactive chat interface with real-time responses and smooth animations.",
+      "frontendTech": {
+        "react": "React",
+        "reactDesc": "Latest React with concurrent features",
+        "typescript": "TypeScript",
+        "typescriptDesc": "Type-safe development",
+        "tailwind": "Tailwind",
+        "tailwindDesc": "Utility-first styling",
+        "framer": "Framer Motion",
+        "framerDesc": "Smooth animations"
+      },
+      "designDescription": "The UX followed a professional assistant paradigm rather than a toy demo. Key design decisions included persistent multi-chat history with intelligent date grouping (Today/Yesterday/7 Days/Older), real-time connection status indicators, and a clean modal-based backend configuration interface. The chat interface features smooth message transitions, typing indicators with \"Visa Buddy is thinking...\" feedback, and a responsive sidebar that adapts to mobile usage patterns.",
+      "beforeAfter": {
+        "lowFi": "Low-Fidelity Design",
+        "highFi": "High-Fidelity Design"
+      },
+      "oldTitle": "Starting oldschool",
+      "designFeatures": {
+        "chatTitle": "Chat Interface Design",
+        "chatDescription": "Professional assistant-style chat with typing indicators, real-time status feedback, and intelligent message grouping by date (Today/Yesterday/7 Days/Older).",
+        "mobileTitle": "Mobile Responsive",
+        "mobileDescription": "Adaptive sidebar that transforms into a mobile menu, ensuring optimal experience across all devices from desktop to smartphone."
+      },
+      "metrics": {
+        "trainingTitle": "Training Performance",
+        "trainingSubtitle": "QLoRA fine-tuning of Llama-3.1-8B-Instruct achieved stable convergence",
+        "trainingDescription": "The model achieved training loss of 0.056 and perplexity of 7.3 after 500 steps, demonstrating efficient learning of immigration-specific patterns while maintaining base model capabilities.",
+        "trainingPoints": {
+          "convergence": "Stable Convergence",
+          "convergenceDesc": "Smooth learning curve showing effective training",
+          "loss": "Low Final Loss",
+          "lossDesc": "0.056 loss indicates strong pattern recognition",
+          "optimized": "Optimized Training",
+          "optimizedDesc": "Efficient QLoRA adaptation for immigration domain"
+        },
+        "ragTitle": "RAG Evaluation",
+        "ragSubtitle": "Retrieval-Augmented Generation system performance across immigration queries",
+        "ragDescription": "The system achieved 100% retrieval success rate with average relevance score of 0.57, providing accurate, cited responses from official immigration sources.",
+        "ragPoints": {
+          "retrieval": "Perfect Retrieval",
+          "retrievalDesc": "100% success rate across all test queries",
+          "relevance": "High Relevance",
+          "relevanceDesc": "0.57 average score for document accuracy",
+          "sources": "Official Sources",
+          "sourcesDesc": "Consistent citation from IRCC documentation"
+        }
+      },
+      "results": [
+        "Achieved 100% retrieval success rate across 10 benchmark immigration queries with average relevance score of 0.57",
+        "Reduced information lookup time from hours to seconds while maintaining citation accuracy from official IRCC sources",
+        "Created comprehensive evaluation dashboard with simulated training metrics (loss/perplexity curves) and RAG performance visualization"
+      ]
+    },
+    "nextProject": {
+      "title": "PHOTOX",
+      "description": "Carbon Tax and NFT platform",
+      "cta": "View case study"
+    }
+  }
+}

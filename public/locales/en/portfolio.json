@@ -1,0 +1,46 @@
+{
+  "header": {
+    "title": "Selected Work",
+    "description": {
+      "base": "A curated collection of projects that showcase my approach to solving complex design challenges and creating",
+      "highlight": "meaningful user experiences",
+      "suffix": "that drive results."
+    }
+  },
+  "projects": {
+    "photox": {
+      "title": "PHOTOX",
+      "subtitle": "Carbon Tax and NFT platform",
+      "category": "WEB APP"
+    },
+    "visabuddy": {
+      "title": "VisaBuddy",
+      "subtitle": "AI-powered visa application assistant",
+      "category": "AI / FULLSTACK / UX-UI DESIGN"
+    },
+    "myholybooks": {
+      "title": "MyHolyBooks",
+      "subtitle": "Christian social network",
+      "category": "WEB AND MOBILE"
+    },
+    "hybras-collab": {
+      "title": "HYBRAS COLLAB",
+      "subtitle": "Hydrology research repository for scholars",
+      "category": "WEB APP"
+    },
+    "p3m-platform": {
+      "title": "P3M Platform",
+      "subtitle": "Natural resources map platform",
+      "category": "WEB APP"
+    },
+    "awesomegames": {
+      "title": "AwesomeGames",
+      "subtitle": "Gaming preview app",
+      "category": "MOBILE APP"
+    }
+  },
+  "ui": {
+    "explore": "Explore Project",
+    "missingVisual": "Add {project} visual here"
+  }
+}
