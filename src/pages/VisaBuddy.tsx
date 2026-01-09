@@ -10,7 +10,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 import Logo from "@/Image/VisaBuddy/Logo.svg";
 import Lofi_menu_close from "@/Image/VisaBuddy/closed menu lofi.png";
-import Hifi_menu_close from "@/Image/VisaBuddy/closed menu highfi.png";
+import Hifi_menu_close from "@/Image/VisaBuddy/closed menu.png";
 import Lofi_chat from "@/Image/VisaBuddy/Started chat lofi.png";
 import Hifi_chat from "@/Image/VisaBuddy/Started chat highfi.png";
 import Url_lofi from "@/Image/VisaBuddy/URL modal lofi.png";
