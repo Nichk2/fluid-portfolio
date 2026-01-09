@@ -552,7 +552,7 @@ const VisaBuddy = () => {
 
                 {/* RAG Metrics Chart */}
                 <div className="mb-8">
-                  <div className="w-full h-80  rounded-xl flex items-center justify-center overflow-hidden p-4">
+                  <div className="w-full h-130  rounded-xl flex items-center justify-center overflow-hidden p-4">
                     <img src={Metrics2} alt="RAG Metrics Chart" className="w-full h-full object-fill rounded-2xl" />
                   </div>
                 </div>
