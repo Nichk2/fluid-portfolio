@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import Hybras_logo from "../Image/HYBRAS/logo.svg";
-import Notes from "../Image/HYBRAS/Notificações page.jpg";
+import Notes from "../Image/HYBRAS/Notificações page.png";
 import History from "../Image/HYBRAS/Histórico geral.png";
 import Empathy_map from "../Image/HYBRAS/empathy_map.png";
 import low_fi1 from "../Image/HYBRAS/low-fi.png";

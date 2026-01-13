@@ -344,7 +344,7 @@ const Navigation = () => {
                 <Link
                   to="/#contact"
                   onClick={closeMobileMenu}
-                  className="block w-full text-center bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-6 py-3 rounded-full font-body font-medium text-lg"
+                  className="block w-full text-center bg-primary text-primary-foreground cursor-pointer hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-6 py-3 rounded-full font-body font-medium text-lg"
                 >
                   {t('buttons.getInTouch')}
                 </Link>
