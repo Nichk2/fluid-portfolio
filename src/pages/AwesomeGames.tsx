@@ -369,15 +369,15 @@ const AwesomeGames = () => {
               </div>
               <button
                 onClick={() => setCurrentLofiSlide(currentLofiSlide === 0 ? lofiImages.length - 1 : currentLofiSlide - 1)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
               >
-                ←
+                <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={() => setCurrentLofiSlide(currentLofiSlide === lofiImages.length - 1 ? 0 : currentLofiSlide + 1)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
               >
-                →
+                <ChevronRight className="w-6 h-6" />
               </button>
               <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
                 {lofiImages.map((_, index) => (
@@ -519,15 +519,15 @@ const AwesomeGames = () => {
               </div>
               <button
                 onClick={() => setCurrentHifiSlide(currentHifiSlide === 0 ? hifiImages.length - 1 : currentHifiSlide - 1)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
               >
-                ←
+                <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={() => setCurrentHifiSlide(currentHifiSlide === hifiImages.length - 1 ? 0 : currentHifiSlide + 1)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
               >
-                →
+                <ChevronRight className="w-6 h-6" />
               </button>
               <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
                 {hifiImages.map((_, index) => (

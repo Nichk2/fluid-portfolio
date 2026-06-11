@@ -220,7 +220,7 @@ const Navigation = () => {
                   onClick={() => scrollToSection("contact")}
                   onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
-                  className="hidden md:block bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-6 py-2.5 rounded-full font-body font-medium"
+                  className="hidden md:block bg-primary cursor-pointer text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-6 py-2.5 rounded-full font-body font-medium"
                 >
                   {t('buttons.getInTouch')}
                 </button>

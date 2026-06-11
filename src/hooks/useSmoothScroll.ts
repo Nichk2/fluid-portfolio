@@ -5,11 +5,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+/** Routes that mount useSmoothScroll — ScrollToTop defers to Lenis on these pages. */
+export const LENIS_ROUTES = new Set([
+  '/',
+  '/case-study/visabuddy',
+  '/case-study/photox',
+  '/case-study/myholybooks',
+  '/case-study/p3m-platform',
+  '/case-study/awesome-games',
+]);
+
 export const useSmoothScroll = () => {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -31,7 +40,10 @@ export const useSmoothScroll = () => {
 
     gsap.ticker.lagSmoothing(0);
 
-    // Cleanup
+    requestAnimationFrame(() => {
+      lenis.scrollTo(0);
+    });
+
     return () => {
       lenis.destroy();
       gsap.ticker.remove(lenis.raf);
