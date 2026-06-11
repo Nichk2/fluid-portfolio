@@ -17,6 +17,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify deploy token
+        run: |
+          if [ -z "${{ secrets.GH_PAGES_TOKEN }}" ]; then
+            echo "::error::Missing GH_PAGES_TOKEN secret."
+            echo "Go to fluid-portfolio → Settings → Secrets and variables → Actions"
+            echo "Create secret GH_PAGES_TOKEN with a Personal Access Token (repo scope)."
+            exit 1
+          fi
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -30,12 +39,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
-          external_repository: Nichk2/nicholas_portfolio
-          publish_branch: gh-pages
-          publish_dir: ./dist
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          commit_message: "deploy: ${{ github.sha }}"
+        run: npx gh-pages -d dist --repo https://github.com/Nichk2/nicholas_portfolio.git
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
