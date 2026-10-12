@@ -1,0 +1,59 @@
+{
+  "identity": {
+    "eyebrow": "Who I Am",
+    "statement": {
+      "base": "I move between research, interface and code without ever really leaving one for the other — ",
+      "highlight1": "designing systems",
+      "mid1": " that hold up under real use, ",
+      "highlight2": "building the products",
+      "mid2": " that ship them, and ",
+      "highlight3": "training the models",
+      "suffix": " that make them a little smarter."
+    }
+  },
+  "featuredWork": {
+    "eyebrow": "Featured Work",
+    "title": "Two ways of solving the same problem.",
+    "description": "One built around a person and a screen. One built around a model and a conversation.",
+    "cta": "Read the case study"
+  },
+  "process": {
+    "eyebrow": "How I Think",
+    "title": "Research, then design, then ship.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Research",
+        "description": "Understand the person before the pixel — interviews, empathy maps, the real shape of the problem."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "description": "Wireframes become interfaces, interfaces become systems, systems become something someone can trust."
+      },
+      {
+        "number": "03",
+        "title": "Build & Ship",
+        "description": "React on the frontend, AI where it earns its place — shipped, measured, and iterated on."
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Technical Expertise",
+    "title": "The toolkit behind the work.",
+    "groups": [
+      {
+        "label": "Design",
+        "items": ["Figma", "Design Systems", "Prototyping", "User Research"]
+      },
+      {
+        "label": "Frontend",
+        "items": ["React", "TypeScript", "Tailwind CSS", "GSAP"]
+      },
+      {
+        "label": "AI Engineering",
+        "items": ["RAG", "Fine-tuning", "LLM Agents", "Vector Databases"]
+      }
+    ]
+  }
+}

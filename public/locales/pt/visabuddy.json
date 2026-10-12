@@ -109,7 +109,13 @@
         "Alcançou 100% de taxa de sucesso de recuperação em 10 consultas de imigração de referência com pontuação média de relevância de 0.57",
         "Reduziu o tempo de busca de informações de horas para segundos enquanto mantinha precisão de citação de fontes oficiais do IRCC",
         "Criou dashboard abrangente de avaliação com métricas simuladas de treinamento (curvas de loss/perplexidade) e visualização de performance RAG"
-      ]
+      ],
+      "quickNote": {
+        "title": "Nota Rápida",
+        "paragraph1": "Só quero dizer que essa foi uma experiência incrível para mim. Tive a oportunidade de aplicar, tudo junto, o conhecimento que venho acumulando ao longo dos meus anos na indústria de tecnologia.",
+        "paragraph2": "O projeto atual não é perfeito nem extremamente realista e meus resultados parecem estranhos (ok... eu sei), e as métricas podem parecer incomuns se aplicadas a uma empresa ou problema real, mas essa foi uma ótima oportunidade que criei para mim mesmo para mostrar minhas habilidades. :)",
+        "signature": "x Nick"
+      }
     },
     "nextProject": {
       "title": "PHOTOX",

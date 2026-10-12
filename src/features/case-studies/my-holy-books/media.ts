@@ -1,0 +1,31 @@
+import Add_friend from "@/Image/MyHolyBooks/Add_friend.svg";
+import Books from "@/Image/MyHolyBooks/books.svg";
+import Logo from "@/Image/MyHolyBooks/MyHolyBooks_logo.svg";
+import Color from "@/Image/MyHolyBooks/Color.svg";
+import Comment from "@/Image/MyHolyBooks/comment.svg";
+import Mobile_1 from "@/Image/MyHolyBooks/mobile1.svg";
+import Mobile_2 from "@/Image/MyHolyBooks/mobile2.svg";
+import Mobile_3 from "@/Image/MyHolyBooks/mobile3.svg";
+import Web_1 from "@/Image/MyHolyBooks/web1.svg";
+import Web_2 from "@/Image/MyHolyBooks/web2.svg";
+import Web_3 from "@/Image/MyHolyBooks/web3.svg";
+import Folders from "@/Image/MyHolyBooks/Folders.svg";
+import Websolution from "@/Image/MyHolyBooks/web.png";
+import Group_members from "@/Image/MyHolyBooks/Groups_members.png";
+import Languages from "@/Image/MyHolyBooks/Languages.svg";
+import Mobile_lofi_hifi from "@/Image/MyHolyBooks/Mobile_lofi-hifi.svg";
+import Persona1 from "@/Image/MyHolyBooks/Persona1.png";
+import Persona2 from "@/Image/MyHolyBooks/Persona2.png";
+import Process_img from "@/Image/MyHolyBooks/Process_img.svg";
+import Sketch from "@/Image/MyHolyBooks/Sketch.svg";
+import Style from "@/Image/MyHolyBooks/Style.svg";
+import Web_lofi_hifi from "@/Image/MyHolyBooks/Web_lofi-hifi.svg";
+
+export { Group_members, Languages, Logo, Process_img, Websolution };
+
+export const webImages = [Web_1, Web_2, Web_3];
+export const mobileImages = [Mobile_1, Mobile_2, Mobile_3];
+export const personaImages = [Persona1, Persona2];
+export const ideateImages = [Sketch, Style, Color];
+export const prototypeImages = [Web_lofi_hifi, Mobile_lofi_hifi];
+export const testImages = [Comment, Folders, Books, Add_friend];

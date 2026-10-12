@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ScrollToTopButton from "@/features/shell/ScrollToTopButton";
 
 const NotFound = () => {
   const location = useLocation();

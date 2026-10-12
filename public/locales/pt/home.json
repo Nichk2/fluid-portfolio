@@ -1,0 +1,59 @@
+{
+  "identity": {
+    "eyebrow": "Quem Eu Sou",
+    "statement": {
+      "base": "Transito entre pesquisa, interface e código sem nunca abandonar um pelo outro — ",
+      "highlight1": "desenhando sistemas",
+      "mid1": " que resistem ao uso real, ",
+      "highlight2": "construindo os produtos",
+      "mid2": " que os colocam no ar, e ",
+      "highlight3": "treinando os modelos",
+      "suffix": " que os tornam um pouco mais inteligentes."
+    }
+  },
+  "featuredWork": {
+    "eyebrow": "Trabalhos em Destaque",
+    "title": "Duas formas de resolver o mesmo problema.",
+    "description": "Uma construída em torno de uma pessoa e uma tela. Outra construída em torno de um modelo e uma conversa.",
+    "cta": "Ver estudo de caso"
+  },
+  "process": {
+    "eyebrow": "Como Eu Penso",
+    "title": "Pesquisar, depois desenhar, depois lançar.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Pesquisa",
+        "description": "Entender a pessoa antes do pixel — entrevistas, mapas de empatia, a forma real do problema."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "description": "Wireframes viram interfaces, interfaces viram sistemas, sistemas viram algo em que alguém pode confiar."
+      },
+      {
+        "number": "03",
+        "title": "Construir e Lançar",
+        "description": "React no frontend, IA onde ela faz sentido — lançado, medido e refinado."
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Expertise Técnica",
+    "title": "As ferramentas por trás do trabalho.",
+    "groups": [
+      {
+        "label": "Design",
+        "items": ["Figma", "Design Systems", "Prototipação", "Pesquisa com Usuários"]
+      },
+      {
+        "label": "Frontend",
+        "items": ["React", "TypeScript", "Tailwind CSS", "GSAP"]
+      },
+      {
+        "label": "Engenharia de IA",
+        "items": ["RAG", "Fine-tuning", "Agentes de IA", "Bancos Vetoriais"]
+      }
+    ]
+  }
+}

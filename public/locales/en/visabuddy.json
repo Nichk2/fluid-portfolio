@@ -109,7 +109,13 @@
         "Achieved 100% retrieval success rate across 10 benchmark immigration queries with average relevance score of 0.57",
         "Reduced information lookup time from hours to seconds while maintaining citation accuracy from official IRCC sources",
         "Created comprehensive evaluation dashboard with simulated training metrics (loss/perplexity curves) and RAG performance visualization"
-      ]
+      ],
+      "quickNote": {
+        "title": "Quick Note",
+        "paragraph1": "I just want to say that this has been an amazing experience for me. I had the opportunity to apply, all together, the knowledge that I've been gathering during my years in the tech industry.",
+        "paragraph2": "The current project is not perfect or even extremely realistic and my findings look weird (ok... I get it), and the metrics might seem unusual if applied to a real company or problem, but this is a great opportunity that I created for myself to showcase my skills. :)",
+        "signature": "x Nick"
+      }
     },
     "nextProject": {
       "title": "PHOTOX",

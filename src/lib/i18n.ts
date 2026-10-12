@@ -31,8 +31,8 @@ i18n
     },
     
     ns: [
-      'about', 'awesomegames', 'casestudy', 'contact', 'footer', 
-      'hero', 'hybrascollab', 'index', 'myholybooks', 'navigation', 
+      'about', 'awesomegames', 'casestudy', 'contact', 'footer',
+      'hero', 'home', 'hybrascollab', 'index', 'myholybooks', 'navigation',
       'p3mplatform', 'photox', 'portfolio', 'visabuddy'
     ],
     defaultNS: 'hero',
