@@ -10,10 +10,15 @@ import { Heading } from "@/components/typography/Heading";
 import { Text } from "@/components/typography/Text";
 import VisaBuddyImage from "@/Image/VisaBuddy/closed menu highfi.png";
 import MyHolyBooksImage from "@/Image/MyHolyBooks/thumbnaill.svg";
+import { Thumbnail as RouteJudgeImage } from "@/features/case-studies/routejudge/media";
 
+// `wide` spans both columns on large screens: with three featured projects in
+// a two-column grid, the newest one leads at full width instead of leaving
+// the last card alone on its row.
 const FEATURED_PROJECTS = [
-  { key: "visabuddy", link: "/case-study/visabuddy", image: VisaBuddyImage },
-  { key: "myholybooks", link: "/case-study/myholybooks", image: MyHolyBooksImage },
+  { key: "routejudge", link: "/case-study/routejudge", image: RouteJudgeImage, wide: true },
+  { key: "visabuddy", link: "/case-study/visabuddy", image: VisaBuddyImage, wide: false },
+  { key: "myholybooks", link: "/case-study/myholybooks", image: MyHolyBooksImage, wide: false },
 ] as const;
 
 const FeaturedWork = () => {
@@ -30,11 +35,17 @@ const FeaturedWork = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {FEATURED_PROJECTS.map((project) => (
-            <motion.div key={project.key} initial="rest" whileHover="hover" animate="rest" className="scroll-reveal">
+            <motion.div
+              key={project.key}
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              className={project.wide ? "scroll-reveal lg:col-span-2" : "scroll-reveal"}
+            >
               <Link to={project.link} className="group block">
                 <motion.div
                   variants={cardHover}
-                  className="relative aspect-4/3 rounded-2xl overflow-hidden bg-secondary border border-border/30"
+                  className={`relative ${project.wide ? "aspect-4/3 lg:aspect-21/9" : "aspect-4/3"} rounded-2xl overflow-hidden bg-secondary border border-border/30`}
                 >
                   <img loading="lazy" decoding="async"
                     src={project.image}

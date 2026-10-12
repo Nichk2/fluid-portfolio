@@ -12,7 +12,11 @@ import { SmoothScrollProvider } from "./contexts/SmoothScrollContext";
 import HomePage from "./features/home/HomePage";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
 import VisaBuddy from "./features/case-studies/visabuddy/VisaBuddyPage";
+// Lazy so its charting library (Recharts, ~114 KB gzipped) only downloads when
+// someone opens this case study, not on the home page.
+const RouteJudge = lazy(() => import("./features/case-studies/routejudge/RouteJudgePage"));
 import Photox from "./features/case-studies/photox/PhotoxPage";
 import HybrasCollab from "./features/case-studies/hybras-collab/HybrasCollabPage";
 import MyHolyBooks from "./features/case-studies/my-holy-books/MyHolyBooksPage";
@@ -31,6 +35,15 @@ const RoutesWithBoundary = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/aboutme" element={<About />} />
+        <Route
+          path="/case-study/routejudge"
+          element={
+            // Page-colored placeholder so the brief load doesn't flash white.
+            <Suspense fallback={<div className="min-h-screen bg-background" />}>
+              <RouteJudge />
+            </Suspense>
+          }
+        />
         <Route path="/case-study/visabuddy" element={<VisaBuddy />} />
         <Route path="/case-study/photox" element={<Photox />} />
         <Route path="/case-study/hybras-collab" element={<HybrasCollab />} />

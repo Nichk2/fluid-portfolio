@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "category": "AI / LLM ENGINEERING / FULL-STACK",
+    "subtitle": "The 93% that wasn't.",
+    "lead": "My query router reported 93.3% accuracy. I found out why that number was wrong, measured the real one, and rebuilt the model until the honest score was worth shipping.",
+    "logoAlt": "RouteJudge logo: a pixel-art gavel",
+    "meta": {
+      "client": "Client",
+      "clientValue": "Personal project",
+      "year": "Year",
+      "role": "Role",
+      "roleValue": "LLM Engineer, Full-Stack Developer",
+      "stack": "Stack",
+      "stackValue": "Qwen3 · Modal · Ollama · FastAPI · React"
+    }
+  },
+  "product": {
+    "eyebrow": "01 — The product",
+    "title": "A small model that decides who answers",
+    "body": "Not every question needs an expensive AI. RouteJudge reads each question, labels how hard it is, and sends it to the cheapest model that can answer it well. The label is the whole product: get it wrong in one direction and users get bad answers; in the other, you pay for nothing.",
+    "query": "A user question",
+    "classifier": "RouteJudge classifier",
+    "classifierNote": "reads the question, never answers it",
+    "tiers": {
+      "easy": "EASY",
+      "medium": "MEDIUM",
+      "hard": "HARD",
+      "local": "Local model",
+      "localNote": "free, instant",
+      "cloud": "GPT",
+      "cloudNote": "strongest, paid per call"
+    }
+  },
+  "number": {
+    "eyebrow": "02 — The number",
+    "caption": "The accuracy my classifier reported. It looked finished."
+  },
+  "investigation": {
+    "eyebrow": "03 — The investigation",
+    "title": "Four clues it wasn't",
+    "intro": "Before tuning anything, I audited the whole pipeline: data, labels, training runs and the live app. Each clue had evidence behind it.",
+    "clues": [
+      {
+        "title": "The exam had the answers",
+        "body": "Every validation question was a reworded copy of a training question: \"Please What is a vector?\" next to \"What is a vector?\". A lookup table with no model at all scored the same 93.3%."
+      },
+      {
+        "title": "It learned topics, not difficulty",
+        "body": "The labels followed the subject: math was 99% EASY, creative writing 100% HARD. Guessing from the topic alone scored {{shortcut}}%. So \"integrate x²eˣ by parts\" went to the cheapest model."
+      },
+      {
+        "title": "It never trained on the new data",
+        "body": "The run took 834 training steps where the new dataset needed 1,674. The cloud volume still held the old {{stale}}-row files, not the {{local}} rows everyone assumed."
+      },
+      {
+        "title": "Production asked a different question",
+        "body": "The live app wrapped every query in tags and instructions the model never saw in training, so even the real model was answering a different prompt."
+      }
+    ]
+  },
+  "honest": {
+    "eyebrow": "04 — The honest number",
+    "title": "Then I measured it properly",
+    "body": "I built a frozen test set of {{items}} questions in English, Portuguese and Chinese, none of them seen in training and every label checked against a written rubric. The same model scored barely above always answering MEDIUM.",
+    "from": "Reported",
+    "to": "Real",
+    "statHard": "Hard questions caught",
+    "statCheap": "Sent to too cheap a model",
+    "matrixTitle": "Where the old model went wrong",
+    "matrixCaption": "Rows are the true difficulty, columns the model's answer. Most hard questions landed in EASY or MEDIUM."
+  },
+  "rebuild": {
+    "eyebrow": "05 — Rebuilding",
+    "title": "Teaching difficulty, not topics",
+    "steps": [
+      {
+        "title": "One definition",
+        "body": "Difficulty is how much reasoning a good answer needs. Topic, language, length and politeness don't count."
+      },
+      {
+        "title": "Real questions",
+        "body": "{{train}} training questions, {{wildchat}} of them from real users, in English, Portuguese and Chinese. None written by me, so the model can't learn my style."
+      },
+      {
+        "title": "An open teacher with a gate",
+        "body": "An open-source model (Mistral Small 24B) labeled the data, only after agreeing {{agreement}}% with the human-checked test labels."
+      },
+      {
+        "title": "Shortcuts removed",
+        "body": "Topic alone now predicts the label {{now}}% of the time, down from {{before}}%."
+      },
+      {
+        "title": "A reality check",
+        "body": "Can a cheap model really answer what I call EASY? The local model solved {{localEasy}}% of EASY questions and only {{localHard}}% of HARD ones. The old EASY tier solved just {{tinyEasy}}%, so I moved it."
+      }
+    ]
+  },
+  "training": {
+    "eyebrow": "06 — Training",
+    "title": "Two models, one honest bug",
+    "body": "Same data, same settings, two base models: TinyLlama 1.1B and Qwen3 1.7B, fine-tuned on Modal. Checkpoints were picked on a separate validation set, never on the test set.",
+    "chartTitle": "Validation score during training",
+    "chartSubtitle": "Macro-F1 on {{valid}} validation questions, measured every 100 steps",
+    "xLabel": "Training step",
+    "series": {
+      "tinyllama": "TinyLlama 1.1B",
+      "qwen3": "Qwen3 1.7B",
+      "baseline": "Old model"
+    },
+    "bugTitle": "The bug",
+    "bugBody": "Served locally, TinyLlama started answering \"EASELY\". The trained adapter was fine; the merge step inside the training job wasn't. Merging again from the saved adapter fixed it, verified on 60 questions before anything shipped."
+  },
+  "results": {
+    "eyebrow": "07 — Results",
+    "title": "{{value}}%, measured the same way as the {{old}}%",
+    "body": "Both new models were scored on the same frozen test set, through the real backend, exactly as users reach them.",
+    "metrics": {
+      "accuracy": "Accuracy",
+      "hardRecall": "Hard questions caught",
+      "underRouting": "Sent too cheap",
+      "lowerIsBetter": "lower is better",
+      "target": "Target"
+    },
+    "targetsTitle": "Targets set before training",
+    "targets": {
+      "accuracy": "Accuracy at least {{target}}%",
+      "hardRecall": "Hard questions caught at least {{target}}%",
+      "underRouting": "Sent too cheap at most {{target}}%",
+      "languageGap": "Language gap at most {{target}} points",
+      "met": "Met",
+      "missed": "Missed by {{gap}}",
+      "languageNote": "EN {{en}}% · PT {{pt}}% · ZH {{zh}}% on the same tasks"
+    },
+    "zeroErrors": "Across {{items}} test questions, Qwen3 never confused EASY with HARD. Every remaining mistake is between neighbors.",
+    "examplesTitle": "Same questions, before and after",
+    "examples": {
+      "question": "Question",
+      "expected": "Expected",
+      "before": "Old model",
+      "after": "New model"
+    }
+  },
+  "shipping": {
+    "eyebrow": "08 — Shipping",
+    "title": "From experiment to product",
+    "items": [
+      "The live app now classifies with Qwen3 v3: {{value}}% instead of {{old}}%.",
+      "Confidence is the model's own probability for its label. It used to be a constant 0.85 for every query.",
+      "The parser takes the label the model actually said first, instead of always preferring EASY.",
+      "A \"tier floor\" lets history upgrade a route but never downgrade it to a weaker model.",
+      "The whole retune used about ${{cost}} of cloud GPU time."
+    ]
+  },
+  "chart": {
+    "viewData": "View as table",
+    "step": "Step"
+  },
+  "nextProject": {
+    "label": "Next Project",
+    "title": "VisaBuddy",
+    "description": "An AI immigration assistant combining RAG with QLoRA fine-tuning.",
+    "cta": "View case study"
+  }
+}

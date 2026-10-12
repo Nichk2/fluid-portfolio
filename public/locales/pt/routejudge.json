@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "category": "IA / ENGENHARIA DE LLM / FULL-STACK",
+    "subtitle": "Os 93% que não eram.",
+    "lead": "Meu roteador de perguntas reportava 93,3% de acurácia. Descobri por que esse número estava errado, medi o número real e reconstruí o modelo até que a nota honesta valesse a pena colocar em produção.",
+    "logoAlt": "Logo do RouteJudge: um martelo de juiz em pixel art",
+    "meta": {
+      "client": "Cliente",
+      "clientValue": "Projeto pessoal",
+      "year": "Ano",
+      "role": "Função",
+      "roleValue": "Engenheiro de LLM, Desenvolvedor Full-Stack",
+      "stack": "Stack",
+      "stackValue": "Qwen3 · Modal · Ollama · FastAPI · React"
+    }
+  },
+  "product": {
+    "eyebrow": "01 — O produto",
+    "title": "Um modelo pequeno que decide quem responde",
+    "body": "Nem toda pergunta precisa de uma IA cara. O RouteJudge lê cada pergunta, classifica o quão difícil ela é e a envia para o modelo mais barato que consegue respondê-la bem. O rótulo é o produto inteiro: errar para um lado entrega respostas ruins; errar para o outro é pagar à toa.",
+    "query": "A pergunta do usuário",
+    "classifier": "Classificador RouteJudge",
+    "classifierNote": "lê a pergunta, nunca a responde",
+    "tiers": {
+      "easy": "FÁCIL",
+      "medium": "MÉDIA",
+      "hard": "DIFÍCIL",
+      "local": "Modelo local",
+      "localNote": "grátis, instantâneo",
+      "cloud": "GPT",
+      "cloudNote": "o mais forte, pago por uso"
+    }
+  },
+  "number": {
+    "eyebrow": "02 — O número",
+    "caption": "A acurácia que meu classificador reportava. Parecia pronto."
+  },
+  "investigation": {
+    "eyebrow": "03 — A investigação",
+    "title": "Quatro pistas de que não era",
+    "intro": "Antes de ajustar qualquer coisa, auditei o pipeline inteiro: dados, rótulos, execuções de treino e o app em produção. Cada pista tinha evidência por trás.",
+    "clues": [
+      {
+        "title": "A prova vinha com as respostas",
+        "body": "Cada pergunta de validação era uma cópia reescrita de uma pergunta de treino: \"Please What is a vector?\" ao lado de \"What is a vector?\". Uma tabela de consulta, sem modelo nenhum, tirava os mesmos 93,3%."
+      },
+      {
+        "title": "Aprendeu temas, não dificuldade",
+        "body": "Os rótulos seguiam o assunto: matemática era 99% FÁCIL, escrita criativa 100% DIFÍCIL. Adivinhar só pelo tema acertava {{shortcut}}%. Então \"integre x²eˣ por partes\" ia para o modelo mais barato."
+      },
+      {
+        "title": "Nunca treinou com os dados novos",
+        "body": "O treino rodou 834 passos, quando o novo conjunto de dados exigia 1.674. O volume na nuvem ainda guardava os arquivos antigos de {{stale}} linhas, não as {{local}} linhas que todos supunham."
+      },
+      {
+        "title": "Em produção, a pergunta era outra",
+        "body": "O app em produção envolvia cada pergunta em tags e instruções que o modelo nunca viu no treino. Mesmo o modelo certo estava respondendo a um prompt diferente."
+      }
+    ]
+  },
+  "honest": {
+    "eyebrow": "04 — O número honesto",
+    "title": "Então medi do jeito certo",
+    "body": "Montei um conjunto de teste congelado com {{items}} perguntas em inglês, português e chinês, nenhuma vista no treino e todas rotuladas segundo uma rubrica escrita. O mesmo modelo ficou pouco acima de responder sempre MÉDIA.",
+    "from": "Reportado",
+    "to": "Real",
+    "statHard": "Perguntas difíceis detectadas",
+    "statCheap": "Enviadas a um modelo barato demais",
+    "matrixTitle": "Onde o modelo antigo errava",
+    "matrixCaption": "As linhas são a dificuldade real, as colunas a resposta do modelo. A maioria das perguntas difíceis caía em FÁCIL ou MÉDIA."
+  },
+  "rebuild": {
+    "eyebrow": "05 — Reconstrução",
+    "title": "Ensinando dificuldade, não temas",
+    "steps": [
+      {
+        "title": "Uma definição",
+        "body": "Dificuldade é quanto raciocínio uma boa resposta exige. Tema, idioma, tamanho e educação não contam."
+      },
+      {
+        "title": "Perguntas reais",
+        "body": "{{train}} perguntas de treino, {{wildchat}} delas de usuários reais, em inglês, português e chinês. Nenhuma escrita por mim, para o modelo não aprender o meu estilo."
+      },
+      {
+        "title": "Um professor aberto, com filtro",
+        "body": "Um modelo open-source (Mistral Small 24B) rotulou os dados, só depois de concordar {{agreement}}% com os rótulos revisados do teste."
+      },
+      {
+        "title": "Atalhos removidos",
+        "body": "Só o tema agora prevê o rótulo em {{now}}% dos casos, antes eram {{before}}%."
+      },
+      {
+        "title": "Teste de realidade",
+        "body": "Um modelo barato realmente responde o que eu chamo de FÁCIL? O modelo local resolveu {{localEasy}}% das perguntas fáceis e só {{localHard}}% das difíceis. O antigo nível FÁCIL resolvia apenas {{tinyEasy}}%, então eu o troquei."
+      }
+    ]
+  },
+  "training": {
+    "eyebrow": "06 — Treino",
+    "title": "Dois modelos, um bug honesto",
+    "body": "Mesmos dados, mesmas configurações, dois modelos base: TinyLlama 1.1B e Qwen3 1.7B, ajustados na Modal. Os checkpoints foram escolhidos num conjunto de validação separado, nunca no conjunto de teste.",
+    "chartTitle": "Nota de validação durante o treino",
+    "chartSubtitle": "Macro-F1 em {{valid}} perguntas de validação, medido a cada 100 passos",
+    "xLabel": "Passo de treino",
+    "series": {
+      "tinyllama": "TinyLlama 1.1B",
+      "qwen3": "Qwen3 1.7B",
+      "baseline": "Modelo antigo"
+    },
+    "bugTitle": "O bug",
+    "bugBody": "Rodando localmente, o TinyLlama começou a responder \"EASELY\". O adaptador treinado estava certo; o passo de merge dentro do job de treino, não. Refazer o merge a partir do adaptador salvo resolveu, verificado em 60 perguntas antes de qualquer coisa ir para produção."
+  },
+  "results": {
+    "eyebrow": "07 — Resultados",
+    "title": "{{value}}%, medido do mesmo jeito que os {{old}}%",
+    "body": "Os dois modelos novos foram avaliados no mesmo conjunto de teste congelado, pelo backend real, exatamente como os usuários os acessam.",
+    "metrics": {
+      "accuracy": "Acurácia",
+      "hardRecall": "Perguntas difíceis detectadas",
+      "underRouting": "Enviadas baratas demais",
+      "lowerIsBetter": "quanto menor, melhor",
+      "target": "Meta"
+    },
+    "targetsTitle": "Metas definidas antes do treino",
+    "targets": {
+      "accuracy": "Acurácia de pelo menos {{target}}%",
+      "hardRecall": "Perguntas difíceis detectadas: pelo menos {{target}}%",
+      "underRouting": "Enviadas baratas demais: no máximo {{target}}%",
+      "languageGap": "Diferença entre idiomas de no máximo {{target}} pontos",
+      "met": "Atingida",
+      "missed": "Faltou {{gap}}",
+      "languageNote": "EN {{en}}% · PT {{pt}}% · ZH {{zh}}% nas mesmas tarefas"
+    },
+    "zeroErrors": "Em {{items}} perguntas de teste, o Qwen3 nunca confundiu FÁCIL com DIFÍCIL. Todo erro restante é entre vizinhos.",
+    "examplesTitle": "As mesmas perguntas, antes e depois",
+    "examples": {
+      "question": "Pergunta",
+      "expected": "Esperado",
+      "before": "Modelo antigo",
+      "after": "Modelo novo"
+    }
+  },
+  "shipping": {
+    "eyebrow": "08 — Produção",
+    "title": "Do experimento ao produto",
+    "items": [
+      "O app agora classifica com o Qwen3 v3: {{value}}% em vez de {{old}}%.",
+      "A confiança é a probabilidade que o próprio modelo dá ao rótulo. Antes era uma constante de 0,85 para toda pergunta.",
+      "O parser pega o rótulo que o modelo realmente disse primeiro, em vez de sempre preferir FÁCIL.",
+      "Um \"piso de nível\" deixa o histórico promover uma rota, mas nunca rebaixá-la para um modelo mais fraco.",
+      "O retune inteiro usou cerca de US${{cost}} de GPU na nuvem."
+    ]
+  },
+  "chart": {
+    "viewData": "Ver como tabela",
+    "step": "Passo"
+  },
+  "nextProject": {
+    "label": "Próximo Projeto",
+    "title": "VisaBuddy",
+    "description": "Um assistente de imigração com IA que combina RAG com fine-tuning QLoRA.",
+    "cta": "Ver estudo de caso"
+  }
+}

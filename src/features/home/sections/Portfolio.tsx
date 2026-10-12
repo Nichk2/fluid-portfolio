@@ -12,6 +12,7 @@ import AwesomeGames from "@/Image/AwesomeGames/thumbnaill_awesomegames.png";
 import p3m from "@/Image/P3M/thumbnaill.png";
 import myholybooks from "@/Image/MyHolyBooks/thumbnaill.svg";
 import Photox from "@/Image/PHOTOX/MAPA.png";
+import { Thumbnail as RouteJudge } from "@/features/case-studies/routejudge/media";
 
 interface Project {
   key: string;
@@ -25,6 +26,7 @@ const Portfolio = () => {
   const { t } = useTranslation("portfolio");
 
   const projects: Project[] = [
+    { key: "routejudge", title: t("projects.routejudge.title"), category: t("projects.routejudge.category"), link: "/case-study/routejudge", image: RouteJudge },
     { key: "visabuddy", title: t("projects.visabuddy.title"), category: t("projects.visabuddy.category"), link: "/case-study/visabuddy", image: VisaBuddy },
     { key: "myholybooks", title: t("projects.myholybooks.title"), category: t("projects.myholybooks.category"), link: "/case-study/myholybooks", image: myholybooks },
     { key: "p3m-platform", title: t("projects.p3m-platform.title"), category: t("projects.p3m-platform.category"), link: "/case-study/p3m-platform", image: p3m },

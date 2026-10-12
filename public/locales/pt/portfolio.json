@@ -8,6 +8,11 @@
     }
   },
   "projects": {
+    "routejudge": {
+      "title": "RouteJudge",
+      "subtitle": "Os 93% que não eram: reconstruindo um roteador de LLM",
+      "category": "IA / ENGENHARIA DE LLM / FULLSTACK"
+    },
     "visabuddy": {
       "title": "VisaBuddy",
       "subtitle": "Assistente de aplicação de visto com IA",

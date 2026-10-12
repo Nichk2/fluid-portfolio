@@ -33,7 +33,7 @@ i18n
     ns: [
       'about', 'awesomegames', 'casestudy', 'contact', 'footer',
       'hero', 'home', 'hybrascollab', 'index', 'myholybooks', 'navigation',
-      'p3mplatform', 'photox', 'portfolio', 'visabuddy'
+      'p3mplatform', 'photox', 'portfolio', 'routejudge', 'visabuddy'
     ],
     defaultNS: 'hero',
     
@@ -47,6 +47,6 @@ i18n
   });
 
 // Preload important namespaces
-i18n.loadNamespaces(['visabuddy', 'myholybooks', 'photox', 'hybrascollab', 'p3mplatform', 'awesomegames']);
+i18n.loadNamespaces(['routejudge', 'visabuddy','myholybooks', 'photox', 'hybrascollab', 'p3mplatform', 'awesomegames']);
 
 export default i18n;
