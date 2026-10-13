@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import {
   EchartsLogo,
   FastApiLogo,
+  FigmaLogo,
   GsapLogo,
   HuggingFaceLogo,
   LlamaCppLogo,
@@ -43,8 +44,10 @@ const GROUPS: { key: "training" | "serving" | "frontend"; tools: Tool[] }[] = [
     tools: [{ name: "FastAPI", logo: FastApiLogo, wordmark: true, logoClass: "h-7" }, { name: "Python", logo: PythonLogo }, { name: "Ollama", logo: OllamaLogo }, { name: "SQLite", logo: SqliteLogo }],
   },
   {
+    // Figma leads this group: the app was designed there before any frontend code (chapter 9).
     key: "frontend",
     tools: [
+      { name: "Figma", logo: FigmaLogo },
       { name: "React", logo: ReactLogo },
       { name: "TypeScript", logo: TypescriptLogo },
       { name: "Tailwind CSS", logo: TailwindLogo },
@@ -67,7 +70,7 @@ export const StackGroups = () => {
       {GROUPS.map((group) => (
         <div key={group.key}>
           <p className="font-body text-xs tracking-widest text-muted-foreground uppercase mb-4">{t(`shipping.stack.${group.key}`)}</p>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
             {group.tools.map((tool) => (
               <li key={tool.name} className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-border/30 bg-card px-3 py-5 min-h-28 text-center">
                 {tool.logo && (

@@ -34,6 +34,7 @@ import PeftLogo from "@/Image/RouteJudge/Peft.svg";
 import LlamaCppLogo from "@/Image/RouteJudge/llama-cpp.svg";
 import SqliteLogo from "@/Image/RouteJudge/sqlite-svgrepo-com.svg";
 import EchartsLogo from "@/Image/RouteJudge/apacheecharts.svg";
+import FigmaLogo from "@/Image/RouteJudge/figma.svg";
 
 export {
   ModalLogo,
@@ -50,4 +51,5 @@ export {
   LlamaCppLogo,
   SqliteLogo,
   EchartsLogo,
+  FigmaLogo,
 };
