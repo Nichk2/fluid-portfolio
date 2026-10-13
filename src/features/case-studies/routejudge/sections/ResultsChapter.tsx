@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metrics";
 import { formatInt, formatNumber } from "@/features/case-studies/routejudge/format";
-import { ChapterHeading } from "@/features/case-studies/routejudge/components/ChapterHeading";
-import { ResultsCharts } from "@/features/case-studies/routejudge/components/ResultsCharts";
-import { TargetsChecklist } from "@/features/case-studies/routejudge/components/TargetsChecklist";
-import { ExamplesTable } from "@/features/case-studies/routejudge/components/ExamplesTable";
+import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
+import { ResultsCharts } from "@/features/case-studies/routejudge/sections/ResultsCharts";
+import { TargetsChecklist } from "@/features/case-studies/routejudge/sections/TargetsChecklist";
+import { ExamplesTable } from "@/features/case-studies/routejudge/sections/ExamplesTable";
 
 /** Chapter 7: the new number, measured exactly like the old one, with the targets and real examples. */
 export const ResultsChapter = () => {

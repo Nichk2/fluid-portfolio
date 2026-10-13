@@ -20,6 +20,24 @@ Working reference for this portfolio. The visual identity is the current editori
 | Scroll reveals | `src/motion/useScrollReveal.ts` |
 | Lenis + GSAP ticker | `src/contexts/SmoothScrollContext.tsx` |
 
+### Case study folders
+
+Each study lives in `src/features/case-studies/<slug>/` (kebab-case) with at least `<Name>Page.tsx` and `media.ts`. Copy stays in `public/locales/{en,pt}/<namespace>.json`.
+
+Add `sections/` only when it earns its place: the page is hard to navigate (~400+ lines), a block has real logic (tabs, carousels, synced galleries), or a block repeats on the same page. Never `components/`, and no empty `hooks/` or `animations/` folders. Section components call `useTranslation` themselves. The page calls `useScrollReveal()` once.
+
+| Slug | `sections/` | Notes |
+| --- | --- | --- |
+| `routejudge` | Chapters, charts, tables | `metrics.ts` is generated; do not edit it by hand. Also `format.ts`, `chartTheme.ts`, `useInViewOnce.ts`. |
+| `my-holy-books` | Hero, DesignProcess (+ IdeateStep), FinalProduct | Web/mobile and groups/languages tabs live in their sections. |
+| `visabuddy` | Hero, Training, Design, Backend, Frontend, Metrics | Only page using `BeforeAfterCarousel`. |
+| `awesome-games` | Hero, Overview, DesignCarousel, ListItems | `DesignCarousel` renders both wireframes and high-fidelity. |
+| `hybras-collab` | Solution, Testing, DesignEvolution | Before/after keeps its own markup with `useBeforeAfter`. |
+| `photox` | Solution, DesignProcess | Same: own before/after markup, shared hook. |
+| `p3m-platform` | RedesignComparison | One `useBeforeAfter` drives both galleries; do not split it. |
+
+Shared at `case-studies/` level: `useCarousel.ts` (`useCarousel`, `useBeforeAfter`) and `BeforeAfterCarousel.tsx`. A component moves up here only when two pages share identical markup. Studies never import each other, and the shared layer never imports a study.
+
 There is no `tailwind.config.ts`. Tailwind v4 is configured in CSS through `@tailwindcss/vite`.
 
 ## Token layers

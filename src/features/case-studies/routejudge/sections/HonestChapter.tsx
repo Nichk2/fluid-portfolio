@@ -6,8 +6,8 @@ import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metrics";
 import { formatInt, formatNumber } from "@/features/case-studies/routejudge/format";
-import { ChapterHeading } from "@/features/case-studies/routejudge/components/ChapterHeading";
-import { ConfusionMatrix } from "@/features/case-studies/routejudge/components/ConfusionMatrix";
+import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
+import { ConfusionMatrix } from "@/features/case-studies/routejudge/sections/ConfusionMatrix";
 
 gsap.registerPlugin(ScrollTrigger);
 

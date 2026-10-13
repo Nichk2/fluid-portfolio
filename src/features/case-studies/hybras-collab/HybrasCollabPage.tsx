@@ -1,55 +1,17 @@
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import useScrollReveal from "@/motion/useScrollReveal";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import Navigation from "@/features/shell/Navigation";
 import ScrollToTopButton from "@/features/shell/ScrollToTopButton";
-import { useBeforeAfter, useCarousel } from "@/features/case-studies/useCarousel";
-import {
-  afterImages,
-  beforeImages,
-  Empathy_map,
-  Final,
-  Hybras_logo,
-  Persona,
-  Research,
-  solutionImages,
-  testImages,
-} from "@/features/case-studies/hybras-collab/media";
-
-interface SolutionCarouselEntry {
-  title: string;
-  bullets: string[];
-}
-
-interface SolutionCarouselItem extends SolutionCarouselEntry {
-  image: string;
-}
+import { Empathy_map, Final, Hybras_logo, Persona, Research } from "@/features/case-studies/hybras-collab/media";
+import { SolutionSection } from "@/features/case-studies/hybras-collab/sections/SolutionSection";
+import { TestingSection } from "@/features/case-studies/hybras-collab/sections/TestingSection";
+import { DesignEvolutionSection } from "@/features/case-studies/hybras-collab/sections/DesignEvolutionSection";
 
 const HybrasCollabPage = () => {
   const { t } = useTranslation("hybrascollab");
   useScrollReveal();
-
-  // Solution carousel data
-  const solutionCarouselRaw = t('hybras.solutionCarousel', { returnObjects: true });
-  const solutionCarouselItems: SolutionCarouselItem[] = Array.isArray(solutionCarouselRaw)
-    ? (solutionCarouselRaw as SolutionCarouselEntry[]).map((item, index) => ({
-        ...item,
-        image: solutionImages[index] ?? "",
-      }))
-    : [];
-
-  // Test carousel data
-  const testCarouselItems = [
-    { image: testImages[0] },
-    { image: testImages[1] },
-    { image: testImages[2] },
-  ];
-
-  const solution = useCarousel(solutionCarouselItems.length);
-  const tests = useCarousel(testCarouselItems.length);
-  const beforeAfter = useBeforeAfter(beforeImages, afterImages);
 
   const caseStudyData = {
     title: "HYBRAS COLLAB",
@@ -61,7 +23,6 @@ const HybrasCollabPage = () => {
     role: "Lead UX/UI Designer",
     overview: t('hybras.caseStudyData.overview'),
     challenge: t('hybras.caseStudyData.challenge'),
-    solution: t('hybras.caseStudyData.solution'),
     process: t('hybras.caseStudyData.process', { returnObjects: true }),
     results: Array.isArray(t('hybras.caseStudyData.results', { returnObjects: true }))
       ? t('hybras.caseStudyData.results', { returnObjects: true })
@@ -153,80 +114,7 @@ const HybrasCollabPage = () => {
             <p className={`${CASE_STUDY_STYLES.typography.body}`}><span className={`${CASE_STUDY_STYLES.typography.body} text-primary`}>{t('hybras.content.howMightWe')}:</span> Create a community-centric platform that simplifies research sharing and enhances collaboration among scholars?</p>
           </div>
 
-          {/* Solution Carousel */}
-          <div className={CASE_STUDY_STYLES.scrollReveal}>
-            <h2 className={CASE_STUDY_STYLES.typography.sectionTitle}>
-              {t('hybras.sections.solution')}
-            </h2>
-            <p className={`${CASE_STUDY_STYLES.typography.body} mb-12`}>
-              {caseStudyData.solution}
-            </p>
-
-            <div className="relative w-full overflow-hidden rounded-2xl enhanced-glass h-[600px]">
-              <div className="relative h-full w-full overflow-hidden">
-                {solutionCarouselItems.map((item, index) => (
-                  <div
-                    key={`solution-${index}`}
-                    className={`absolute inset-0 transition-opacity duration-500 ${
-                      solution.index === index
-                        ? "opacity-100"
-                        : "opacity-0"
-                    }`}
-                  >
-                    <div className="h-full w-full flex flex-col md:flex-row">
-                      <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center p-8">
-                        <img loading="lazy" decoding="async"
-                          src={item.image}
-                          alt={item.title}
-                          className="max-h-full max-w-full object-contain rounded-xl shadow-lg"
-                        />
-                      </div>
-                      <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center p-8">
-                        <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-                          {item.title}
-                        </h3>
-                        <ul className="list-disc pl-5 space-y-2">
-                          {item.bullets.map((bullet: string, i: number) => (
-                            <li
-                              key={i}
-                              className="text-muted-foreground font-body"
-                            >
-                              {bullet}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <button
-                onClick={solution.previous}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={solution.next}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-              <div className="absolute bottom-4 top-140 left-0 right-0 flex justify-center gap-2">
-                {solutionCarouselItems.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => solution.goTo(index)}
-                    className={`w-3 h-3 hover:bg-primary ease-in cursor-pointer rounded-full transition-all duration-300 ${
-                      solution.index === index
-                        ? "bg-primary w-6"
-                        : "bg-muted-foreground/30"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <SolutionSection />
 
           {/* Research */}
           <div className={CASE_STUDY_STYLES.scrollReveal}>
@@ -291,175 +179,9 @@ const HybrasCollabPage = () => {
             </div>
           </div>
 
-          {/* Testing */}
-          <div className={CASE_STUDY_STYLES.scrollReveal}>
-            <h2 className={CASE_STUDY_STYLES.typography.sectionTitle}>
-              {t('hybras.sections.testing')}
-            </h2>
-            <p className={`${CASE_STUDY_STYLES.typography.body} mb-6`}>
-              {t('hybras.content.testingDescription')}
-            </p>
-            
-            {/* Test Carousel */}
-            <div className="relative w-full overflow-hidden rounded-2xl enhanced-glass h-[700px]">
-              <div className="relative h-full w-full overflow-hidden">
-                {testCarouselItems.map((item, index) => (
-                  <div
-                    key={`test-${index}`}
-                    className={`absolute inset-0 transition-opacity duration-500 ${
-                      tests.index === index ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    <div className="h-full w-full flex flex-col">
-                      <div className="w-full h-full flex items-center justify-center p-4">
-                        <img loading="lazy" decoding="async"
-                          src={item.image}
-                          alt='test3'
-                          className="max-h-full max-w-full object-contain rounded-xl shadow-lg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <button
-                onClick={tests.previous}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full cursor-pointer glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={tests.next}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full glass-effect cursor-pointer flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                {testCarouselItems.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => tests.goTo(index)}
-                    className={`w-3 h-3 rounded-full transition-all cursor-pointer ease-in hover:bg-primary duration-300 ${
-                      tests.index === index
-                        ? "bg-primary w-6"
-                        : "bg-muted-foreground/30"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <TestingSection />
 
-          {/* Design Evolution */}
-          <div className={CASE_STUDY_STYLES.scrollReveal}>
-            <h2 className={CASE_STUDY_STYLES.typography.sectionTitle}>
-              {t('hybras.sections.evolution')}
-            </h2>
-            <p className={`${CASE_STUDY_STYLES.typography.body} mb-6`}>
-              {t('hybras.content.evolutionDescription')}
-            </p>
-
-            <div className="relative w-full overflow-hidden rounded-2xl enhanced-glass">
-              <div className="flex border-b border-border/20">
-                <button className={`flex-1 py-4 font-display ease-in font-medium transition-colors ${beforeAfter.tab === "before" ? "text-primary" : "text-muted-foreground"}`} onClick={() => beforeAfter.selectTab("before")}>
-                  <p className="cursor-pointer transition-all ease-in hover:text-primary">
-                  {t('hybras.content.before')}
-                  </p>
-                </button>
-                <button className={`flex-1 py-4 font-display font-medium transition-colors ${beforeAfter.tab === "after" ? "text-primary" : "text-muted-foreground"}`} onClick={() => beforeAfter.selectTab("after")}>
-                  <p className="cursor-pointer transition-all ease-in hover:text-primary">
-                  {t('hybras.content.after')}
-                  </p>
-                </button>
-              </div>
-              <div className="relative h-[600px] w-full">
-                {/* Before Images */}
-                <div
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    beforeAfter.tab === "before"
-                      ? "opacity-100"
-                      : "opacity-0 pointer-events-none"
-                  }`}
-                >
-                  <div className="relative h-full w-full overflow-hidden">
-                    {beforeImages.map((img, index) => (
-                      <div
-                        key={`before-${index}`}
-                        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${
-                          beforeAfter.index === index
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                      >
-                        <img loading="lazy" decoding="async"
-                          src={img}
-                          alt={`Before design ${index + 1}`}
-                          className="max-h-[80%] max-w-[90%] object-contain rounded-xl shadow-lg"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {/* After Images */}
-                <div
-                  className={`absolute inset-0 transition-opacity rounded-md duration-500 ${
-                    beforeAfter.tab === "after"
-                      ? "opacity-100"
-                      : "opacity-0 pointer-events-none"
-                  }`}
-                >
-                  <div className="relative h-full w-full overflow-hidden">
-                    {afterImages.map((img, index) => (
-                      <div
-                        key={`after-${index}`}
-                        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${
-                          beforeAfter.index === index
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                      >
-                        <img loading="lazy" decoding="async"
-                          src={img}
-                          alt={`After design ${index + 1}`}
-                          className="max-h-[80%] max-w-[90%] object-contain rounded-xl shadow-lg"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {/* Navigation Arrows */}
-                <button
-                  onClick={beforeAfter.previous}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-                <button
-                  onClick={beforeAfter.next}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 cursor-pointer rounded-full glass-effect flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-                {/* Pagination Dots */}
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                  {(beforeAfter.tab === "before"
-                    ? beforeImages
-                    : afterImages
-                  ).map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => beforeAfter.goTo(index)}
-                      className={`w-3 h-3 rounded-full transition-all hover:bg-primary cursor-pointer duration-300 ${
-                        beforeAfter.index === index
-                          ? "bg-primary w-6"
-                          : "bg-muted-foreground/30"
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <DesignEvolutionSection />
 
           {/* Final Design */}
           <div className={CASE_STUDY_STYLES.scrollReveal}>

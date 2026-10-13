@@ -4,15 +4,15 @@ import useScrollReveal from "@/motion/useScrollReveal";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import Navigation from "@/features/shell/Navigation";
 import ScrollToTopButton from "@/features/shell/ScrollToTopButton";
-import { HeroChapter } from "@/features/case-studies/routejudge/components/HeroChapter";
-import { ProductChapter } from "@/features/case-studies/routejudge/components/ProductChapter";
-import { NumberChapter } from "@/features/case-studies/routejudge/components/NumberChapter";
-import { InvestigationChapter } from "@/features/case-studies/routejudge/components/InvestigationChapter";
-import { HonestChapter } from "@/features/case-studies/routejudge/components/HonestChapter";
-import { RebuildChapter } from "@/features/case-studies/routejudge/components/RebuildChapter";
-import { TrainingChapter } from "@/features/case-studies/routejudge/components/TrainingChapter";
-import { ResultsChapter } from "@/features/case-studies/routejudge/components/ResultsChapter";
-import { ShippingChapter } from "@/features/case-studies/routejudge/components/ShippingChapter";
+import { HeroChapter } from "@/features/case-studies/routejudge/sections/HeroChapter";
+import { ProductChapter } from "@/features/case-studies/routejudge/sections/ProductChapter";
+import { NumberChapter } from "@/features/case-studies/routejudge/sections/NumberChapter";
+import { InvestigationChapter } from "@/features/case-studies/routejudge/sections/InvestigationChapter";
+import { HonestChapter } from "@/features/case-studies/routejudge/sections/HonestChapter";
+import { RebuildChapter } from "@/features/case-studies/routejudge/sections/RebuildChapter";
+import { TrainingChapter } from "@/features/case-studies/routejudge/sections/TrainingChapter";
+import { ResultsChapter } from "@/features/case-studies/routejudge/sections/ResultsChapter";
+import { ShippingChapter } from "@/features/case-studies/routejudge/sections/ShippingChapter";
 
 /**
  * RouteJudge case study: "The 93% that wasn't."

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
-import { ChapterHeading } from "@/features/case-studies/routejudge/components/ChapterHeading";
-import { TrainingCurves } from "@/features/case-studies/routejudge/components/TrainingCurves";
+import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
+import { TrainingCurves } from "@/features/case-studies/routejudge/sections/TrainingCurves";
 
 /** Chapter 6: the two training runs, and the bug that almost shipped. */
 export const TrainingChapter = () => {

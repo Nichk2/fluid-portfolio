@@ -5,7 +5,7 @@ import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metri
 import { chrome, seriesColor, type ModelKey } from "@/features/case-studies/routejudge/chartTheme";
 import { formatNumber } from "@/features/case-studies/routejudge/format";
 import { useInViewOnce } from "@/features/case-studies/routejudge/useInViewOnce";
-import { DataTable } from "@/features/case-studies/routejudge/components/DataTable";
+import { DataTable } from "@/features/case-studies/routejudge/sections/DataTable";
 
 const MODELS: ModelKey[] = ["baseline", "tinyllama", "qwen3"];
 const METRICS = [

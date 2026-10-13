@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { duration, gsapEaseOut, stagger } from "@/motion/motion";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-import { ChapterHeading } from "@/features/case-studies/routejudge/components/ChapterHeading";
+import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 

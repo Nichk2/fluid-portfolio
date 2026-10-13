@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metrics";
 import { formatNumber } from "@/features/case-studies/routejudge/format";
-import { ChapterHeading } from "@/features/case-studies/routejudge/components/ChapterHeading";
+import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
 
 const ITEM_COUNT = 5;
 
