@@ -118,8 +118,10 @@
       "accuracy": "Acurácia",
       "hardRecall": "Perguntas difíceis detectadas",
       "underRouting": "Enviadas baratas demais",
+      "overRouting": "Enviadas caras demais",
       "lowerIsBetter": "quanto menor, melhor",
-      "target": "Meta"
+      "target": "Meta",
+      "noTarget": "Sem meta definida"
     },
     "topics": {
       "title": "O que o modelo respondeu, por tema",

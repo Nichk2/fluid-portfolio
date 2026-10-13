@@ -8,18 +8,22 @@ import { useInViewOnce } from "@/features/case-studies/routejudge/useInViewOnce"
 import { DataTable } from "@/features/case-studies/routejudge/sections/DataTable";
 
 const MODELS: ModelKey[] = ["baseline", "tinyllama", "qwen3"];
+// overRouting had no target before training (only under-routing loses answer
+// quality), so its panel says "no target" instead of drawing one after the fact.
 const METRICS = [
   { key: "accuracy", target: m.targets.accuracy, lowerIsBetter: false },
   { key: "hardRecall", target: m.targets.hardRecall, lowerIsBetter: false },
   { key: "underRouting", target: m.targets.underRouting, lowerIsBetter: true },
+  { key: "overRouting", target: null, lowerIsBetter: true },
 ] as const;
 
 /**
- * Small multiples, one per metric, instead of one grouped chart: the three
- * metrics don't share a meaning (and one is lower-is-better), so they get
+ * Small multiples, one per metric, instead of one grouped chart: the four
+ * metrics don't share a meaning (and two are lower-is-better), so they get
  * separate panels on the same 0-100 scale. Bars are direct-labeled through the
  * category axis (each bar is its own row), the old model is gray on purpose
- * (emphasis on the new models), and each panel shows its pre-set target.
+ * (emphasis on the new models), and each panel shows its pre-set target
+ * where one was set.
  */
 export const ResultsCharts = () => {
   const { t, i18n } = useTranslation("routejudge");
@@ -31,7 +35,8 @@ export const ResultsCharts = () => {
 
   return (
     <div>
-      <div ref={ref} className="grid md:grid-cols-3 gap-6">
+      {/* 2x2: under- and over-routing share the bottom row, the two sides of a routing error. */}
+      <div ref={ref} className="grid md:grid-cols-2 gap-6">
         {METRICS.map((metric) => {
           const rows = MODELS.map((model) => ({ model, label: name(model), value: m.results[model][metric.key] }));
           return (
@@ -39,7 +44,9 @@ export const ResultsCharts = () => {
               <figcaption className="mb-4">
                 <span className="block font-body font-medium text-foreground">{t(`results.metrics.${metric.key}`)}</span>
                 <span className="text-xs text-muted-foreground font-body">
-                  {t("results.metrics.target")} {metric.lowerIsBetter ? "≤" : "≥"} {metric.target}%
+                  {metric.target === null
+                    ? t("results.metrics.noTarget")
+                    : `${t("results.metrics.target")} ${metric.lowerIsBetter ? "≤" : "≥"} ${metric.target}%`}
                   {metric.lowerIsBetter ? ` · ${t("results.metrics.lowerIsBetter")}` : ""}
                 </span>
               </figcaption>
@@ -57,7 +64,7 @@ export const ResultsCharts = () => {
                         axisLine={false}
                         tick={{ fill: chrome.axisText, fontSize: 12 }}
                       />
-                      <ReferenceLine x={metric.target} stroke={chrome.axisText} strokeWidth={1} />
+                      {metric.target !== null && <ReferenceLine x={metric.target} stroke={chrome.axisText} strokeWidth={1} />}
                       <Bar dataKey="value" barSize={20} radius={[0, 4, 4, 0]} isAnimationActive={!prefersReducedMotion}>
                         {rows.map((row) => (
                           <Cell key={row.model} fill={seriesColor[row.model]} />

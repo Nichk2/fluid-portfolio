@@ -118,8 +118,10 @@
       "accuracy": "Accuracy",
       "hardRecall": "Hard questions caught",
       "underRouting": "Sent too cheap",
+      "overRouting": "Sent too expensive",
       "lowerIsBetter": "lower is better",
-      "target": "Target"
+      "target": "Target",
+      "noTarget": "No target set"
     },
     "topics": {
       "title": "What the model answered, per topic",
