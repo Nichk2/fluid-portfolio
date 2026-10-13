@@ -108,7 +108,8 @@
       "baseline": "Modelo antigo"
     },
     "bugTitle": "O bug",
-    "bugBody": "Rodando localmente, o TinyLlama começou a responder \"EASELY\". O adaptador treinado estava certo; o passo de merge dentro do job de treino, não. Refazer o merge a partir do adaptador salvo resolveu, verificado em 60 perguntas antes de qualquer coisa ir para produção."
+    "bugBody": "Rodando localmente, o TinyLlama começou a responder \"EASELY\". O adaptador treinado estava certo; o passo de merge dentro do job de treino, não. Refazer o merge a partir do adaptador salvo resolveu, verificado em 60 perguntas antes de qualquer coisa ir para produção.",
+    "invalidResult": "Depois da correção, saídas inválidas no conjunto de teste de {{items}} perguntas: {{rate}}% nos dois modelos novos. Toda resposta foi exatamente FÁCIL, MÉDIA ou DIFÍCIL."
   },
   "results": {
     "eyebrow": "07 — Resultados",
