@@ -17,10 +17,12 @@ export const ScreenFigure = ({ src, screen }: ScreenFigureProps) => {
 
   return (
     <figure>
-      <div className={CASE_STUDY_STYLES.images.feature}>
+      {/* A desktop screen is small on a phone, so the image links to the full
+          2x file: one tap opens it where the reader can zoom. */}
+      <a href={src} target="_blank" rel="noopener noreferrer" className={`block ${CASE_STUDY_STYLES.images.feature}`}>
         {/* width/height let the browser reserve the right box before the image loads (no layout shift). */}
         <img src={src} alt={t(`screens.${screen}.alt`)} width={2560} height={1800} loading="lazy" decoding="async" className="w-full h-auto" />
-      </div>
+      </a>
       <figcaption className="mt-4 font-body text-sm text-muted-foreground leading-relaxed">
         <span className="text-foreground font-medium">{t("screens.tag")}</span> · {t(`screens.${screen}.caption`)}
       </figcaption>

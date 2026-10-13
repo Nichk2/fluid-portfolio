@@ -151,6 +151,11 @@
       "The whole retune used about ${{cost}} of cloud GPU time."
     ]
   },
+  "design": {
+    "eyebrow": "09 — Design",
+    "title": "Designed before it was built",
+    "body": "Before writing the frontend, I designed RouteJudge in Figma: color, type and spacing tokens, a component library, and each screen with its loading, empty and error states. The code mirrors that system in three token layers, so a component can only use the colors defined for it."
+  },
   "screens": {
     "tag": "Figma design · sample data",
     "dashboard": {

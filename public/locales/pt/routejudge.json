@@ -151,6 +151,11 @@
       "O retune inteiro usou cerca de US${{cost}} de GPU na nuvem."
     ]
   },
+  "design": {
+    "eyebrow": "09 — Design",
+    "title": "Desenhado antes de ser construído",
+    "body": "Antes de escrever o frontend, desenhei o RouteJudge no Figma: tokens de cor, tipografia e espaçamento, uma biblioteca de componentes e cada tela com seus estados de carregamento, vazio e erro. O código espelha esse sistema em três camadas de tokens, então um componente só pode usar as cores definidas para ele."
+  },
   "screens": {
     "tag": "Design no Figma · dados de exemplo",
     "dashboard": {

@@ -13,13 +13,15 @@ import { RebuildChapter } from "@/features/case-studies/routejudge/sections/Rebu
 import { TrainingChapter } from "@/features/case-studies/routejudge/sections/TrainingChapter";
 import { ResultsChapter } from "@/features/case-studies/routejudge/sections/ResultsChapter";
 import { ShippingChapter } from "@/features/case-studies/routejudge/sections/ShippingChapter";
+import { DesignChapter } from "@/features/case-studies/routejudge/sections/DesignChapter";
 
 /**
  * RouteJudge case study: "The 93% that wasn't."
  *
  * Told as an investigation, one chapter per component:
  *   product -> the reported number -> the audit's clues -> the honest number
- *   -> rebuilding the data -> training (and the merge bug) -> results -> shipping.
+ *   -> rebuilding the data -> training (and the merge bug) -> results -> shipping
+ *   -> design (the app screens, from Figma).
  *
  * Every figure comes from metrics.ts, generated from the RouteJudge run ledger
  * (routejudge/experiments/export_portfolio_metrics.py), and all copy from
@@ -53,6 +55,10 @@ const RouteJudgePage = () => {
         </div>
         <div className="max-w-4xl mx-auto px-6 md:px-8 mt-40">
           <ShippingChapter />
+        </div>
+        {/* Same width as the results: wide enough for an app screen to stay legible. */}
+        <div className="max-w-5xl mx-auto px-6 md:px-8 mt-40">
+          <DesignChapter />
         </div>
       </section>
 
