@@ -7,6 +7,8 @@ import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { duration, gsapEaseOut, stagger } from "@/motion/motion";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
+import { ScreenFigure } from "@/features/case-studies/routejudge/sections/ScreenFigure";
+import { ScreenDashboard } from "@/features/case-studies/routejudge/media";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,6 +85,11 @@ export const ProductChapter = () => {
             <p className="text-sm text-muted-foreground font-body mt-1">{t("product.tiers.cloudNote")}</p>
           </div>
         </div>
+      </div>
+
+      {/* The diagram explains the idea; the screen shows it as a user meets it. */}
+      <div className={`mt-20 ${CASE_STUDY_STYLES.scrollReveal}`}>
+        <ScreenFigure src={ScreenDashboard} screen="dashboard" />
       </div>
     </div>
   );
