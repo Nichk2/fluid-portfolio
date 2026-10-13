@@ -1,17 +1,21 @@
 import { useTranslation } from "react-i18next";
 import {
   FastApiLogo,
+  GsapLogo,
   ModalLogo,
+  OllamaLogo,
+  PythonLogo,
   ReactLogo,
   TailwindLogo,
   TransformersLogo,
   TypescriptLogo,
+  VllmLogo,
 } from "@/features/case-studies/routejudge/media";
 
 type Tool = {
   name: string;
   logo?: string;
-  /** The logo already spells the name (FastAPI, Transformers), so the caption would repeat it. */
+  /** The logo already spells the name (FastAPI, Transformers, GSAP), so the caption would repeat it. */
   wordmark?: boolean;
   /** Per-logo size: some files carry lots of empty space around the mark. */
   logoClass?: string;
@@ -26,13 +30,13 @@ const GROUPS: { key: "training" | "serving" | "frontend"; tools: Tool[] }[] = [
       { name: "Modal", logo: ModalLogo },
       { name: "Transformers", logo: TransformersLogo, wordmark: true, logoClass: "h-14" },
       { name: "PEFT (LoRA)" },
-      { name: "vLLM" },
+      { name: "vLLM", logo: VllmLogo },
       { name: "llama.cpp" },
     ],
   },
   {
     key: "serving",
-    tools: [{ name: "FastAPI", logo: FastApiLogo, wordmark: true, logoClass: "h-7" }, { name: "Python" }, { name: "Ollama" }, { name: "SQLite" }, { name: "sentence-transformers" }],
+    tools: [{ name: "FastAPI", logo: FastApiLogo, wordmark: true, logoClass: "h-7" }, { name: "Python", logo: PythonLogo }, { name: "Ollama", logo: OllamaLogo }, { name: "SQLite" }, { name: "sentence-transformers" }],
   },
   {
     key: "frontend",
@@ -40,7 +44,7 @@ const GROUPS: { key: "training" | "serving" | "frontend"; tools: Tool[] }[] = [
       { name: "React", logo: ReactLogo },
       { name: "TypeScript", logo: TypescriptLogo },
       { name: "Tailwind CSS", logo: TailwindLogo },
-      { name: "GSAP" },
+      { name: "GSAP", logo: GsapLogo, wordmark: true, logoClass: "h-7" },
       { name: "ECharts" },
     ],
   },
