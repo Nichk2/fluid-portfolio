@@ -39,19 +39,21 @@ export const FullMetrics = () => {
   ];
 
   return (
-    <details className="group rounded-3xl border border-border/30 bg-card p-6 md:p-8">
+    <details className="group rounded-3xl border border-border/30 bg-card p-4 sm:p-6 md:p-8">
       <summary className="cursor-pointer font-display text-2xl md:text-3xl font-medium text-foreground">
         {t("results.full.title")}
       </summary>
       <p className="mt-4 text-muted-foreground font-body">{t("results.full.note", { items: formatInt(m.evalSet.items, lang) })}</p>
       <div className="mt-6 overflow-x-auto">
-        <table className="w-full text-sm font-body tabular-nums">
+        {/* Tighter on phones so all three model columns fit without sideways
+            scrolling; the deployed model is the last column and must not hide. */}
+        <table className="w-full text-xs sm:text-sm font-body tabular-nums">
           <caption className="sr-only">{t("results.full.title")}</caption>
           <thead>
             <tr className="border-b border-border text-left text-muted-foreground">
-              <th scope="col" className="py-2 pr-6 font-medium" />
+              <th scope="col" className="py-2 pr-2 sm:pr-6 font-medium" />
               {MODELS.map((key) => (
-                <th key={key} scope="col" className="py-2 pr-6 font-medium whitespace-nowrap">
+                <th key={key} scope="col" className="py-2 pr-2 sm:pr-6 font-medium align-bottom">
                   {t(`training.series.${key}`)}
                 </th>
               ))}
@@ -67,11 +69,11 @@ export const FullMetrics = () => {
                 </tr>
               ) : (
                 <tr key={index} className="border-b border-border/40">
-                  <th scope="row" className="py-2 pr-6 text-left font-normal text-muted-foreground">
+                  <th scope="row" className="py-2 pr-2 sm:pr-6 text-left font-normal text-muted-foreground">
                     {row.label}
                   </th>
                   {row.values.map((value, cell) => (
-                    <td key={cell} className="py-2 pr-6 text-foreground">
+                    <td key={cell} className="py-2 pr-2 sm:pr-6 text-foreground whitespace-nowrap">
                       {value}
                     </td>
                   ))}
