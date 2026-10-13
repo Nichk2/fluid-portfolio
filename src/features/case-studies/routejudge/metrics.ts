@@ -215,6 +215,280 @@ export const routejudgeMetrics = {
     }
   },
   "qwenTwoLevelErrors": 0,
+  "full": {
+    "baseline": {
+      "perClass": {
+        "EASY": {
+          "precision": 46.6,
+          "recall": 56.4,
+          "f1": 51.0,
+          "support": 110
+        },
+        "MEDIUM": {
+          "precision": 37.2,
+          "recall": 50.8,
+          "f1": 43.0,
+          "support": 120
+        },
+        "HARD": {
+          "precision": 37.5,
+          "recall": 14.0,
+          "f1": 20.4,
+          "support": 107
+        }
+      },
+      "confusion": [
+        [
+          62,
+          39,
+          9
+        ],
+        [
+          43,
+          61,
+          16
+        ],
+        [
+          28,
+          64,
+          15
+        ]
+      ],
+      "invalidOutputRate": 0.0,
+      "latencyMs": {
+        "p50": 288,
+        "p95": 694
+      },
+      "byDomainAccuracy": {
+        "advice": 34.0,
+        "coding": 41.7,
+        "creative": 37.8,
+        "facts": 41.2,
+        "language": 62.5,
+        "math": 30.2,
+        "reasoning": 40.0
+      }
+    },
+    "tinyllama": {
+      "perClass": {
+        "EASY": {
+          "precision": 71.5,
+          "recall": 84.5,
+          "f1": 77.5,
+          "support": 110
+        },
+        "MEDIUM": {
+          "precision": 66.4,
+          "recall": 64.2,
+          "f1": 65.2,
+          "support": 120
+        },
+        "HARD": {
+          "precision": 89.0,
+          "recall": 75.7,
+          "f1": 81.8,
+          "support": 107
+        }
+      },
+      "confusion": [
+        [
+          93,
+          16,
+          1
+        ],
+        [
+          34,
+          77,
+          9
+        ],
+        [
+          3,
+          23,
+          81
+        ]
+      ],
+      "invalidOutputRate": 0.0,
+      "latencyMs": {
+        "p50": 201,
+        "p95": 568
+      },
+      "byDomainAccuracy": {
+        "advice": 80.8,
+        "coding": 77.1,
+        "creative": 86.7,
+        "facts": 76.5,
+        "language": 77.1,
+        "math": 69.8,
+        "reasoning": 53.3
+      }
+    },
+    "qwen3": {
+      "perClass": {
+        "EASY": {
+          "precision": 72.8,
+          "recall": 82.7,
+          "f1": 77.5,
+          "support": 110
+        },
+        "MEDIUM": {
+          "precision": 72.0,
+          "recall": 64.2,
+          "f1": 67.8,
+          "support": 120
+        },
+        "HARD": {
+          "precision": 91.4,
+          "recall": 89.7,
+          "f1": 90.6,
+          "support": 107
+        }
+      },
+      "confusion": [
+        [
+          91,
+          19,
+          0
+        ],
+        [
+          34,
+          77,
+          9
+        ],
+        [
+          0,
+          11,
+          96
+        ]
+      ],
+      "invalidOutputRate": 0.0,
+      "latencyMs": {
+        "p50": 386,
+        "p95": 778
+      },
+      "byDomainAccuracy": {
+        "advice": 72.3,
+        "coding": 85.4,
+        "creative": 91.1,
+        "facts": 80.4,
+        "language": 75.0,
+        "math": 77.4,
+        "reasoning": 66.7
+      }
+    }
+  },
+  "labelsByDomain": {
+    "baseline": {
+      "advice": {
+        "EASY": 4,
+        "MEDIUM": 41,
+        "HARD": 2
+      },
+      "coding": {
+        "EASY": 4,
+        "MEDIUM": 44,
+        "HARD": 0
+      },
+      "creative": {
+        "EASY": 6,
+        "MEDIUM": 16,
+        "HARD": 23
+      },
+      "facts": {
+        "EASY": 31,
+        "MEDIUM": 16,
+        "HARD": 4
+      },
+      "language": {
+        "EASY": 13,
+        "MEDIUM": 26,
+        "HARD": 9
+      },
+      "math": {
+        "EASY": 51,
+        "MEDIUM": 2,
+        "HARD": 0
+      },
+      "reasoning": {
+        "EASY": 24,
+        "MEDIUM": 19,
+        "HARD": 2
+      }
+    },
+    "qwen3": {
+      "advice": {
+        "EASY": 3,
+        "MEDIUM": 27,
+        "HARD": 17
+      },
+      "coding": {
+        "EASY": 10,
+        "MEDIUM": 23,
+        "HARD": 15
+      },
+      "creative": {
+        "EASY": 14,
+        "MEDIUM": 15,
+        "HARD": 16
+      },
+      "facts": {
+        "EASY": 28,
+        "MEDIUM": 8,
+        "HARD": 15
+      },
+      "language": {
+        "EASY": 27,
+        "MEDIUM": 9,
+        "HARD": 12
+      },
+      "math": {
+        "EASY": 22,
+        "MEDIUM": 13,
+        "HARD": 18
+      },
+      "reasoning": {
+        "EASY": 21,
+        "MEDIUM": 12,
+        "HARD": 12
+      }
+    },
+    "gold": {
+      "advice": {
+        "EASY": 14,
+        "MEDIUM": 18,
+        "HARD": 15
+      },
+      "coding": {
+        "EASY": 15,
+        "MEDIUM": 18,
+        "HARD": 15
+      },
+      "creative": {
+        "EASY": 15,
+        "MEDIUM": 15,
+        "HARD": 15
+      },
+      "facts": {
+        "EASY": 18,
+        "MEDIUM": 18,
+        "HARD": 15
+      },
+      "language": {
+        "EASY": 18,
+        "MEDIUM": 15,
+        "HARD": 15
+      },
+      "math": {
+        "EASY": 15,
+        "MEDIUM": 21,
+        "HARD": 17
+      },
+      "reasoning": {
+        "EASY": 15,
+        "MEDIUM": 15,
+        "HARD": 15
+      }
+    }
+  },
   "targets": {
     "accuracy": 70,
     "hardRecall": 70,
