@@ -196,7 +196,13 @@
       "A \"tier floor\" lets history upgrade a route but never downgrade it to a weaker model.",
       "Classifying a question takes {{p50}} s at the median and {{p95}} s for the slowest 5%, measured over the test set on an 8 GB laptop.",
       "The whole retune used about ${{cost}} of cloud GPU time."
-    ]
+    ],
+    "stack": {
+      "title": "Built with",
+      "training": "Training (cloud)",
+      "serving": "Serving (local)",
+      "frontend": "Frontend"
+    }
   },
   "design": {
     "eyebrow": "09 — Design",

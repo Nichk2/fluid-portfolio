@@ -3,6 +3,7 @@ import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metrics";
 import { formatNumber } from "@/features/case-studies/routejudge/format";
 import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
+import { StackGroups } from "@/features/case-studies/routejudge/sections/StackGroups";
 
 const ITEM_COUNT = 6;
 
@@ -29,6 +30,9 @@ export const ShippingChapter = () => {
           </li>
         ))}
       </ul>
+
+      <h3 className="mt-16 mb-8 text-2xl md:text-3xl font-display font-medium text-foreground">{t("shipping.stack.title")}</h3>
+      <StackGroups />
     </div>
   );
 };

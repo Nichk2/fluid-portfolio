@@ -196,7 +196,13 @@
       "Um \"piso de nível\" deixa o histórico promover uma rota, mas nunca rebaixá-la para um modelo mais fraco.",
       "Classificar uma pergunta leva {{p50}} s na mediana e {{p95}} s nos 5% mais lentos, medido no conjunto de teste num notebook de 8 GB.",
       "O retune inteiro usou cerca de US${{cost}} de GPU na nuvem."
-    ]
+    ],
+    "stack": {
+      "title": "Feito com",
+      "training": "Treino (nuvem)",
+      "serving": "Execução (local)",
+      "frontend": "Frontend"
+    }
   },
   "design": {
     "eyebrow": "09 — Design",
