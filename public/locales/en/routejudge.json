@@ -107,6 +107,17 @@
       "qwen3": "Qwen3 1.7B",
       "baseline": "Old model"
     },
+    "modal": {
+      "title": "Trained on Modal",
+      "body": "Every GPU step of the retune ran as a Modal job, so a laptop with 8 GB of RAM never had to hold a 24B model.",
+      "points": [
+        "Labeling: Mistral Small 3.2 (24B) on an {{teacherGpu}}, served with vLLM.",
+        "Fine-tuning: LoRA on an {{trainGpu}}, {{tinyMinutes}} minutes for TinyLlama and {{qwenMinutes}} for Qwen3.",
+        "Merging and GGUF export: CPU jobs, no GPU time needed.",
+        "Evaluation: locally, on a {{evalMachine}}, at no cost.",
+        "Total cloud spend: about US${{cost}}."
+      ]
+    },
     "bugTitle": "The bug",
     "bugBody": "Served locally, TinyLlama started answering \"EASELY\". The trained adapter was fine; the merge step inside the training job wasn't. Merging again from the saved adapter fixed it, verified on 60 questions before anything shipped.",
     "invalidResult": "After the fix, invalid outputs on the {{items}}-question test set: {{rate}}% for both new models. Every answer was exactly EASY, MEDIUM or HARD."

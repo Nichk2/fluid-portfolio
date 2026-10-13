@@ -107,6 +107,17 @@
       "qwen3": "Qwen3 1.7B",
       "baseline": "Modelo antigo"
     },
+    "modal": {
+      "title": "Treinado na Modal",
+      "body": "Toda etapa de GPU do retune rodou como um job na Modal, então um notebook com 8 GB de RAM nunca precisou carregar um modelo de 24B.",
+      "points": [
+        "Rotulagem: Mistral Small 3.2 (24B) numa {{teacherGpu}}, servido com vLLM.",
+        "Fine-tuning: LoRA numa {{trainGpu}}, {{tinyMinutes}} minutos para o TinyLlama e {{qwenMinutes}} para o Qwen3.",
+        "Merge e exportação GGUF: jobs de CPU, sem tempo de GPU.",
+        "Avaliação: local, num {{evalMachine}}, sem custo.",
+        "Gasto total na nuvem: cerca de US${{cost}}."
+      ]
+    },
     "bugTitle": "O bug",
     "bugBody": "Rodando localmente, o TinyLlama começou a responder \"EASELY\". O adaptador treinado estava certo; o passo de merge dentro do job de treino, não. Refazer o merge a partir do adaptador salvo resolveu, verificado em 60 perguntas antes de qualquer coisa ir para produção.",
     "invalidResult": "Depois da correção, saídas inválidas no conjunto de teste de {{items}} perguntas: {{rate}}% nos dois modelos novos. Toda resposta foi exatamente FÁCIL, MÉDIA ou DIFÍCIL."

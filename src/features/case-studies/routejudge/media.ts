@@ -15,3 +15,15 @@ import ScreenStats from "@/Image/RouteJudge/screen-stats.png";
 import ScreenHistory from "@/Image/RouteJudge/screen-history.png";
 
 export { ScreenDashboard, ScreenStats, ScreenHistory };
+
+// Stack logos, reused from the VisaBuddy case study's assets (same files, so
+// both pages show identical marks). Tools without a logo file in the repo are
+// shown as text labels instead of an invented icon.
+import ModalLogo from "@/Image/VisaBuddy/Modal-Primary-Logo.svg";
+import FastApiLogo from "@/Image/VisaBuddy/FastAPI_logo.svg";
+import TransformersLogo from "@/Image/VisaBuddy/HG transfomers.svg";
+import ReactLogo from "@/Image/VisaBuddy/react.svg";
+import TypescriptLogo from "@/Image/VisaBuddy/typescript.svg";
+import TailwindLogo from "@/Image/VisaBuddy/tailwindcss.svg";
+
+export { ModalLogo, FastApiLogo, TransformersLogo, ReactLogo, TypescriptLogo, TailwindLogo };

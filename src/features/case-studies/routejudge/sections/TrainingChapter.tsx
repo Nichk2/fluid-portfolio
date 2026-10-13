@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import CASE_STUDY_STYLES from "@/components/CaseStudyTemplate";
 import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
 import { TrainingCurves } from "@/features/case-studies/routejudge/sections/TrainingCurves";
+import { ModalCard } from "@/features/case-studies/routejudge/sections/ModalCard";
 import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metrics";
 import { formatInt, formatNumber } from "@/features/case-studies/routejudge/format";
 
@@ -19,6 +20,9 @@ export const TrainingChapter = () => {
         <ChapterHeading eyebrow={t("training.eyebrow")} title={t("training.title")} />
         <p className={CASE_STUDY_STYLES.typography.body}>{t("training.body")}</p>
       </div>
+
+      {/* Where it ran, before what it produced. */}
+      <ModalCard />
 
       <div className={CASE_STUDY_STYLES.scrollReveal}>
         <TrainingCurves />

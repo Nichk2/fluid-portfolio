@@ -496,6 +496,20 @@ export const routejudgeMetrics = {
     "languageGap": 5
   },
   "costUsd": 2.5,
+  "compute": {
+    "teacherGpu": "H100",
+    "train": {
+      "tinyllama": {
+        "gpu": "A100-80GB",
+        "minutes": 8.7
+      },
+      "qwen3": {
+        "gpu": "A100-80GB",
+        "minutes": 11.7
+      }
+    },
+    "evalMachine": "MacBook (Apple M3, 8 GB)"
+  },
   "examples": [
     {
       "id": "e0038",
