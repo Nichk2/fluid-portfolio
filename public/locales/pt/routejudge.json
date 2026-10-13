@@ -121,6 +121,21 @@
       "lowerIsBetter": "quanto menor, melhor",
       "target": "Meta"
     },
+    "topics": {
+      "title": "O que o modelo respondeu, por tema",
+      "caption": "Cada barra são as perguntas de teste de um tema, divididas pelo rótulo que o modelo deu. A mistura real é de cerca de um terço de cada nível em todos os temas. O modelo antigo respondia pelo assunto: matemática era quase sempre FÁCIL, programação e conselhos quase sempre MÉDIA. O Qwen3 usa os três níveis em todos os temas.",
+      "topic": "Tema",
+      "real": "Rótulos reais",
+      "names": {
+        "advice": "Conselhos",
+        "coding": "Programação",
+        "creative": "Escrita criativa",
+        "facts": "Fatos",
+        "language": "Idiomas",
+        "math": "Matemática",
+        "reasoning": "Raciocínio"
+      }
+    },
     "targetsTitle": "Metas definidas antes do treino",
     "targets": {
       "accuracy": "Acurácia de pelo menos {{target}}%",

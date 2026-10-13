@@ -31,3 +31,25 @@ export const chrome = {
 } as const;
 
 export type ModelKey = keyof typeof seriesColor;
+
+/**
+ * Difficulty levels are ordered (EASY < MEDIUM < HARD), so they take one hue
+ * stepped in lightness, not three unrelated colors. On a dark surface the
+ * ramp anchors dark: the "most" end (HARD) is the brightest. Validated with
+ * the dataviz validator in --ordinal mode on #0f0f16: monotone lightness,
+ * adjacent steps >= 0.06 L apart, single hue (spread 2°), dimmest step 3.2:1.
+ * Rose hue 355, OKLCH L 0.52 / 0.70 / 0.86.
+ */
+export const levelColor = {
+  EASY: "#a4406d",
+  MEDIUM: "#e177a3",
+  HARD: "#ffb6d4",
+} as const;
+
+/** Text color on each level fill, picked for >= 4.5:1 contrast. */
+export const levelInk = {
+  EASY: "#edebe5",
+  MEDIUM: "#0a0a11",
+  HARD: "#0a0a11",
+} as const;
+

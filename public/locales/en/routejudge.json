@@ -121,6 +121,21 @@
       "lowerIsBetter": "lower is better",
       "target": "Target"
     },
+    "topics": {
+      "title": "What the model answered, per topic",
+      "caption": "Each bar is one topic's test questions, split by the label the model gave. The real mix is roughly a third of each level in every topic. The old model answered by subject: math was almost always EASY, coding and advice almost always MEDIUM. Qwen3 uses all three levels in every topic.",
+      "topic": "Topic",
+      "real": "Real labels",
+      "names": {
+        "advice": "Advice",
+        "coding": "Coding",
+        "creative": "Creative writing",
+        "facts": "Facts",
+        "language": "Language",
+        "math": "Math",
+        "reasoning": "Reasoning"
+      }
+    },
     "targetsTitle": "Targets set before training",
     "targets": {
       "accuracy": "Accuracy at least {{target}}%",

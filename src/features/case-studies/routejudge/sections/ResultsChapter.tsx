@@ -7,6 +7,7 @@ import { ResultsCharts } from "@/features/case-studies/routejudge/sections/Resul
 import { TargetsChecklist } from "@/features/case-studies/routejudge/sections/TargetsChecklist";
 import { ExamplesTable } from "@/features/case-studies/routejudge/sections/ExamplesTable";
 import { MatrixComparison } from "@/features/case-studies/routejudge/sections/MatrixComparison";
+import { TopicLabels } from "@/features/case-studies/routejudge/sections/TopicLabels";
 
 /** Chapter 7: the new number, measured exactly like the old one, with the targets and real examples. */
 export const ResultsChapter = () => {
@@ -38,6 +39,11 @@ export const ResultsChapter = () => {
       <p className={`${CASE_STUDY_STYLES.typography.quote} ${CASE_STUDY_STYLES.scrollReveal}`}>
         {t("results.zeroErrors", { items: formatInt(m.evalSet.items, lang) })}
       </p>
+
+      {/* Closes clue 2 from the investigation: labels no longer follow the topic. */}
+      <div className={CASE_STUDY_STYLES.scrollReveal}>
+        <TopicLabels />
+      </div>
 
       <div className={CASE_STUDY_STYLES.scrollReveal}>
         <TargetsChecklist />
