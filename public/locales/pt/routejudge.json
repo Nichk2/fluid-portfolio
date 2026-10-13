@@ -131,6 +131,10 @@
       "missed": "Faltou {{gap}}",
       "languageNote": "EN {{en}}% · PT {{pt}}% · ZH {{zh}}% nas mesmas tarefas"
     },
+    "matrices": {
+      "title": "Onde as respostas caíram, antes e depois",
+      "caption": "As mesmas {{items}} perguntas de teste, a mesma grade do capítulo 4, a mesma escala de cor. As linhas são a dificuldade real; as colunas, a resposta do modelo."
+    },
     "zeroErrors": "Em {{items}} perguntas de teste, o Qwen3 nunca confundiu FÁCIL com DIFÍCIL. Todo erro restante é entre vizinhos.",
     "examplesTitle": "As mesmas perguntas, antes e depois",
     "examples": {

@@ -4,26 +4,44 @@ import { seriesColor } from "@/features/case-studies/routejudge/chartTheme";
 
 const LABEL_KEYS = { EASY: "easy", MEDIUM: "medium", HARD: "hard" } as const;
 
+type ConfusionMatrixProps = {
+  /** Rows are the true difficulty, columns the model's answer (EASY, MEDIUM, HARD). */
+  matrix: readonly (readonly number[])[];
+  /** Count that maps to the strongest shade. Pass one shared value when two
+   * matrices sit side by side, so equal shades mean equal counts. */
+  max?: number;
+  title: string;
+  caption?: string;
+  /** Smaller title, for a matrix that is one of a pair. */
+  compact?: boolean;
+};
+
 /**
- * The old model's confusion matrix as a real HTML table (so it is its own
- * accessible "table view"). Cell shade is a single-hue sequential scale:
- * how many questions landed there, as opacity of the rose series color.
- * Counts are printed in every cell because this is a 3x3 table to be read,
- * not a dense chart to be scanned.
+ * A confusion matrix as a real HTML table (so it is its own accessible
+ * "table view"). Cell shade is a single-hue sequential scale: how many
+ * questions landed there, as opacity of the rose series color. Counts are
+ * printed in every cell because this is a 3x3 table to be read, not a dense
+ * chart to be scanned.
  */
-export const ConfusionMatrix = () => {
+export const ConfusionMatrix = ({ matrix, max: maxProp, title, caption, compact = false }: ConfusionMatrixProps) => {
   const { t } = useTranslation("routejudge");
-  const { labels, matrix } = m.baselineConfusion;
-  const max = Math.max(...matrix.flat());
+  const { labels } = m.baselineConfusion;
+  const max = maxProp ?? Math.max(...matrix.flat());
   const label = (key: (typeof labels)[number]) => t(`product.tiers.${LABEL_KEYS[key]}`);
 
   return (
     <figure>
-      <figcaption className="mb-6">
-        <span className="block text-2xl md:text-3xl font-display font-medium text-foreground mb-2">
-          {t("honest.matrixTitle")}
+      <figcaption className={compact ? "mb-4 text-center" : "mb-6"}>
+        <span
+          className={
+            compact
+              ? "block font-body font-medium text-foreground"
+              : "block text-2xl md:text-3xl font-display font-medium text-foreground mb-2"
+          }
+        >
+          {title}
         </span>
-        <span className="text-muted-foreground font-body">{t("honest.matrixCaption")}</span>
+        {caption && <span className="text-muted-foreground font-body">{caption}</span>}
       </figcaption>
       <div className="overflow-x-auto">
         <table className="border-separate border-spacing-0.5 font-body tabular-nums mx-auto">

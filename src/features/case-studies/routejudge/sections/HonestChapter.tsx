@@ -92,7 +92,11 @@ export const HonestChapter = () => {
       </div>
 
       <div className={CASE_STUDY_STYLES.scrollReveal}>
-        <ConfusionMatrix />
+        <ConfusionMatrix
+          matrix={m.baselineConfusion.matrix}
+          title={t("honest.matrixTitle")}
+          caption={t("honest.matrixCaption")}
+        />
       </div>
     </div>
   );

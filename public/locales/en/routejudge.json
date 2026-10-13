@@ -131,6 +131,10 @@
       "missed": "Missed by {{gap}}",
       "languageNote": "EN {{en}}% · PT {{pt}}% · ZH {{zh}}% on the same tasks"
     },
+    "matrices": {
+      "title": "Where the answers landed, before and after",
+      "caption": "Same {{items}} test questions, same grid as chapter 4, same shade scale. Rows are the real difficulty; columns are the model's answer."
+    },
     "zeroErrors": "Across {{items}} test questions, Qwen3 never confused EASY with HARD. Every remaining mistake is between neighbors.",
     "examplesTitle": "Same questions, before and after",
     "examples": {

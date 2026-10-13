@@ -6,6 +6,7 @@ import { ChapterHeading } from "@/features/case-studies/routejudge/sections/Chap
 import { ResultsCharts } from "@/features/case-studies/routejudge/sections/ResultsCharts";
 import { TargetsChecklist } from "@/features/case-studies/routejudge/sections/TargetsChecklist";
 import { ExamplesTable } from "@/features/case-studies/routejudge/sections/ExamplesTable";
+import { MatrixComparison } from "@/features/case-studies/routejudge/sections/MatrixComparison";
 
 /** Chapter 7: the new number, measured exactly like the old one, with the targets and real examples. */
 export const ResultsChapter = () => {
@@ -27,6 +28,11 @@ export const ResultsChapter = () => {
 
       <div className={CASE_STUDY_STYLES.scrollReveal}>
         <ResultsCharts />
+      </div>
+
+      {/* The matrices first, then the sentence that names what they show. */}
+      <div className={CASE_STUDY_STYLES.scrollReveal}>
+        <MatrixComparison />
       </div>
 
       <p className={`${CASE_STUDY_STYLES.typography.quote} ${CASE_STUDY_STYLES.scrollReveal}`}>
