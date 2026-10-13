@@ -183,6 +183,7 @@
       "A confiança é a probabilidade que o próprio modelo dá ao rótulo. Antes era uma constante de 0,85 para toda pergunta.",
       "O parser pega o rótulo que o modelo realmente disse primeiro, em vez de sempre preferir FÁCIL.",
       "Um \"piso de nível\" deixa o histórico promover uma rota, mas nunca rebaixá-la para um modelo mais fraco.",
+      "Classificar uma pergunta leva {{p50}} s na mediana e {{p95}} s nos 5% mais lentos, medido no conjunto de teste num notebook de 8 GB.",
       "O retune inteiro usou cerca de US${{cost}} de GPU na nuvem."
     ]
   },

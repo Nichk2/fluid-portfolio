@@ -4,7 +4,7 @@ import { routejudgeMetrics as m } from "@/features/case-studies/routejudge/metri
 import { formatNumber } from "@/features/case-studies/routejudge/format";
 import { ChapterHeading } from "@/features/case-studies/routejudge/sections/ChapterHeading";
 
-const ITEM_COUNT = 5;
+const ITEM_COUNT = 6;
 
 /** Chapter 8: what changed in the product. Quiet on purpose: pragmatic changes, no extra motion. */
 export const ShippingChapter = () => {
@@ -14,6 +14,8 @@ export const ShippingChapter = () => {
     value: formatNumber(m.results.qwen3.accuracy, lang),
     old: formatNumber(m.headline.honestAccuracy, lang),
     cost: formatNumber(m.costUsd, lang, 2),
+    p50: formatNumber(m.full.qwen3.latencyMs.p50 / 1000, lang, 2),
+    p95: formatNumber(m.full.qwen3.latencyMs.p95 / 1000, lang, 2),
   };
 
   return (

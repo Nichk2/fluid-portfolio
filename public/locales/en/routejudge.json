@@ -183,6 +183,7 @@
       "Confidence is the model's own probability for its label. It used to be a constant 0.85 for every query.",
       "The parser takes the label the model actually said first, instead of always preferring EASY.",
       "A \"tier floor\" lets history upgrade a route but never downgrade it to a weaker model.",
+      "Classifying a question takes {{p50}} s at the median and {{p95}} s for the slowest 5%, measured over the test set on an 8 GB laptop.",
       "The whole retune used about ${{cost}} of cloud GPU time."
     ]
   },
