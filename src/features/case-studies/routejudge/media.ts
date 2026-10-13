@@ -16,13 +16,10 @@ import ScreenHistory from "@/Image/RouteJudge/screen-history.png";
 
 export { ScreenDashboard, ScreenStats, ScreenHistory };
 
-// Stack logos, mostly reused from the VisaBuddy case study's assets (same files, so
-// both pages show identical marks). Tools without a logo file in the repo are
-// shown as text labels instead of an invented icon.
+// Stack logos. These four are reused from the VisaBuddy case study's assets
+// (same files, so both pages show identical marks).
 import ModalLogo from "@/Image/VisaBuddy/Modal-Primary-Logo.svg";
 import FastApiLogo from "@/Image/VisaBuddy/FastAPI_logo.svg";
-import TransformersLogo from "@/Image/VisaBuddy/HG transfomers.svg";
-
 import TypescriptLogo from "@/Image/VisaBuddy/typescript.svg";
 import TailwindLogo from "@/Image/VisaBuddy/tailwindcss.svg";
 
@@ -32,11 +29,15 @@ import PythonLogo from "@/Image/RouteJudge/python.svg";
 import OllamaLogo from "@/Image/RouteJudge/ollama-dark.svg";
 import VllmLogo from "@/Image/RouteJudge/vllm.svg";
 import GsapLogo from "@/Image/RouteJudge/gsap.svg";
+import HuggingFaceLogo from "@/Image/RouteJudge/hf-logo.svg";
+import PeftLogo from "@/Image/RouteJudge/Peft.svg";
+import LlamaCppLogo from "@/Image/RouteJudge/llama-cpp.svg";
+import SqliteLogo from "@/Image/RouteJudge/sqlite-svgrepo-com.svg";
+import EchartsLogo from "@/Image/RouteJudge/apacheecharts.svg";
 
 export {
   ModalLogo,
   FastApiLogo,
-  TransformersLogo,
   ReactLogo,
   TypescriptLogo,
   TailwindLogo,
@@ -44,4 +45,9 @@ export {
   OllamaLogo,
   VllmLogo,
   GsapLogo,
+  HuggingFaceLogo,
+  PeftLogo,
+  LlamaCppLogo,
+  SqliteLogo,
+  EchartsLogo,
 };

@@ -1,13 +1,17 @@
 import { useTranslation } from "react-i18next";
 import {
+  EchartsLogo,
   FastApiLogo,
   GsapLogo,
+  HuggingFaceLogo,
+  LlamaCppLogo,
   ModalLogo,
   OllamaLogo,
+  PeftLogo,
   PythonLogo,
   ReactLogo,
+  SqliteLogo,
   TailwindLogo,
-  TransformersLogo,
   TypescriptLogo,
   VllmLogo,
 } from "@/features/case-studies/routejudge/media";
@@ -15,7 +19,7 @@ import {
 type Tool = {
   name: string;
   logo?: string;
-  /** The logo already spells the name (FastAPI, Transformers, GSAP), so the caption would repeat it. */
+  /** The logo already spells the name (FastAPI, GSAP), so the caption would repeat it. */
   wordmark?: boolean;
   /** Per-logo size: some files carry lots of empty space around the mark. */
   logoClass?: string;
@@ -28,15 +32,15 @@ const GROUPS: { key: "training" | "serving" | "frontend"; tools: Tool[] }[] = [
     key: "training",
     tools: [
       { name: "Modal", logo: ModalLogo },
-      { name: "Transformers", logo: TransformersLogo, wordmark: true, logoClass: "h-14" },
-      { name: "PEFT (LoRA)" },
+      { name: "Transformers", logo: HuggingFaceLogo },
+      { name: "PEFT (LoRA)", logo: PeftLogo },
       { name: "vLLM", logo: VllmLogo },
-      { name: "llama.cpp" },
+      { name: "llama.cpp", logo: LlamaCppLogo },
     ],
   },
   {
     key: "serving",
-    tools: [{ name: "FastAPI", logo: FastApiLogo, wordmark: true, logoClass: "h-7" }, { name: "Python", logo: PythonLogo }, { name: "Ollama", logo: OllamaLogo }, { name: "SQLite" }, { name: "sentence-transformers" }],
+    tools: [{ name: "FastAPI", logo: FastApiLogo, wordmark: true, logoClass: "h-7" }, { name: "Python", logo: PythonLogo }, { name: "Ollama", logo: OllamaLogo }, { name: "SQLite", logo: SqliteLogo }],
   },
   {
     key: "frontend",
@@ -45,7 +49,7 @@ const GROUPS: { key: "training" | "serving" | "frontend"; tools: Tool[] }[] = [
       { name: "TypeScript", logo: TypescriptLogo },
       { name: "Tailwind CSS", logo: TailwindLogo },
       { name: "GSAP", logo: GsapLogo, wordmark: true, logoClass: "h-7" },
-      { name: "ECharts" },
+      { name: "ECharts", logo: EchartsLogo },
     ],
   },
 ];
