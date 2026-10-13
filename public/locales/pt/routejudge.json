@@ -151,6 +151,21 @@
       "O retune inteiro usou cerca de US${{cost}} de GPU na nuvem."
     ]
   },
+  "screens": {
+    "tag": "Design no Figma · dados de exemplo",
+    "dashboard": {
+      "alt": "Dashboard do RouteJudge. Uma pergunta foi classificada como Difícil, com 99% de certeza, e enviada ao GPT-4. O card de resultado mostra custo estimado de US$ 0,03, tempo do roteador de 0,37 segundo e tempo típico de resposta marcado como Não medido.",
+      "caption": "O card de resultado. O tempo do próprio roteador é medido a cada pergunta; quando o tempo de resposta de um modelo nunca foi medido, o card diz isso em vez de chutar."
+    },
+    "stats": {
+      "alt": "Página de estatísticas do RouteJudge com quatro cards (48 perguntas, tempo médio do roteador de 0,41 s, US$ 1,12 economizados, taxa de satisfação vazia), um gráfico de rosca das perguntas por dificuldade (Fácil 18, Média 21, Difícil 9) e um card de economia mostrando 78% a menos que o GPT-4.",
+      "caption": "Estatísticas. A satisfação fica vazia de propósito: com avaliações que sempre eram cinco estrelas, qualquer número ali seria o 93% de novo."
+    },
+    "history": {
+      "alt": "Página de histórico do RouteJudge com o detalhe da pergunta 47 aberto: uma pergunta Difícil sobre infinitos números primos, enviada ao GPT-4, custo de US$ 0,03, latência de 0,37 segundo, sem avaliação.",
+      "caption": "Histórico, com uma pergunta aberta: cada decisão de roteamento fica registrada com modelo, custo e tempo."
+    }
+  },
   "chart": {
     "viewData": "Ver como tabela",
     "step": "Passo"

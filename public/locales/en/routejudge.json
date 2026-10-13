@@ -151,6 +151,21 @@
       "The whole retune used about ${{cost}} of cloud GPU time."
     ]
   },
+  "screens": {
+    "tag": "Figma design · sample data",
+    "dashboard": {
+      "alt": "RouteJudge dashboard. A question was classified as Hard, 99% sure, and routed to GPT-4. The result card shows an estimated cost of $0.03, a router time of 0.37 seconds, and a typical answer time marked Not measured.",
+      "caption": "The result card. The router's own time is measured on every request; when a model's answer time was never measured, the card says so instead of guessing."
+    },
+    "stats": {
+      "alt": "RouteJudge statistics page with four stat cards (48 queries, 0.41 s average router time, $1.12 saved, satisfaction rate empty), a donut chart of queries by difficulty (Easy 18, Medium 21, Hard 9), and a cost-savings card showing 78% saved compared to GPT-4.",
+      "caption": "Statistics. Satisfaction stays empty on purpose: with ratings that were always five stars, any number there would be the 93% all over again."
+    },
+    "history": {
+      "alt": "RouteJudge history page with a detail dialog open for query 47: a Hard question about infinitely many primes, routed to GPT-4, cost $0.03, latency 0.37 seconds, not rated.",
+      "caption": "History, with one query opened: every routing decision is logged with its model, cost and time."
+    }
+  },
   "chart": {
     "viewData": "View as table",
     "step": "Step"
