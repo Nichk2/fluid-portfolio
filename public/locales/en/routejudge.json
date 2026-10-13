@@ -207,7 +207,24 @@
   "design": {
     "eyebrow": "09 — Design",
     "title": "Designed before it was built",
-    "body": "Before writing the frontend, I designed RouteJudge in Figma: color, type and spacing tokens, a component library, and each screen with its loading, empty and error states. The code mirrors that system in three token layers, so a component can only use the colors defined for it."
+    "body": "Before writing the frontend, I designed RouteJudge in Figma: color, type and spacing tokens, a component library, and each screen with its loading, empty and error states. The code mirrors that system in three token layers, so a component can only use the colors defined for it.",
+    "foundations": {
+      "title": "The foundations",
+      "tag": "Figma design system",
+      "body": "The design system in the Figma file the app was built from: five color ramps, the component tokens that point at them, and a pixel type scale in two fonts.",
+      "colors": {
+        "alt": "Five color ramps from 50 to 900: violet primary, green success, orange warning, red danger, and an inverted gray neutral.",
+        "caption": "Five ramps, 50 to 900. The neutral ramp is inverted because the app is dark-only: 50 is the page background, 900 the text."
+      },
+      "type": {
+        "alt": "Type scale with the word RouteJudge in seven sizes, from caption at 12 px in Pixelify Sans to stat at 30 px in Press Start 2P.",
+        "caption": "Two pixel fonts: Pixelify Sans for reading, Press Start 2P for headings and big numbers."
+      },
+      "tokens": {
+        "alt": "Component tokens: named color swatches for Badge, Button, Card, InfoBanner, Spinner, Input, Table, Skeleton and Avatar.",
+        "caption": "Component tokens: every color a component uses has its own name, pointing at a ramp step. The code enforces this layer: components can't use a raw color."
+      }
+    }
   },
   "screens": {
     "tag": "Figma design · sample data",

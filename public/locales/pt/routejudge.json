@@ -207,7 +207,24 @@
   "design": {
     "eyebrow": "09 — Design",
     "title": "Desenhado antes de ser construído",
-    "body": "Antes de escrever o frontend, desenhei o RouteJudge no Figma: tokens de cor, tipografia e espaçamento, uma biblioteca de componentes e cada tela com seus estados de carregamento, vazio e erro. O código espelha esse sistema em três camadas de tokens, então um componente só pode usar as cores definidas para ele."
+    "body": "Antes de escrever o frontend, desenhei o RouteJudge no Figma: tokens de cor, tipografia e espaçamento, uma biblioteca de componentes e cada tela com seus estados de carregamento, vazio e erro. O código espelha esse sistema em três camadas de tokens, então um componente só pode usar as cores definidas para ele.",
+    "foundations": {
+      "title": "As fundações",
+      "tag": "Design system no Figma",
+      "body": "O design system do arquivo no Figma a partir do qual o app foi construído: cinco escalas de cor, os tokens de componente que apontam para elas e uma escala tipográfica pixelada em duas fontes.",
+      "colors": {
+        "alt": "Cinco escalas de cor de 50 a 900: violeta primária, verde de sucesso, laranja de alerta, vermelho de perigo e um cinza neutro invertido.",
+        "caption": "Cinco escalas, de 50 a 900. A escala neutra é invertida porque o app é só escuro: 50 é o fundo da página, 900 o texto."
+      },
+      "type": {
+        "alt": "Escala tipográfica com a palavra RouteJudge em sete tamanhos, de caption em 12 px na Pixelify Sans até stat em 30 px na Press Start 2P.",
+        "caption": "Duas fontes pixeladas: Pixelify Sans para leitura, Press Start 2P para títulos e números grandes."
+      },
+      "tokens": {
+        "alt": "Tokens de componente: amostras de cor nomeadas para Badge, Button, Card, InfoBanner, Spinner, Input, Table, Skeleton e Avatar.",
+        "caption": "Tokens de componente: cada cor que um componente usa tem nome próprio, apontando para um passo de uma escala. O código impõe essa camada: componentes não podem usar uma cor crua."
+      }
+    }
   },
   "screens": {
     "tag": "Design no Figma · dados de exemplo",

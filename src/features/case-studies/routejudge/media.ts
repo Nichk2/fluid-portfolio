@@ -16,6 +16,14 @@ import ScreenHistory from "@/Image/RouteJudge/screen-history.png";
 
 export { ScreenDashboard, ScreenStats, ScreenHistory };
 
+// Design-system foundations from the same Figma file (2x), trimmed to their
+// content on the file's own board color (#282A36).
+import FoundationsColors from "@/Image/RouteJudge/foundations-colors.png";
+import FoundationsType from "@/Image/RouteJudge/foundations-type.png";
+import FoundationsTokens from "@/Image/RouteJudge/foundations-tokens.png";
+
+export { FoundationsColors, FoundationsType, FoundationsTokens };
+
 // Stack logos. These four are reused from the VisaBuddy case study's assets
 // (same files, so both pages show identical marks).
 import ModalLogo from "@/Image/VisaBuddy/Modal-Primary-Logo.svg";
