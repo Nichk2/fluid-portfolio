@@ -3,7 +3,7 @@
     "category": "IA / ENGENHARIA DE LLM / FULL-STACK",
     "subtitle": "Os 93% que não eram.",
     "lead": "Meu roteador de perguntas reportava 93,3% de acurácia. Descobri por que esse número estava errado, medi o número real e reconstruí o modelo até que a nota honesta valesse a pena colocar em produção.",
-    "logoAlt": "Logo do RouteJudge: um martelo de juiz em pixel art",
+    "logoAlt": "Logo do RouteJudge: um martelo de juiz em pixel art ao lado do nome em fonte pixelada",
     "meta": {
       "client": "Cliente",
       "clientValue": "Projeto pessoal",

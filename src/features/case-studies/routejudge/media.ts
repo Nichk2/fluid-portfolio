@@ -1,11 +1,14 @@
 // Pixel-art gavel from the RouteJudge app, resized with nearest-neighbor
 // sampling (keeps the pixel edges crisp) and palette-compressed: 3.2 MB -> 6 KB.
 import Logo from "@/Image/RouteJudge/logo.png";
+// "RouteJudge" in the app's stat style (Press Start 2P, 30px), exported from the
+// Figma Foundations typography as an outlined path, so no font has to load.
+import Wordmark from "@/Image/RouteJudge/wordmark.svg";
 // 21:9 version (gavel centered on its own background) so the full-width
 // featured card and the project-list hover preview can crop without cutting the mark.
 import Thumbnail from "@/Image/RouteJudge/thumbnail.png";
 
-export { Logo, Thumbnail };
+export { Logo, Wordmark, Thumbnail };
 
 // App screens exported from the RouteJudge Figma file at 2x (2560x1800), so the
 // pixel font stays sharp on retina screens. They are designs with sample data,

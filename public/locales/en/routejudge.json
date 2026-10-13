@@ -3,7 +3,7 @@
     "category": "AI / LLM ENGINEERING / FULL-STACK",
     "subtitle": "The 93% that wasn't.",
     "lead": "My query router reported 93.3% accuracy. I found out why that number was wrong, measured the real one, and rebuilt the model until the honest score was worth shipping.",
-    "logoAlt": "RouteJudge logo: a pixel-art gavel",
+    "logoAlt": "RouteJudge logo: a pixel-art gavel next to the name in pixel type",
     "meta": {
       "client": "Client",
       "clientValue": "Personal project",
