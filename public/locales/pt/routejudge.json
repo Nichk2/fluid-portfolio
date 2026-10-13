@@ -160,6 +160,19 @@
       "expected": "Esperado",
       "before": "Modelo antigo",
       "after": "Modelo novo"
+    },
+    "full": {
+      "title": "Todas as métricas",
+      "note": "Todas as {{items}} perguntas de teste, três modelos, medidos pelo mesmo backend. Os tempos são só do classificador, num notebook de 8 GB.",
+      "accuracy": "Acurácia",
+      "macroF1": "Macro-F1",
+      "precision": "Precisão",
+      "recall": "Revocação",
+      "f1": "F1",
+      "routing": "ROTEAMENTO E EXECUÇÃO",
+      "invalid": "Saídas inválidas",
+      "latencyP50": "Tempo do classificador, mediana",
+      "latencyP95": "Tempo do classificador, percentil 95"
     }
   },
   "shipping": {

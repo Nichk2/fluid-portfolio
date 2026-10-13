@@ -160,6 +160,19 @@
       "expected": "Expected",
       "before": "Old model",
       "after": "New model"
+    },
+    "full": {
+      "title": "Full metrics",
+      "note": "All {{items}} test questions, three models, measured through the same backend. Times are the classifier alone, on an 8 GB laptop.",
+      "accuracy": "Accuracy",
+      "macroF1": "Macro-F1",
+      "precision": "Precision",
+      "recall": "Recall",
+      "f1": "F1",
+      "routing": "ROUTING AND RUNTIME",
+      "invalid": "Invalid outputs",
+      "latencyP50": "Classifier time, median",
+      "latencyP95": "Classifier time, 95th percentile"
     }
   },
   "shipping": {

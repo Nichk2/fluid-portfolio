@@ -8,6 +8,7 @@ import { TargetsChecklist } from "@/features/case-studies/routejudge/sections/Ta
 import { ExamplesTable } from "@/features/case-studies/routejudge/sections/ExamplesTable";
 import { MatrixComparison } from "@/features/case-studies/routejudge/sections/MatrixComparison";
 import { TopicLabels } from "@/features/case-studies/routejudge/sections/TopicLabels";
+import { FullMetrics } from "@/features/case-studies/routejudge/sections/FullMetrics";
 
 /** Chapter 7: the new number, measured exactly like the old one, with the targets and real examples. */
 export const ResultsChapter = () => {
@@ -51,6 +52,11 @@ export const ResultsChapter = () => {
 
       <div className={CASE_STUDY_STYLES.scrollReveal}>
         <ExamplesTable />
+      </div>
+
+      {/* Depth for readers who want to check the numbers; closed by default. */}
+      <div className={CASE_STUDY_STYLES.scrollReveal}>
+        <FullMetrics />
       </div>
     </div>
   );
