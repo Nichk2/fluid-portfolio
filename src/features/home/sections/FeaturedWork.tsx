@@ -9,7 +9,7 @@ import { Eyebrow } from "@/components/typography/Eyebrow";
 import { Heading } from "@/components/typography/Heading";
 import { Text } from "@/components/typography/Text";
 import VisaBuddyImage from "@/Image/VisaBuddy/closed menu highfi.png";
-import MyHolyBooksImage from "@/Image/MyHolyBooks/thumbnaill.svg";
+import PhotoxImage from "@/Image/PHOTOX/MAPA.png";
 import { Thumbnail as RouteJudgeImage } from "@/features/case-studies/routejudge/media";
 
 // `wide` spans both columns on large screens: with three featured projects in
@@ -18,7 +18,7 @@ import { Thumbnail as RouteJudgeImage } from "@/features/case-studies/routejudge
 const FEATURED_PROJECTS = [
   { key: "routejudge", link: "/case-study/routejudge", image: RouteJudgeImage, wide: true },
   { key: "visabuddy", link: "/case-study/visabuddy", image: VisaBuddyImage, wide: false },
-  { key: "myholybooks", link: "/case-study/myholybooks", image: MyHolyBooksImage, wide: false },
+  { key: "photox", link: "/case-study/photox", image: PhotoxImage, wide: false },
 ] as const;
 
 const FeaturedWork = () => {

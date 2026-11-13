@@ -1,60 +1,299 @@
 {
+  "hero": {
+    "category": "Projeto AI / Fullstack / UX-UI Design",
+    "logoAlt": "Logo do VisaBuddy",
+    "subtitle": "Primeiro a citação",
+    "lead": "Um assistente de imigração canadense, reconstruído: de um painel de números que ninguém mediu para um sistema que cita a página oficial antes de responder, e é julgado por uma prova que nunca viu.",
+    "meta": {
+      "client": "Cliente",
+      "clientValue": "Projeto pessoal",
+      "year": "Ano",
+      "yearValue": "2025–2026",
+      "role": "Função",
+      "roleValue": "Engenheiro de IA, desenvolvedor full stack, designer UX/UI",
+      "stack": "Stack",
+      "stackValue": "Qwen3-4B, QLoRA, RAG híbrido, FastAPI, React"
+    }
+  },
+  "product": {
+    "eyebrow": "01 · O produto",
+    "title": "Faça uma pergunta, receba a resposta oficial",
+    "body": "O VisaBuddy responde perguntas sobre vistos, permissões e cidadania canadense usando apenas as páginas oficiais do IRCC no canada.ca, e mostra as frases exatas que usou. Ele não chuta, não dá estratégia jurídica e se recusa a ajudar alguém a mentir no processo.",
+    "cards": [
+      {
+        "title": "Milhares de páginas",
+        "body": "As regras estão espalhadas por centenas de páginas e sete programas."
+      },
+      {
+        "title": "Regras que mudam",
+        "body": "Políticas temporárias começam e terminam; uma resposta de memória pode estar anos desatualizada."
+      },
+      {
+        "title": "Muito em jogo",
+        "body": "Um \"sim\" errado sobre uma regra de permissão pode custar o status de alguém."
+      }
+    ]
+  },
+  "claims": {
+    "eyebrow": "02 · O número",
+    "title": "Um 8/10 que ninguém mediu",
+    "body": "A primeira versão saiu com um painel confiante: nota geral {{score}}, 100% de sucesso na busca e loss de treino de 0,056. Quando voltei para reconstruir, fui ver de onde vinha cada número.",
+    "dashboardTitle": "O painel da v1, como foi publicado",
+    "dashboardAlt1": "Gráficos de treino da v1: uma curva de loss suave terminando em 0,056 e perplexidade 7,3 ao longo de 500 passos",
+    "dashboardAlt2": "Gráficos de busca da v1: relevância por pergunta e uma pizza mostrando 100% de sucesso",
+    "claimTag": "Alegado",
+    "cluesTitle": "Quatro coisas que não se sustentaram",
+    "clues": [
+      {
+        "title": "A nota não tinha teste por trás",
+        "body": "O 8/10 foi calculado com {{queries}} perguntas de teste. Não existia conjunto de teste."
+      },
+      {
+        "title": "A curva de loss era uma fórmula",
+        "body": "O gráfico de treino foi desenhado com {{formula}} ao longo de {{steps}} passos, para um treino de cerca de 14 passos."
+      },
+      {
+        "title": "\"Sucesso\" era qualquer página voltar",
+        "body": "Toda busca contava como sucesso se algum trecho voltasse. Em {{compared}} das próprias perguntas da v1, o primeiro resultado era do programa certo só {{right}} vez."
+      },
+      {
+        "title": "Dez páginas, e o modelo treinado nunca respondeu",
+        "body": "O índice tinha {{pages}} páginas, {{ee}} delas de Express Entry. O treino usou {{rows}} linhas de template, só {{similar}} parecidas com uma fonte real. E o app caía em silêncio para o DialoGPT, então o modelo treinado nunca respondeu ninguém."
+      }
+    ],
+    "claimedVsMeasured": "Alegado vs medido",
+    "retrievalClaimed": "Sucesso na busca, alegado",
+    "retrievalMeasured": "Página certa entre as 5 primeiras, medido",
+    "retrievalNote": "Medido em 54 perguntas respondíveis escritas a partir das páginas oficiais, antes de qualquer mudança.",
+    "lossTitle": "Uma curva desenhada e uma real",
+    "lossSubtitle": "Loss de treino por passo. A curva da v1 é a parte suave da fórmula; a da v4 é o treino real.",
+    "lossSeries": {
+      "v1": "v1, desenhada por fórmula",
+      "v4": "v4, treino real"
+    },
+    "lossNote": "As duas terminam perto do mesmo valor baixo (a v1 alegou 0,056; a v4 chegou de verdade a {{last}}). Um loss baixo diz que o modelo se ajustou aos exemplos de treino. Não diz que as respostas estão certas: só um teste diz.",
+    "pagesTitle": "O que o assistente conseguia ler de fato",
+    "pagesSubtitle": "Páginas no índice, por programa",
+    "pagesSeries": {
+      "v1": "v1 ({{n}} páginas)",
+      "v4": "v4 ({{n}} páginas)"
+    }
+  },
+  "measuring": {
+    "eyebrow": "03 · Medindo de verdade",
+    "title": "Primeiro o teste, depois o modelo",
+    "body": "Antes de mudar qualquer coisa, escrevi um conjunto congelado de {{questions}} perguntas a partir das páginas oficiais, {{refuse}} delas que o assistente deve recusar. Cada arquivo tem um hash, então não muda sem ninguém ver. Toda versão seguinte é avaliada nas mesmas perguntas, pelo mesmo código, e cada execução fica registrada num ledger com os hashes do que entrou e saiu.",
+    "recallTitle": "Encontrando a página certa",
+    "recallSubtitle": "Página certa entre as 5 primeiras, por programa (%). Linha tracejada: a meta de 70% em cidadania.",
+    "recallSeries": {
+      "dense": "Só embeddings",
+      "hybrid": "Híbrida (palavras-chave + embeddings + re-ranker)"
+    },
+    "recallNote": "A busca híbrida resolveu cidadania ({{cDense}}% → {{cHybrid}}%) e família; visitante perdeu uma pergunta ({{vDense}}% → {{vHybrid}}%). Deixei assim em vez de ajustar para uma única pergunta de teste.",
+    "graderTitle": "O avaliador errou, duas vezes",
+    "graderBody": "Sem IA como juiz, o avaliador é código simples. Isso permite auditá-lo, e a auditoria achou dois bugs que mudavam as notas.",
+    "graderCols": {
+      "version": "Avaliador",
+      "problem": "O que errava",
+      "fix": "Correção"
+    },
+    "graders": [
+      {
+        "version": "v1",
+        "problem": "Contava \"$7 CAD\" vs \"CAN$7\" como erro",
+        "fix": "Gabarito com variantes aceitas: cobertura de fatos do baseline 45,5% → 58,5%"
+      },
+      {
+        "version": "v2",
+        "problem": "Dava nota cheia para \"você não precisa parar de trabalhar\" quando a regra diz \"você deve parar\"",
+        "fix": "Checagem de polaridade; cada alarme falso virou um teste unitário"
+      }
+    ]
+  },
+  "finetune": {
+    "eyebrow": "04 · Fine-tuning",
+    "title": "O que o treino corrigiu, e o que não conseguiu",
+    "body": "A v2 e a v3 fizeram fine-tuning do Llama 3.1 8B com QLoRA. O treino corrigiu comportamento: menos recusas desnecessárias e citações melhores. Um conjunto de segurança separado, escrito antes de qualquer correção, pegou uma regressão (a v2 endossou mentir sobre um código de ocupação), e a v3 corrigiu.",
+    "versionsTitle": "Todas as versões nas mesmas perguntas",
+    "versionsNote": "baseline–v3: Llama 3.1 8B com um prompt. v4: Qwen3-4B com o pipeline de citação e o corpus maior, então isto compara sistemas inteiros, não modelos. Linha tracejada: a meta definida para a v4 antes de ela existir.",
+    "versions": {
+      "baseline": "Baseline",
+      "v2": "v2",
+      "v3": "v3",
+      "v4": "v4"
+    },
+    "metrics": {
+      "factCoverageGold": "Fatos cobertos, perguntas gerais",
+      "factCoverageRules": "Fatos cobertos, perguntas de regra",
+      "overRefusalGold": "Recusou com a resposta disponível",
+      "mustRefuseRefused": "Perguntas inseguras recusadas (de {{total}})",
+      "lowerIsBetter": "menor é melhor"
+    },
+    "staleTitle": "O problema que o treino não resolveu",
+    "staleBody": "Perguntados se um curso feito todo online, de fora do Canadá, conta para a permissão de trabalho pós-graduação, todos os modelos disseram \"Sim\". Era uma regra temporária da COVID que acabou em 2022. A v3 chegou a citar a data de fim enquanto dava a resposta errada. Mais dados de treino não resolvem isso: o problema é a memória do modelo, e as regras mudam depois do treino.",
+    "pipelineTitle": "O redesenho: primeiro a citação",
+    "pipelineBody": "Então o trabalho do modelo mudou de saber as regras para lê-las. Os fatos que o usuário vê são sempre as frases oficiais, checadas por código.",
+    "steps": [
+      {
+        "name": "Buscar",
+        "body": "Encontrar os 5 trechos mais relevantes em 610 páginas oficiais."
+      },
+      {
+        "name": "Citar",
+        "body": "O modelo copia as frases que respondem. O código checa se cada uma existe palavra por palavra; citações inventadas são descartadas, políticas expiradas também."
+      },
+      {
+        "name": "Responder",
+        "body": "Uma resposta curta escrita só a partir dessas citações."
+      },
+      {
+        "name": "Verificar",
+        "body": "O código compara a resposta com as citações: números, sim/não, negação. Se discordarem, o usuário recebe só as citações."
+      }
+    ]
+  },
+  "v4": {
+    "eyebrow": "05 · v4",
+    "title": "Um modelo menor, treinado para ler",
+    "body": "A v4 usa o Qwen3-4B, metade do tamanho do Llama 8B, escolhido numa comparação entre três modelos pequenos. Fiz fine-tuning com QLoRA em {{rows}} exemplos de como citar fontes e recusar quando elas não respondem, escritos por um modelo professor maior.",
+    "gateTitle": "Um critério que falhou, e uma exceção documentada",
+    "gateBody": "Os dados do professor tinham que passar por um critério de qualidade definido antes. O Mistral Small falhou ({{mistralWrong}} regras erradas). O Qwen3-30B errou por uma recusa ({{qwenRefused}} de 32, critério ≥ 31) e venceu o aluno em todo o resto. Treinei mesmo assim, registrei o porquê e adicionei uma regra: o modelo treinado só vai para produção se for pelo menos tão bom quanto o não treinado em todos os critérios.",
+    "compareTitle": "Sem treino vs com treino, mesmo pipeline, mesmas 126 perguntas",
+    "compareNote": "Linha tracejada: a meta definida antes da v4.",
+    "series": {
+      "untuned": "Sem treino",
+      "fineTuned": "Com fine-tuning"
+    },
+    "metrics": {
+      "factRules": "Fatos cobertos, perguntas de regra",
+      "factYes": "Fatos cobertos, regras de \"sim\"",
+      "overRules": "Recusou com a resposta disponível, regras",
+      "overGold": "Recusou com a resposta disponível, gerais",
+      "wrongRules": "Regras erradas mostradas ao usuário"
+    },
+    "decision": "Resultado: igual ou melhor em todas as medidas, então o modelo treinado vai para produção. Regras erradas mostradas ficaram em 2: o treino não resolveu isso, e a prova confirmaria."
+  },
+  "exam": {
+    "eyebrow": "06 · A prova",
+    "title": "Lacrada, avaliada uma vez, reprovada com honestidade",
+    "body": "Os conjuntos de teste anteriores tinham guiado algumas correções, então já não eram uma prova limpa. Antes do fine-tuning, escrevi {{questions}} perguntas novas a partir de páginas em que nenhum modelo foi treinado, {{refuse}} delas que devem ser recusadas, e lacrei com um hash. Elas rodaram uma única vez, no sistema como vai para produção, numa GPU gratuita do Colab.",
+    "checklistTitle": "Critérios definidos antes do treino",
+    "criteria": {
+      "wrong_rules_shown": "Regras erradas mostradas ao usuário: 0",
+      "must_refuse_refused": "Perguntas inseguras recusadas: 6 de 6",
+      "fact_coverage": "Fatos cobertos: pelo menos 60%",
+      "over_refusal_rate": "Recusou com a resposta disponível: no máximo 10%",
+      "median_reply_s": "Tempo mediano de resposta: no máximo 15 s"
+    },
+    "met": "Atingido",
+    "missed": "Não atingido",
+    "verdict": "Resultado: reprovado. 4 de 5 critérios atingidos.",
+    "wrongTitle": "As duas respostas erradas",
+    "wrongCols": {
+      "question": "Pergunta",
+      "answered": "O VisaBuddy disse",
+      "source": "A fonte diz"
+    },
+    "wrongWhy": {
+      "x05": "A frase e as citações estão certas; a primeira palavra responde a pergunta oposta. A checagem de sim/não procura um \"não\" depois do \"Sim\" e não entende \"isento\".",
+      "x14": "A página certa foi encontrada mas não citada, e a resposta se apoia numa citação sem relação. As checagens cobrem números, sim/não e negação, não se a citação sustenta a afirmação."
+    },
+    "timesTitle": "Cada resposta, cronometrada",
+    "timesSubtitle": "Segundos por pergunta, do início ao fim, numa GPU T4 gratuita. Linha tracejada: a meta de 15 s.",
+    "timesRows": {
+      "answer": "Respondidas",
+      "refuse": "Recusadas"
+    },
+    "timesNote": "Mediana de {{median}} s. Recusas são rápidas porque o modelo para na etapa de citação; a resposta mais lenta levou {{max}} s.",
+    "meaning": "Em perguntas que nunca tinha visto, o VisaBuddy recusou todas as inseguras, quase nunca recusou sem motivo e cobriu a maioria dos fatos. Falhou no objetivo mais importante: em 2 de 19 respostas, o resumo no topo contradizia as citações logo abaixo. Por isso o texto oficial aparece sempre, e isso aponta a próxima correção: checar se a citação realmente sustenta a afirmação.",
+    "timesCols": {
+      "id": "Pergunta",
+      "kind": "Resultado"
+    }
+  },
+  "shipping": {
+    "eyebrow": "07 · Em produção",
+    "title": "Grátis para rodar, barato para construir",
+    "body": "Uma demo de portfólio quase não tem tráfego, então pagar por uma GPU esperando o dia todo não faz sentido. O trabalho pesado (modelos professores, treino, comparações) rodou nas GPUs serverless do Modal, cobradas por segundo. Avaliação, prova e demo rodam na T4 gratuita do Colab, atrás da mesma API que o app React já chama.",
+    "costTitle": "Quanto custou o projeto inteiro",
+    "costSubtitle": "Cobrança do próprio Modal, por tipo de tarefa (USD)",
+    "costRoles": {
+      "teacher": "Modelos professores (H100)",
+      "training": "Fine-tuning (A100)",
+      "comparison": "Comparações de modelos (L4)",
+      "colab": "Avaliação e demo (Colab)"
+    },
+    "costNote": "Total de US$ {{total}}, coberto pelos créditos mensais gratuitos do Modal. Rodar o tempo mediano da prova numa T4 paga custaria cerca de US$ {{per1000}} por 1.000 respostas (uma estimativa, sem contar tempo ocioso).",
+    "optionsTitle": "Onde poderia rodar",
+    "optionsCols": {
+      "option": "Opção",
+      "cost": "Custo",
+      "trade": "Contrapartida",
+      "fits": "Serve para"
+    },
+    "options": [
+      {
+        "option": "Colab T4 (escolhida)",
+        "cost": "US$ 0",
+        "trade": "Iniciada à mão; o link muda a cada sessão",
+        "fits": "Demos, avaliação, quase nenhum tráfego"
+      },
+      {
+        "option": "GPU serverless (Modal)",
+        "cost": "Por segundo, nada quando parada",
+        "trade": "A primeira resposta depois de parada espera o cold start",
+        "fits": "Usuários reais, tráfego ocasional"
+      },
+      {
+        "option": "MacBook, 8 GB",
+        "cost": "US$ 0",
+        "trade": "Pouca memória: o modelo 4B mais a busca usam muito swap",
+        "fits": "Não este projeto"
+      },
+      {
+        "option": "GPU sempre ligada",
+        "cost": "Paga toda hora, usada ou não",
+        "trade": "Rápida, sempre pronta",
+        "fits": "Só tráfego constante"
+      }
+    ],
+    "honestTitle": "Sem fallback silencioso",
+    "honestBody": "A v1 servia o DialoGPT quando o modelo real não carregava, e parecia funcionar. Agora o /health só diz pronto quando o modelo, o adapter e o índice carregaram; caso contrário, o /chat avisa."
+  },
+  "chart": {
+    "seconds": "segundos",
+    "step": "Passo"
+  },
+  "programs": {
+    "express_entry": "Express Entry",
+    "study_permit": "Permissão de estudo",
+    "work_permit": "Permissão de trabalho",
+    "pgwp": "PGWP",
+    "visitor": "Visitante",
+    "family": "Família",
+    "citizenship": "Cidadania"
+  },
   "visaBuddy": {
     "navigation": {
       "back": "Voltar para o portfólio"
     },
-    "hero": {
-      "category": "Projeto AI / Fullstack / UX-UI DESIGN",
-      "client": "Cliente",
-      "year": "Ano",
-      "duration": "Duração",
-      "role": "Função"
-    },
     "sections": {
-      "overview": "Visão Geral",
-      "problem": "O Problema da Complexidade da Imigração",
-      "training": "Treinamento QLoRA na Plataforma Modal",
-      "backend": "Arquitetura do Backend",
-      "frontend": "Implementação do Frontend",
       "design": "Processo de Design UX/UI",
-      "metrics": "Métricas do Modelo",
-      "results": "Impacto Mensurável",
+      "frontend": "Implementação do Frontend",
       "nextProject": "Próximo Projeto"
     },
     "content": {
-      "overview": "VisaBuddy é um assistente de imigração canadense sofisticado alimentado por IA que combina Geração Aumentada por Recuperação (RAG) com fine-tuning QLoRA para fornecer orientação precisa e contextualizada sobre procedimentos complexos de imigração. O sistema transforma documentação governamental não estruturada em insights acionáveis através de uma interface de chat moderna.",
-      "problem": "Navegar pela imigração canadense é notoriamente complexo, com candidatos enfrentando milhares de páginas de regulamentos frequentemente atualizados em múltiplos programas (Express Entry, permissões de estudo, permissões de trabalho, etc.). Métodos de busca tradicionais geralmente produzem informações incompletas ou desatualizadas, levando a erros de aplicação, atrasos e estresse desnecessário.",
-      "problemPoints": {
-        "pages": "Milhares de Páginas",
-        "pagesDesc": "Regulamentos governamentais espalhados por múltiplos programas",
-        "updates": "Atualizações Frequentes",
-        "updatesDesc": "Políticas mudam regularmente, exigindo monitoramento constante",
-        "decisions": "Decisões de Alto Risco",
-        "decisionsDesc": "Erros na aplicação podem levar à rejeição e atrasos"
+      "designDescription": "A UX seguiu um paradigma de assistente profissional em vez de uma demonstração simples. Decisões de design-chave incluíram histórico de chat múltiplo persistente com agrupamento inteligente por data (Hoje/Ontem/7 Dias/Mais Antigo), indicadores de status de conexão em tempo real e uma interface de configuração do backend baseada em modal. A interface de chat apresenta transições suaves de mensagens, indicadores de digitação com feedback \"Visa Buddy está pensando...\" e uma barra lateral responsiva que se adapta a padrões de uso mobile.",
+      "beforeAfter": {
+        "lowFi": "Design de Baixa Fidelidade",
+        "highFi": "Design de Alta Fidelidade"
       },
-      "trainingDescription": "O modelo foi ajustado usando QLoRA (Quantized Low-Rank Adaptation) na plataforma GPU da Modal, permitindo treinamento eficiente do modelo Llama-3.1-8B-Instruct com sobrecarga mínima de memória. A Modal forneceu acesso contínuo a GPUs T4 e fluxos de trabalho de implantação automatizados.",
-      "jupyterTitle": "Treinamento em Jupyter Notebook",
-      "jupyterDescription": "Notebooks interativos do Jupyter foram usados para treinamento, permitindo desenvolvimento iterativo do pipeline RAG e fine-tuning QLoRA.",
-      "modalTitle": "Desenvolvido com Modal",
-      "modalDescription": "A plataforma serverless GPU da Modal permitiu fine-tuning QLoRA eficiente sem gerenciamento de infraestrutura. A plataforma forneceu:",
-      "modalPoints": [
-        "Instâncias GPU T4 para treinamento QLoRA",
-        "Empacotamento e implantação automatizados do modelo",
-        "Cobrança eficiente por segundo",
-        "Integração perfeita com modelos do Hugging Face"
-      ],
-      "backendDescription": "Construímos um backend Python otimizado para implantação no Colab, com endpoints FastAPI para interações de chat e recuperação RAG. O sistema carrega adaptadores LoRA em cima do Llama-3.1-8B-Instruct, com gerenciamento inteligente de janela de contexto. Principais recursos incluem recuperação baseada em similaridade com limites configuráveis, rastreamento de histórico de conversas e mecanismos de fallback para garantir confiabilidade quando o modelo principal está indisponível.",
-      "backendDemoTitle": "Backend em Ação",
-      "backendDemoDescription": "Backend FastAPI executando no Google Colab com inferência de modelo em tempo real e recuperação RAG.",
-      "techStack": {
-        "fastapi": "FastAPI",
-        "fastapiDesc": "Framework de API de alta performance",
-        "chromadb": "ChromaDB",
-        "chromadbDesc": "Banco de dados vetorial para embeddings",
-        "transformers": "Transformers",
-        "transformersDesc": "Llama-3.1-8B-Instruct",
-        "sentenceTransformers": "Sentence-Transformers",
-        "sentenceTransformersDesc": "Geração de embeddings"
+      "oldTitle": "Começando à moda antiga",
+      "designFeatures": {
+        "chatTitle": "Design da Interface de Chat",
+        "chatDescription": "Chat estilo assistente profissional com indicadores de digitação, feedback de status em tempo real e agrupamento inteligente de mensagens por data (Hoje/Ontem/7 Dias/Mais Antigo).",
+        "mobileTitle": "Responsivo para Mobile",
+        "mobileDescription": "Barra lateral adaptativa que se transforma em menu mobile, garantindo experiência ótima em todos os dispositivos de desktop a smartphone."
       },
       "frontendDescription": "Desenvolvemos um frontend React + TypeScript com Vite para performance ótima. Implementamos hooks personalizados (useVisaBuddy) para gerenciamento de estado e comunicação API, com camadas de serviço tipadas (visaBuddyApi.ts) garantindo tratamento robusto de erros. A UI utiliza Tailwind com efeitos personalizados, Framer Motion para animações suaves e persistência localStorage para histórico de chats. A arquitetura de componentes inclui modais reutilizáveis, utilitários inteligentes de formatação de data e padrões de design responsivo.",
       "frontendDemoTitle": "Demonstração do Frontend",
@@ -69,47 +308,6 @@
         "framer": "Framer Motion",
         "framerDesc": "Animações suaves"
       },
-      "designDescription": "A UX seguiu um paradigma de assistente profissional em vez de uma demonstração simples. Decisões de design-chave incluíram histórico de chat múltiplo persistente com agrupamento inteligente por data (Hoje/Ontem/7 Dias/Mais Antigo), indicadores de status de conexão em tempo real e uma interface de configuração do backend baseada em modal. A interface de chat apresenta transições suaves de mensagens, indicadores de digitação com feedback \"Visa Buddy está pensando...\" e uma barra lateral responsiva que se adapta a padrões de uso mobile.",
-      "beforeAfter": {
-        "lowFi": "Design de Baixa Fidelidade",
-        "highFi": "Design de Alta Fidelidade"
-      },
-      "oldTitle": "Começando à moda antiga",
-      "designFeatures": {
-        "chatTitle": "Design da Interface de Chat",
-        "chatDescription": "Chat estilo assistente profissional com indicadores de digitação, feedback de status em tempo real e agrupamento inteligente de mensagens por data (Hoje/Ontem/7 Dias/Mais Antigo).",
-        "mobileTitle": "Responsivo para Mobile",
-        "mobileDescription": "Barra lateral adaptativa que se transforma em menu mobile, garantindo experiência ótima em todos os dispositivos de desktop a smartphone."
-      },
-      "metrics": {
-        "trainingTitle": "Performance de Treinamento",
-        "trainingSubtitle": "Fine-tuning QLoRA do Llama-3.1-8B-Instruct alcançou convergência estável",
-        "trainingDescription": "O modelo alcançou perda de treinamento de 0.056 e perplexidade de 7.3 após 500 passos, demonstrando aprendizado eficiente de padrões específicos de imigração enquanto mantinha as capacidades do modelo base.",
-        "trainingPoints": {
-          "convergence": "Convergência Estável",
-          "convergenceDesc": "Curva de aprendizado suave mostrando treinamento eficaz",
-          "loss": "Perda Final Baixa",
-          "lossDesc": "Perda de 0.056 indica reconhecimento forte de padrões",
-          "optimized": "Treinamento Otimizado",
-          "optimizedDesc": "Adaptação QLoRA eficiente para domínio de imigração"
-        },
-        "ragTitle": "Avaliação RAG",
-        "ragSubtitle": "Performance do sistema de Geração Aumentada por Recuperação em consultas de imigração",
-        "ragDescription": "O sistema alcançou taxa de sucesso de recuperação de 100% com pontuação média de relevância de 0.57, fornecendo respostas precisas e citadas de fontes oficiais de imigração.",
-        "ragPoints": {
-          "retrieval": "Recuperação Perfeita",
-          "retrievalDesc": "Taxa de sucesso de 100% em todas as consultas de teste",
-          "relevance": "Alta Relevância",
-          "relevanceDesc": "Pontuação média de 0.57 para precisão de documentos",
-          "sources": "Fontes Oficiais",
-          "sourcesDesc": "Citação consistente da documentação IRCC"
-        }
-      },
-      "results": [
-        "Alcançou 100% de taxa de sucesso de recuperação em 10 consultas de imigração de referência com pontuação média de relevância de 0.57",
-        "Reduziu o tempo de busca de informações de horas para segundos enquanto mantinha precisão de citação de fontes oficiais do IRCC",
-        "Criou dashboard abrangente de avaliação com métricas simuladas de treinamento (curvas de loss/perplexidade) e visualização de performance RAG"
-      ],
       "quickNote": {
         "title": "Nota Rápida",
         "paragraph1": "Só quero dizer que essa foi uma experiência incrível para mim. Tive a oportunidade de aplicar, tudo junto, o conhecimento que venho acumulando ao longo dos meus anos na indústria de tecnologia.",

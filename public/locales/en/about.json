@@ -12,11 +12,9 @@
       "suffix": ", transforming insights into intuitive and accessible user experiences. I’m used to managing multiple projects at once, which strengthens my adaptability and time management."
     },
     "technical": {
-      "base": "I continuously expand my technical toolkit. My current stack includes",
-      "tools": ["Figma"],
-      "coding": "and strong knowledge of",
-      "languages": "HTML5, CSS3, JavaScript (Typescript), React, Next.js and React Native, along with growing experience in Python and AI engineering (LoRA/QLoRA, Fine-Tuning, RAG, Quantization)",
-      "suffix": "."
+      "base": "Figma · design systems · React / Next.js / React Native (TypeScript) · production CSS · Python · ",
+      "highlight": "AI engineering",
+      "suffix": " (LLM adaptation / LoRA·QLoRA, fine-tuning, RAG, quantization) — I learn what each project needs; the stack serves the problem, not the other way around."
     },
     "approach": {
       "text": "I approach every project with commitment, creativity, and a results-driven mindset — aiming to deliver solutions that create meaningful value for both users and businesses."
@@ -41,7 +39,6 @@
       "title": "Research",
       "items": [
         "User Research",
-        "Usability Testing",
         "Strategy",
         "Data Analysis"
       ]

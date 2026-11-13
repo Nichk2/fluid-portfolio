@@ -28,9 +28,9 @@ const Portfolio = () => {
   const projects: Project[] = [
     { key: "routejudge", title: t("projects.routejudge.title"), category: t("projects.routejudge.category"), link: "/case-study/routejudge", image: RouteJudge },
     { key: "visabuddy", title: t("projects.visabuddy.title"), category: t("projects.visabuddy.category"), link: "/case-study/visabuddy", image: VisaBuddy },
-    { key: "myholybooks", title: t("projects.myholybooks.title"), category: t("projects.myholybooks.category"), link: "/case-study/myholybooks", image: myholybooks },
-    { key: "p3m-platform", title: t("projects.p3m-platform.title"), category: t("projects.p3m-platform.category"), link: "/case-study/p3m-platform", image: p3m },
     { key: "photox", title: t("projects.photox.title"), category: t("projects.photox.category"), link: "/case-study/photox", image: Photox },
+    { key: "p3m-platform", title: t("projects.p3m-platform.title"), category: t("projects.p3m-platform.category"), link: "/case-study/p3m-platform", image: p3m },
+    { key: "myholybooks", title: t("projects.myholybooks.title"), category: t("projects.myholybooks.category"), link: "/case-study/myholybooks", image: myholybooks },
     { key: "hybras-collab", title: t("projects.hybras-collab.title"), category: t("projects.hybras-collab.category"), link: "/case-study/hybras-collab", image: Hybras },
     { key: "awesomegames", title: t("projects.awesomegames.title"), category: t("projects.awesomegames.category"), link: "/case-study/awesome-games", image: AwesomeGames },
   ];

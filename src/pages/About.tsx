@@ -118,8 +118,6 @@ const About = () => {
   const researchSkills = getArray("skills.research.items");
   const aiSkills = getArray("skills.ai.items");
   const frontendSkills = getArray("skills.frontend.items");
-  const technicalTools = getArray("paragraphs.technical.tools");
-
   return (
     <div ref={containerRef} className="noise-bg min-h-screen bg-background relative z-10">
       <Navigation />
@@ -154,10 +152,10 @@ const About = () => {
                 </p>
 
                 <p className={`about-paragraph ${type.body}`}>
-                  {t("paragraphs.technical.base")}{" "}
-                  {technicalTools.join(", ")}{" "}
-                  {t("paragraphs.technical.coding")}{" "}
-                  {t("paragraphs.technical.languages")}
+                  {t("paragraphs.technical.base")}
+                  <span className="text-foreground font-medium">
+                    {t("paragraphs.technical.highlight")}
+                  </span>
                   {t("paragraphs.technical.suffix")}
                 </p>
 

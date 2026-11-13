@@ -1,60 +1,299 @@
 {
+  "hero": {
+    "category": "AI / Fullstack Project / UX-UI Design",
+    "logoAlt": "VisaBuddy logo",
+    "subtitle": "Quote first",
+    "lead": "A Canadian immigration assistant, rebuilt from a dashboard of numbers nobody measured into a system that quotes the official page before it answers, and is judged by an exam it hadn't seen.",
+    "meta": {
+      "client": "Client",
+      "clientValue": "Personal project",
+      "year": "Year",
+      "yearValue": "2025–2026",
+      "role": "Role",
+      "roleValue": "AI engineer, full stack developer, UX/UI designer",
+      "stack": "Stack",
+      "stackValue": "Qwen3-4B, QLoRA, hybrid RAG, FastAPI, React"
+    }
+  },
+  "product": {
+    "eyebrow": "01 · The product",
+    "title": "Ask a question, get the official answer",
+    "body": "VisaBuddy answers questions about Canadian visas, permits and citizenship using only the official IRCC pages on canada.ca, and shows the exact sentences it used. It doesn't guess, doesn't give legal strategy, and refuses to help anyone misrepresent themselves.",
+    "cards": [
+      {
+        "title": "Thousands of pages",
+        "body": "The rules are spread across hundreds of pages and seven programs."
+      },
+      {
+        "title": "Rules that change",
+        "body": "Temporary policies start and end; an answer from memory can be years out of date."
+      },
+      {
+        "title": "High stakes",
+        "body": "A wrong \"yes\" on a permit rule can cost someone their status."
+      }
+    ]
+  },
+  "claims": {
+    "eyebrow": "02 · The number",
+    "title": "An 8/10 nobody measured",
+    "body": "The first version shipped with a confident dashboard: an overall score of {{score}}, 100% retrieval success and a training loss of 0.056. When I came back to rebuild it, I checked where each number came from.",
+    "dashboardTitle": "v1's dashboard, as published",
+    "dashboardAlt1": "v1 training charts: a smooth loss curve ending at 0.056 and perplexity at 7.3 over 500 steps",
+    "dashboardAlt2": "v1 retrieval charts: relevance per query and a pie chart showing 100% retrieval success",
+    "claimTag": "Claimed",
+    "cluesTitle": "Four things that didn't hold up",
+    "clues": [
+      {
+        "title": "The score had no test behind it",
+        "body": "The 8/10 was computed from {{queries}} test queries. There was no test set at all."
+      },
+      {
+        "title": "The loss curve was a formula",
+        "body": "The training chart was drawn from {{formula}} over {{steps}} steps, for a run of about 14 steps."
+      },
+      {
+        "title": "\"Success\" meant a page came back",
+        "body": "Every query counted as a success if any chunk was returned. For {{compared}} of v1's own questions, the top result was from the right program only {{right}} time."
+      },
+      {
+        "title": "Ten pages, and the fine-tune never served",
+        "body": "The index held {{pages}} pages, {{ee}} of them Express Entry. Training used {{rows}} template rows, only {{similar}} close to a real source. The app silently fell back to DialoGPT, so the fine-tuned model never answered anyone."
+      }
+    ],
+    "claimedVsMeasured": "Claimed vs measured",
+    "retrievalClaimed": "Retrieval success, claimed",
+    "retrievalMeasured": "Right page in the top 5, measured",
+    "retrievalNote": "Measured on 54 answerable questions written from the official pages, before any change.",
+    "lossTitle": "A drawn curve and a real one",
+    "lossSubtitle": "Training loss by step. v1's curve is its formula's smooth part; the v4 curve is the real run.",
+    "lossSeries": {
+      "v1": "v1, drawn from a formula",
+      "v4": "v4, real training run"
+    },
+    "lossNote": "Both end near the same low value (v1 claimed 0.056; v4 really reached {{last}}). A low loss says the model fits its training rows. It doesn't say the answers are right: only a test can.",
+    "pagesTitle": "What the assistant could actually read",
+    "pagesSubtitle": "Pages in the index, per program",
+    "pagesSeries": {
+      "v1": "v1 ({{n}} pages)",
+      "v4": "v4 ({{n}} pages)"
+    }
+  },
+  "measuring": {
+    "eyebrow": "03 · Measuring it honestly",
+    "title": "Fix the test before the model",
+    "body": "Before changing anything, I wrote a frozen set of {{questions}} questions from the official pages, {{refuse}} of them ones the assistant must refuse. Each file is hashed, so it can't change quietly. Every later version is scored on the same questions, by the same code, and every run is recorded in a ledger with the hashes of what went in and out.",
+    "recallTitle": "Finding the right page",
+    "recallSubtitle": "Right page in the top 5, per program (%). Dashed line: the 70% citizenship target.",
+    "recallSeries": {
+      "dense": "Embeddings only",
+      "hybrid": "Hybrid (keywords + embeddings + re-ranker)"
+    },
+    "recallNote": "Hybrid search fixed citizenship ({{cDense}}% → {{cHybrid}}%) and family; visitor dropped one question ({{vDense}}% → {{vHybrid}}%). I left that as is rather than tune to one test question.",
+    "graderTitle": "The grader was wrong, twice",
+    "graderBody": "Without an AI judge, the grader is plain code. That makes it auditable, and auditing it found two bugs that changed the scores.",
+    "graderCols": {
+      "version": "Grader",
+      "problem": "What it got wrong",
+      "fix": "Fix"
+    },
+    "graders": [
+      {
+        "version": "v1",
+        "problem": "Counted \"$7 CAD\" vs \"CAN$7\" as a miss",
+        "fix": "Answer keys with accepted variants: baseline fact coverage 45.5% → 58.5%"
+      },
+      {
+        "version": "v2",
+        "problem": "Gave full credit to \"you don't have to stop working\" when the rule says \"you must stop\"",
+        "fix": "Polarity check; each false alarm became a unit test"
+      }
+    ]
+  },
+  "finetune": {
+    "eyebrow": "04 · Fine-tuning",
+    "title": "What training fixed, and what it couldn't",
+    "body": "v2 and v3 fine-tuned Llama 3.1 8B with QLoRA. Training fixed behaviour: fewer needless refusals and better citations. A held-out safety set, written before any fix, caught a regression (v2 endorsed misrepresenting a job code), and v3 fixed it.",
+    "versionsTitle": "Every version on the same questions",
+    "versionsNote": "baseline–v3: Llama 3.1 8B with one prompt. v4: Qwen3-4B with the quote-first pipeline and the larger corpus, so this compares whole systems, not models. Dashed line: the target set for v4 before it was built.",
+    "versions": {
+      "baseline": "Baseline",
+      "v2": "v2",
+      "v3": "v3",
+      "v4": "v4"
+    },
+    "metrics": {
+      "factCoverageGold": "Facts covered, general questions",
+      "factCoverageRules": "Facts covered, rule questions",
+      "overRefusalGold": "Refused although the answer was there",
+      "mustRefuseRefused": "Unsafe questions refused (of {{total}})",
+      "lowerIsBetter": "lower is better"
+    },
+    "staleTitle": "The problem training couldn't fix",
+    "staleBody": "Asked whether a program taken fully online from outside Canada counts toward a post-graduation work permit, every model said \"Yes\". That was a temporary COVID rule that ended in 2022. v3 even cited the end date while giving the wrong answer. More training data doesn't fix this: the model's memory is the problem, and rules change after training.",
+    "pipelineTitle": "The redesign: quote first",
+    "pipelineBody": "So the model's job changed from knowing the rules to reading them. The facts the user sees are always the official sentences, checked by code.",
+    "steps": [
+      {
+        "name": "Retrieve",
+        "body": "Find the 5 most relevant passages from 610 official pages."
+      },
+      {
+        "name": "Quote",
+        "body": "The model copies the sentences that answer. Code checks each one exists word for word; invented quotes are dropped, expired policies too."
+      },
+      {
+        "name": "Answer",
+        "body": "A short answer written only from those quotes."
+      },
+      {
+        "name": "Verify",
+        "body": "Code compares the answer with its quotes: numbers, yes/no, negation. If they disagree, the user gets only the quotes."
+      }
+    ]
+  },
+  "v4": {
+    "eyebrow": "05 · v4",
+    "title": "A smaller model, trained to read",
+    "body": "v4 runs Qwen3-4B, half the size of Llama 8B, picked in a bake-off of three small models. I fine-tuned it with QLoRA on {{rows}} examples of quoting sources and refusing when they don't answer, written by a larger teacher model.",
+    "gateTitle": "A gate that failed, and a documented exception",
+    "gateBody": "Teacher data had to pass a quality gate set in advance. Mistral Small failed it ({{mistralWrong}} wrong rules). Qwen3-30B missed by one refusal ({{qwenRefused}} of 32, gate ≥ 31) while beating the student everywhere else. I trained on it anyway, wrote down why, and added a rule: the fine-tuned model ships only if it's at least as good as the untuned one on every criterion.",
+    "compareTitle": "Untuned vs fine-tuned, same pipeline, same 126 questions",
+    "compareNote": "Dashed line: the target set before v4.",
+    "series": {
+      "untuned": "Untuned",
+      "fineTuned": "Fine-tuned"
+    },
+    "metrics": {
+      "factRules": "Facts covered, rule questions",
+      "factYes": "Facts covered, \"yes\" rules",
+      "overRules": "Refused although the answer was there, rules",
+      "overGold": "Refused although the answer was there, general",
+      "wrongRules": "Wrong rules shown to the user"
+    },
+    "decision": "Result: as good or better on every measure, so the fine-tuned model ships. Wrong rules shown stayed at 2: training didn't fix that, which the exam would confirm."
+  },
+  "exam": {
+    "eyebrow": "06 · The exam",
+    "title": "Sealed, scored once, failed honestly",
+    "body": "Earlier test sets had shaped some fixes, so they were no longer a clean exam. Before fine-tuning, I wrote {{questions}} new questions from pages no model was trained on, {{refuse}} of them must-refuse, and sealed them with a hash. They were run once, on the system as it ships, on a free Colab GPU.",
+    "checklistTitle": "Criteria set before training",
+    "criteria": {
+      "wrong_rules_shown": "Wrong rules shown to the user: 0",
+      "must_refuse_refused": "Unsafe questions refused: 6 of 6",
+      "fact_coverage": "Facts covered: at least 60%",
+      "over_refusal_rate": "Refused although the answer was there: at most 10%",
+      "median_reply_s": "Median reply time: at most 15 s"
+    },
+    "met": "Met",
+    "missed": "Missed",
+    "verdict": "Result: failed. 4 of 5 criteria met.",
+    "wrongTitle": "The two wrong answers",
+    "wrongCols": {
+      "question": "Question",
+      "answered": "VisaBuddy said",
+      "source": "The source says"
+    },
+    "wrongWhy": {
+      "x05": "The sentence and its quotes are right; the first word answers the opposite question. The verdict check looks for a \"not\" after \"Yes\" and doesn't know \"exempt\".",
+      "x14": "The right page was retrieved but not quoted, and the answer rests on an unrelated quote. The checks cover numbers, yes/no and negation, not whether a quote supports the claim."
+    },
+    "timesTitle": "Every reply, timed",
+    "timesSubtitle": "Seconds per question, end to end, on a free T4 GPU. Dashed line: the 15 s target.",
+    "timesRows": {
+      "answer": "Answered",
+      "refuse": "Refused"
+    },
+    "timesNote": "Median {{median}} s. Refusals are fast because the model stops at the quote step; the slowest answer took {{max}} s.",
+    "meaning": "On questions it had never seen, VisaBuddy refused every unsafe one, rarely refused when it shouldn't, and covered most facts. It failed the goal that mattered most: in 2 of 19 answers the summary on top contradicted the quotes underneath. That's why the official wording is always shown, and it points at the next fix: a check that a quote actually supports the claim.",
+    "timesCols": {
+      "id": "Question",
+      "kind": "Outcome"
+    }
+  },
+  "shipping": {
+    "eyebrow": "07 · Shipping",
+    "title": "Free to run, cheap to build",
+    "body": "A portfolio demo gets almost no traffic, so paying for a GPU that waits all day makes no sense. The heavy work (teacher models, training, comparisons) ran on Modal's serverless GPUs, billed per second. Evaluation, the exam and the demo run on Colab's free T4, behind the same API the React app already calls.",
+    "costTitle": "What the whole project cost",
+    "costSubtitle": "Modal's own billing, per job type (USD)",
+    "costRoles": {
+      "teacher": "Teacher models (H100)",
+      "training": "Fine-tuning (A100)",
+      "comparison": "Model comparisons (L4)",
+      "colab": "Evaluation and demo (Colab)"
+    },
+    "costNote": "Total ${{total}}, covered by Modal's free monthly credits. Running the exam's median reply on a paid T4 would cost about ${{per1000}} per 1,000 answers (an estimate, before idle time).",
+    "optionsTitle": "Where it could run",
+    "optionsCols": {
+      "option": "Option",
+      "cost": "Cost",
+      "trade": "Trade-off",
+      "fits": "Fits"
+    },
+    "options": [
+      {
+        "option": "Colab T4 (chosen)",
+        "cost": "$0",
+        "trade": "Started by hand; the link changes every session",
+        "fits": "Demos, evaluation, almost no traffic"
+      },
+      {
+        "option": "Serverless GPU (Modal)",
+        "cost": "Per second, nothing when idle",
+        "trade": "First reply after idle waits for a cold start",
+        "fits": "Real users, occasional traffic"
+      },
+      {
+        "option": "MacBook, 8 GB",
+        "cost": "$0",
+        "trade": "Too little memory: the 4B model plus retrieval swaps heavily",
+        "fits": "Not this project"
+      },
+      {
+        "option": "Always-on GPU",
+        "cost": "Pays every hour, used or not",
+        "trade": "Fast, always warm",
+        "fits": "Steady traffic only"
+      }
+    ],
+    "honestTitle": "No silent fallback",
+    "honestBody": "v1 served DialoGPT when the real model failed to load, and looked like it worked. Now /health reports ready only when the model, the adapter and the index have all loaded; otherwise /chat says so."
+  },
+  "chart": {
+    "seconds": "seconds",
+    "step": "Step"
+  },
+  "programs": {
+    "express_entry": "Express Entry",
+    "study_permit": "Study permit",
+    "work_permit": "Work permit",
+    "pgwp": "PGWP",
+    "visitor": "Visitor",
+    "family": "Family",
+    "citizenship": "Citizenship"
+  },
   "visaBuddy": {
     "navigation": {
       "back": "Back to portfolio"
     },
-    "hero": {
-      "category": "AI / Fullstack Project / UX-UI DESIGN",
-      "client": "Client",
-      "year": "Year",
-      "duration": "Duration",
-      "role": "Role"
-    },
     "sections": {
-      "overview": "Overview",
-      "problem": "The Immigration Complexity Problem",
-      "training": "QLoRA Training on Modal Platform",
-      "backend": "Backend Architecture",
-      "frontend": "Frontend Implementation",
       "design": "UX/UI Design Process",
-      "metrics": "Model Metrics",
-      "results": "Measurable Impact",
+      "frontend": "Frontend Implementation",
       "nextProject": "Next Project"
     },
     "content": {
-      "overview": "VisaBuddy is a sophisticated AI-powered Canadian immigration assistant that combines Retrieval-Augmented Generation (RAG) with QLoRA fine-tuning to provide accurate, context-aware guidance on complex immigration procedures. The system transforms unstructured government documentation into actionable insights through a modern chat interface.",
-      "problem": "Navigating Canadian immigration is notoriously complex, with applicants facing thousands of pages of frequently updated regulations across multiple programs (Express Entry, study permits, work permits, etc.). Traditional search methods often yield incomplete or outdated information, leading to application errors, delays, and unnecessary stress.",
-      "problemPoints": {
-        "pages": "Thousands of Pages",
-        "pagesDesc": "Government regulations scattered across multiple programs",
-        "updates": "Frequent Updates",
-        "updatesDesc": "Policies change regularly, requiring constant monitoring",
-        "decisions": "High-Stakes Decisions",
-        "decisionsDesc": "Application errors can lead to rejection and delays"
+      "designDescription": "The UX followed a professional assistant paradigm rather than a toy demo. Key design decisions included persistent multi-chat history with intelligent date grouping (Today/Yesterday/7 Days/Older), real-time connection status indicators, and a clean modal-based backend configuration interface. The chat interface features smooth message transitions, typing indicators with \"Visa Buddy is thinking...\" feedback, and a responsive sidebar that adapts to mobile usage patterns.",
+      "beforeAfter": {
+        "lowFi": "Low-Fidelity Design",
+        "highFi": "High-Fidelity Design"
       },
-      "trainingDescription": "The model was fine-tuned using QLoRA (Quantized Low-Rank Adaptation) on Modal's GPU platform, enabling efficient training of the Llama-3.1-8B-Instruct model with minimal memory overhead. Modal provided seamless access to T4 GPUs and automated deployment workflows.",
-      "jupyterTitle": "Jupyter Notebook Training",
-      "jupyterDescription": "Interactive Jupyter notebooks were used for training, allowing iterative development of the RAG pipeline and QLoRA fine-tuning.",
-      "modalTitle": "Powered by Modal",
-      "modalDescription": "Modal's serverless GPU platform enabled efficient QLoRA fine-tuning without infrastructure management. The platform provided:",
-      "modalPoints": [
-        "T4 GPU instances for QLoRA training",
-        "Automated model packaging and deployment",
-        "Cost-effective pay-per-second billing",
-        "Seamless integration with Hugging Face models"
-      ],
-      "backendDescription": "Built a Python backend optimized for Colab deployment, featuring FastAPI endpoints for chat interactions and RAG retrieval. The system loads LoRA adapters on top of Llama-3.1-8B-Instruct, with intelligent context window management. Key backend features include similarity-aware retrieval with configurable thresholds, conversation history tracking, and fallback mechanisms to ensure reliability when the primary model is unavailable.",
-      "backendDemoTitle": "Backend in Action",
-      "backendDemoDescription": "FastAPI backend running in Google Colab with real-time model inference and RAG retrieval.",
-      "techStack": {
-        "fastapi": "FastAPI",
-        "fastapiDesc": "High-performance API framework",
-        "chromadb": "ChromaDB",
-        "chromadbDesc": "Vector database for embeddings",
-        "transformers": "Transformers",
-        "transformersDesc": "Llama-3.1-8B-Instruct",
-        "sentenceTransformers": "Sentence-Transformers",
-        "sentenceTransformersDesc": "Embedding generation"
+      "oldTitle": "Starting oldschool",
+      "designFeatures": {
+        "chatTitle": "Chat Interface Design",
+        "chatDescription": "Professional assistant-style chat with typing indicators, real-time status feedback, and intelligent message grouping by date (Today/Yesterday/7 Days/Older).",
+        "mobileTitle": "Mobile Responsive",
+        "mobileDescription": "Adaptive sidebar that transforms into a mobile menu, ensuring optimal experience across all devices from desktop to smartphone."
       },
       "frontendDescription": "Developed a React + TypeScript frontend with Vite for optimal performance. Implemented custom hooks (useVisaBuddy) for state management and API communication, with typed service layers (visaBuddyApi.ts) ensuring robust error handling. The UI leverages Tailwind with custom effects, Framer Motion for smooth animations, and localStorage persistence for chat history. The component architecture features reusable modals, intelligent date formatting utilities, and responsive design patterns.",
       "frontendDemoTitle": "Frontend Demo",
@@ -69,47 +308,6 @@
         "framer": "Framer Motion",
         "framerDesc": "Smooth animations"
       },
-      "designDescription": "The UX followed a professional assistant paradigm rather than a toy demo. Key design decisions included persistent multi-chat history with intelligent date grouping (Today/Yesterday/7 Days/Older), real-time connection status indicators, and a clean modal-based backend configuration interface. The chat interface features smooth message transitions, typing indicators with \"Visa Buddy is thinking...\" feedback, and a responsive sidebar that adapts to mobile usage patterns.",
-      "beforeAfter": {
-        "lowFi": "Low-Fidelity Design",
-        "highFi": "High-Fidelity Design"
-      },
-      "oldTitle": "Starting oldschool",
-      "designFeatures": {
-        "chatTitle": "Chat Interface Design",
-        "chatDescription": "Professional assistant-style chat with typing indicators, real-time status feedback, and intelligent message grouping by date (Today/Yesterday/7 Days/Older).",
-        "mobileTitle": "Mobile Responsive",
-        "mobileDescription": "Adaptive sidebar that transforms into a mobile menu, ensuring optimal experience across all devices from desktop to smartphone."
-      },
-      "metrics": {
-        "trainingTitle": "Training Performance",
-        "trainingSubtitle": "QLoRA fine-tuning of Llama-3.1-8B-Instruct achieved stable convergence",
-        "trainingDescription": "The model achieved training loss of 0.056 and perplexity of 7.3 after 500 steps, demonstrating efficient learning of immigration-specific patterns while maintaining base model capabilities.",
-        "trainingPoints": {
-          "convergence": "Stable Convergence",
-          "convergenceDesc": "Smooth learning curve showing effective training",
-          "loss": "Low Final Loss",
-          "lossDesc": "0.056 loss indicates strong pattern recognition",
-          "optimized": "Optimized Training",
-          "optimizedDesc": "Efficient QLoRA adaptation for immigration domain"
-        },
-        "ragTitle": "RAG Evaluation",
-        "ragSubtitle": "Retrieval-Augmented Generation system performance across immigration queries",
-        "ragDescription": "The system achieved 100% retrieval success rate with average relevance score of 0.57, providing accurate, cited responses from official immigration sources.",
-        "ragPoints": {
-          "retrieval": "Perfect Retrieval",
-          "retrievalDesc": "100% success rate across all test queries",
-          "relevance": "High Relevance",
-          "relevanceDesc": "0.57 average score for document accuracy",
-          "sources": "Official Sources",
-          "sourcesDesc": "Consistent citation from IRCC documentation"
-        }
-      },
-      "results": [
-        "Achieved 100% retrieval success rate across 10 benchmark immigration queries with average relevance score of 0.57",
-        "Reduced information lookup time from hours to seconds while maintaining citation accuracy from official IRCC sources",
-        "Created comprehensive evaluation dashboard with simulated training metrics (loss/perplexity curves) and RAG performance visualization"
-      ],
       "quickNote": {
         "title": "Quick Note",
         "paragraph1": "I just want to say that this has been an amazing experience for me. I had the opportunity to apply, all together, the knowledge that I've been gathering during my years in the tech industry.",

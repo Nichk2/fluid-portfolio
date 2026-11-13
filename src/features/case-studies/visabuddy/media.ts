@@ -10,13 +10,6 @@ import Hifi_menu_open from "@/Image/VisaBuddy/open menu highfi.png";
 import Metrics1 from "@/Image/VisaBuddy/metrics.png";
 import Metrics2 from "@/Image/VisaBuddy/metrics 2.png";
 import Front from "@/Image/VisaBuddy/frontend test.gif";
-import Jupyter from "@/Image/VisaBuddy/jupyter notebook training.gif";
-import Modal_logo from "@/Image/VisaBuddy/Modal-Primary-Logo.svg";
-import Back from "@/Image/VisaBuddy/google colab model and backend.gif";
-import Chroma from "@/Image/VisaBuddy/Chroma--Streamline-Svg-Logos.svg";
-import Fast_api from "@/Image/VisaBuddy/FastAPI_logo.svg";
-import Transformers from "@/Image/VisaBuddy/HG transfomers.svg";
-import Vectors from "@/Image/VisaBuddy/vectors 1.svg";
 import Tailwind from "@/Image/VisaBuddy/tailwindcss.svg";
 import ReactLogo from "@/Image/VisaBuddy/react.svg";
 import Typescript from "@/Image/VisaBuddy/typescript.svg";
@@ -28,13 +21,6 @@ export {
   Metrics1,
   Metrics2,
   Front,
-  Jupyter,
-  Modal_logo,
-  Back,
-  Chroma,
-  Fast_api,
-  Transformers,
-  Vectors,
   Tailwind,
   ReactLogo,
   Typescript,
