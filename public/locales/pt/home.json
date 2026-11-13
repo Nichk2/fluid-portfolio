@@ -2,13 +2,13 @@
   "identity": {
     "eyebrow": "Quem Eu Sou",
     "statement": {
-      "base": "Transito entre pesquisa, interface e código sem nunca abandonar um pelo outro — ",
-      "highlight1": "desenhando sistemas",
-      "mid1": " que resistem ao uso real, ",
-      "highlight2": "construindo os produtos",
-      "mid2": " que os colocam no ar, e ",
-      "highlight3": "treinando os modelos",
-      "suffix": " que os tornam um pouco mais inteligentes."
+      "base": "Atuo em ",
+      "highlight1": "engenharia de IA",
+      "mid1": " (dados, prompts, adaptadores, inferência), ",
+      "highlight2": "desenvolvimento full-stack de produto",
+      "mid2": " e ",
+      "highlight3": "design de experiência do usuário",
+      "suffix": " — um fio só do benchmark à tela, sem corrente de repasses."
     }
   },
   "featuredWork": {

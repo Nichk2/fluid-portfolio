@@ -2,13 +2,13 @@
   "identity": {
     "eyebrow": "Who I Am",
     "statement": {
-      "base": "I move between research, interface and code without ever really leaving one for the other — ",
-      "highlight1": "designing systems",
-      "mid1": " that hold up under real use, ",
-      "highlight2": "building the products",
-      "mid2": " that ship them, and ",
-      "highlight3": "training the models",
-      "suffix": " that make them a little smarter."
+      "base": "I work across ",
+      "highlight1": "AI engineering",
+      "mid1": " (data, prompts, adapters, inference), ",
+      "highlight2": "full-stack product development",
+      "mid2": ", and ",
+      "highlight3": "user experience design",
+      "suffix": " — one thread from benchmark to screen, not a handoff chain."
     }
   },
   "featuredWork": {
