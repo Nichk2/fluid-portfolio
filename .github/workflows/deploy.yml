@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Otherwise the default GITHUB_TOKEN is used for every github.com push,
+          # and it cannot write to nicholas_portfolio.
+          persist-credentials: false
 
       - name: Verify deploy token
         run: |
@@ -39,6 +43,9 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist --repo https://github.com/Nichk2/nicholas_portfolio.git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          npx gh-pages -d dist --repo "https://x-access-token:${GH_TOKEN}@github.com/Nichk2/nicholas_portfolio.git"
         env:
           GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
