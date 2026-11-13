@@ -17,16 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # Otherwise the default GITHUB_TOKEN is used for every github.com push,
-          # and it cannot write to nicholas_portfolio.
           persist-credentials: false
 
-      - name: Verify deploy token
+      - name: Verify deploy key
         run: |
-          if [ -z "${{ secrets.GH_PAGES_TOKEN }}" ]; then
-            echo "::error::Missing GH_PAGES_TOKEN secret."
-            echo "Go to fluid-portfolio → Settings → Secrets and variables → Actions"
-            echo "Create secret GH_PAGES_TOKEN with a Personal Access Token (repo scope)."
+          if [ -z "${{ secrets.DEPLOY_KEY }}" ]; then
+            echo "::error::Missing DEPLOY_KEY secret."
+            echo "It is the private half of a write-enabled deploy key on Nichk2/nicholas_portfolio."
             exit 1
           fi
 
@@ -42,10 +39,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Pushes dist/ to the gh-pages branch of nicholas_portfolio over SSH,
+      # using a deploy key that can write to that one repository only.
       - name: Deploy to GitHub Pages
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          npx gh-pages -d dist --repo "https://x-access-token:${GH_TOKEN}@github.com/Nichk2/nicholas_portfolio.git"
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+          npx gh-pages -d dist --repo git@github.com:Nichk2/nicholas_portfolio.git
